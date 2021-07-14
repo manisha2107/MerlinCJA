@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_Match_from_Prod_detail</fullName>
+    <active>false</active>
+    <errorConditionFormula>00Nf0000005t4Tg.00Nf0000005t4Ov.Id   &lt;&gt;  00Nf0000005t4Tv.Product.Id</errorConditionFormula>
+    <errorMessage>Under Quote Product, please select the same product mentioned under Product Detail.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Quote_Expiry_date_Validation</fullName>
+    <active>false</active>
+    <description>quote expiry date = should be equal (effective date + terms)</description>
+    <errorConditionFormula>DATEVALUE(Quote_Expiry_Date__c)  &lt;&gt; ADDMONTHS(Quote_Effective_Date__c, Quote_Term__c )</errorConditionFormula>
+    <errorDisplayField>Quote_Expiry_Date__c</errorDisplayField>
+    <errorMessage>Quote Expiry Date should be equal to Quote Effective date + Quote Term</errorMessage>
+</ValidationRule>

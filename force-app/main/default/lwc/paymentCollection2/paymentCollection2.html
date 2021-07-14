@@ -1,0 +1,106 @@
+<template>
+    
+    
+    <lightning:layout class="slds-align_absolute-center" >
+        
+        <div aria-labelledby="newpaymentform">
+
+            <fieldset class="slds-box slds-align_absolute-centerslds-theme--default slds-container--medium">
+                <legend class="slds-text-heading--large slds-align_absolute-center
+                                                   slds-p-vertical--medium">
+         Payment for {invoiceNumber}
+
+                      </legend>
+
+                      <div style="padding-bottom: 5px;">
+                        {invNotes}
+                    </div>
+                    <div class="slds-text-color_error slds-text-align_center">{result}</div>
+                         
+         <!-- CREATE NEW PAYMENT FORM -->
+                    
+         <form class="slds-form--stacked">                     
+                        
+        <!--    <p class="contactname"> Contact Name </p>-->
+            <!--<ui:outputText class="receiptemail" value="{!v.contactName}"/>-->
+            
+            <lightning-input type="text" label="Contact Name" value="Amy Jackson" readonly></lightning-input>
+
+</br>
+
+        <!--    <p class="receiptemail"> Amount </p>-->
+             <!-- <ui:outputcurrency class="receiptemail" value="{!v.payment.amount}"/>-->           
+          
+          <lightning-input type="currency" label="Amount" value="$2145.00" readonly></lightning-input>
+ </br>
+
+        <!--    <p class="receiptemail"> Currency </p>-->
+            <!--<ui:outputtext class="receiptemail" value="{!v.payment.currencyval}"/> -->           
+        
+         <lightning-input type="text" label="Currency" value="CAD" readonly></lightning-input>
+
+</br>            
+
+        <!--       <p class="cardholder"> Card Holder Name</p>-->
+            <lightning-input label="Card Holder Name" name="accName" required="required" type="text" value={card} placeholder="Name displayed on Card"></lightning-input>
+</br>
+        <!--    <p class="cardholder"> Card Number</p>-->
+            <lightning-input label="Card Number" name="card" required="required"  value={holderName} pattern="[0-9]{13,16}" placeholder="Card Number"></lightning-input>
+</br>
+            <fieldset class="slds-form--compound">
+                <div class="form-element__group">
+                    <div class="slds-form-element__row">
+                        <div class="slds-form-element slds-size--1-of-3">
+                       <!-- <p class="cardholder">Expiry Month *</p>-->                            
+                            <lightning-input type="number"
+                            label="Expiry Month"
+                            min="1"
+                            max="12"
+                            name="Card Month"
+                            required="required"
+                            value={month}
+                            placeholder="MM">
+           </lightning-input>                
+            </div>
+                        
+                        <div class="slds-form-element slds-size--1-of-3">
+                      <!--  <p class="cardholder">Expiry Year *</p>-->
+                            
+                            <lightning-input type="text"
+                            label="Expiry Year"
+                            name="Card Year"
+                            required="required"
+                            pattern="[0-9]{4}"
+                            value={year}
+                            placeholder="YYYY">
+           </lightning-input>
+                        </div>
+                        <div class="slds-form-element slds-size--1-of-3">
+                     <!--    <p class="cardholder">Card CVV *</p> -->
+                            <lightning-input type="number"
+                            label="CVV"
+                            pattern="[0-9]{3,4}"
+                            name="Card CVV Code"
+                            required="required"
+                            value={cvv}
+                            placeholder="3 digit # on the back of card">
+           </lightning-input>                  
+              </div>
+                    </div>
+                </div>
+            </fieldset>
+
+            <div class="slds-text-align_center slds-p-top_large">
+                    <lightning-button class="slds-p-top_xx-large" label="Submit Payment" onclick={handlePayment} variant="brand"></lightning-button>
+
+                
+            </div>
+        </form>
+             </fieldset> 
+                      </div>
+
+
+
+    </lightning:layout>
+
+</template>

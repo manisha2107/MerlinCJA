@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Non_Program_Policy_Compact_Layout</fullName>
+    <fields>Account__c</fields>
+    <fields>Category__c</fields>
+    <fields>Brokerage_Account__c</fields>
+    <fields>Product__c</fields>
+    <fields>Status__c</fields>
+    <fields>Policy_Premium__c</fields>
+    <fields>RecordTypeId</fields>
+    <label>Non-Program Policy Compact Layout</label>
+</CompactLayout>

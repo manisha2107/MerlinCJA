@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Category__c</fullName>
+    <externalId>false</externalId>
+    <label>Category</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Coverage</fullName>
+                <default>false</default>
+                <label>Coverage</label>
+            </value>
+            <value>
+                <fullName>Sub-limit</fullName>
+                <default>false</default>
+                <label>Sub-limit</label>
+            </value>
+            <value>
+                <fullName>Extensions</fullName>
+                <default>false</default>
+                <label>Extensions</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

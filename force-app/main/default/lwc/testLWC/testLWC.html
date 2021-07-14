@@ -1,0 +1,39 @@
+<template>
+    <lightning-record-edit-form record-id={recordId} object-api-name="Account" onsuccess={handleSuccess} onsubmit ={handleSubmit}>
+            
+        <lightning-messages>
+        </lightning-messages>
+      
+
+
+        <lightning-input-field class="inputCmp" field-name="ShippingState" type="string">   </lightning-input-field>
+        
+        <div class="city">
+
+        
+        <lightning-input-field class="inputCmp1" field-name="ShippingCity onchange={hidecity}">     </lightning-input-field>   
+        
+
+        </div>
+        <lightning-button class="slds-m-top_small" variant="brand"   label="Update" onclick={register2}>
+
+        </lightning-button>
+
+
+    </lightning-record-edit-form>
+
+
+
+
+
+
+
+
+    <lightning-input class="inputCmp"
+                     label="Enter your name:">
+    </lightning-input>
+    <lightning-button label="Register"
+                      onclick={register3}>
+    </lightning-button>
+
+</template>

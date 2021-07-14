@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Sub_Limits</fullName>
+    <columns>Name</columns>
+    <columns>CategoryGroup</columns>
+    <columns>EffectiveDate</columns>
+    <columns>ExpirationDate</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>Category</field>
+        <operation>equals</operation>
+        <value>Sub-limit</value>
+    </filters>
+    <label>All Sub Limits</label>
+</ListView>

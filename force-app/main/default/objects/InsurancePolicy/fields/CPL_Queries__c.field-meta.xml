@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CPL_Queries__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( Product.ProductCode == &apos;CPL&apos; ,&quot;&amp;queryid=[PPDExt]a0pf0000003TYKNAA4,[PIns]a0pf0000003XMDlAAO,[HCFPPD]a0pf0000003XbGXAA0,[PUI]a0pf0000003TWUxAAO,[PPE]a0pf0000003ZZ2qAAG,[PPDRA]a0pf0000003TXybAAG,[PPDCov]a0pf0000003TY9jAAG,[COCQPD]a0pf0000003XPQxAAO,[HCC]a0pf0000003ZjvVAAS,[PPDSL]a0pf0000003TYLLAA4,[PPDMR]a0pf0000003ZmGfAAK,[CPLE00101]a0pf0000003TNRuAAO,[CPLE00201]a0pf0000003TNRvAAO,[CPLE00301]a0pf0000003TNRwAAO,[CPLE00401]a0pf0000003TNRxAAO,[CPLE00501]a0pf0000003TNRyAAO,[CPLE00601]a0pf0000003TNRzAAO,[CPLE00701]a0pf0000003TNS0AAO,[CPLE99701]a0pf0000003TNS3AAO,[CPLE99801]a0pf0000003TNS2AAO,[CPLE99901]a0pf0000003TNS1AAO,[CPLW00101]a0pf0000003TNRtAAO&quot; , &quot;&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>CPL Queries</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Next_Related_Item__c</fullName>
+    <externalId>false</externalId>
+    <label>Next Related Item</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Policy Wording and Endorsements</fullName>
+                <default>false</default>
+                <label>Policy Wording and Endorsements</label>
+            </value>
+            <value>
+                <fullName>Extended Report Periods</fullName>
+                <default>false</default>
+                <label>Extended Report Periods</label>
+            </value>
+            <value>
+                <fullName>Insurers</fullName>
+                <default>false</default>
+                <label>Insurers</label>
+            </value>
+            <value>
+                <fullName>Reinstatement</fullName>
+                <default>false</default>
+                <label>Reinstatement</label>
+            </value>
+            <value>
+                <fullName>Underlying Insurers</fullName>
+                <default>false</default>
+                <label>Underlying Insurers</label>
+            </value>
+            <value>
+                <fullName>Projects</fullName>
+                <default>false</default>
+                <label>Projects</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,11 @@
+<template>
+    <template if:true={isPickList}>
+        <!--<lightning-input type={type} variant="label-hidden" label={field} name={field} value={value} onchange={handleInputChange}></lightning-input>
+        -->
+        <lightning-combobox name={field} variant="label-hidden" value={value} placeholder="Select Values"
+            options={fieldoptions} onchange={handleChange}></lightning-combobox>
+       
+
+    </template>
+
+</template>

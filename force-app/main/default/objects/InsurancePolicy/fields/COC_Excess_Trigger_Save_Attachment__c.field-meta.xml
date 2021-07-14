@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>COC_Excess_Trigger_Save_Attachment__c</fullName>
+    <externalId>false</externalId>
+    <formula>&quot;&amp;solmgr=1&quot; +
+&quot;&amp;id=&quot; + Id +
+&quot;&amp;templateid=&quot; + Template_Ids__c &amp; Template_Ids2__c &amp; Template_Ids3__c +
+&quot;&amp;QueryStringField= Excess__c &quot; +
+&quot;&amp;defaultpdf=1&quot; +
+&quot;&amp;ofn=&quot; + Name +
+&quot;&amp;SC0=1&quot; +
+&quot;&amp;SC1=SalesforceFile&quot; +
+&quot;&amp;CongaEmailTemplateId=a0of0000003OQZ9AAO&quot; +
+&quot;&amp;EmailAdditionalTo=&quot; + Broker__r.Id +
+&quot;&amp;QMode=SendEmail&quot;</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>COC [Excess] Trigger - Save Attachment</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

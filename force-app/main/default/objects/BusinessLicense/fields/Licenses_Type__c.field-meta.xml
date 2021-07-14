@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Licenses_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Licenses Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>LLQP</fullName>
+                <default>false</default>
+                <label>LLQP</label>
+            </value>
+            <value>
+                <fullName>MFDA</fullName>
+                <default>false</default>
+                <label>MFDA</label>
+            </value>
+            <value>
+                <fullName>IIROC</fullName>
+                <default>false</default>
+                <label>IIROC</label>
+            </value>
+            <value>
+                <fullName>EMD</fullName>
+                <default>false</default>
+                <label>EMD</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

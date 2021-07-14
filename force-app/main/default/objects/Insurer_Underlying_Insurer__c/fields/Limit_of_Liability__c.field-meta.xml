@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Limit_of_Liability__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Underlying Insurance Limit of Liability</inlineHelpText>
+    <label>Limit of Liability</label>
+    <length>225</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

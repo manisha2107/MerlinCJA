@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FinServ__IndustriesIndividual</fullName>
+    <active>true</active>
+    <description>Contact data for a retail client</description>
+    <label>Individual</label>
+    <picklistValues>
+        <picklist>AcctSeed__Default_1099_Box__c</picklist>
+        <values>
+            <fullName>1%2E Rents</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>10%2E Crop Insurance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>13%2E Golden Parachute</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>14%2E Attorney Proceeds</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>15a%2E Section 409A Deferrals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>15b%2E Section 409A Income</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>16%2E State Tax Withheld</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2%2E Royalties</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3%2E Other Income</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4%2E Federal Tax Withheld</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5%2E Fishing Boat Proceeds</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6%2E Medical Payments</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7%2E Nonemployee Compensation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8%2E Substitute Payments</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>FinServ__Gender__c</picklist>
+        <values>
+            <fullName>Female</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Male</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>FinServ__IndividualType__c</picklist>
+        <values>
+            <fullName>Individual</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>FinServ__MaritalStatus__c</picklist>
+        <values>
+            <fullName>Divorced</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Married</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Separated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Single</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Widowed</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>FinServ__TaxBracket__c</picklist>
+        <values>
+            <fullName>10%25</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>15%25</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>25%25</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>28%25</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>33%25</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>35%25</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>LeadSource</picklist>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Purchased List</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Name</picklist>
+        <values>
+            <fullName>Dr%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mr%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mrs%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ms%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prof%2E</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

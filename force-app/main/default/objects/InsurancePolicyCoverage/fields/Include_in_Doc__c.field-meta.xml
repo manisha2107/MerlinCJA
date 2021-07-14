@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Include_in_Doc__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( Quote_Product_Detail__r.Name = &apos;Hard Costs&apos; 
+ || Quote_Product_Detail__r.Name  = &apos;Soft Costs&apos;
+ || Quote_Product_Detail__r.Name  = &apos;Existing Structure&apos;
+ || Quote_Product_Detail__r.Name  = &apos;Delay in Start-Up&apos;
+ || Quote_Product_Detail__r.Name= &apos;Earthquake&apos;
+ || Quote_Product_Detail__r.Name  = &apos;Flood&apos;
+ || Quote_Product_Detail__r.Name  = &apos;Sewer Back-Up&apos;
+ || Quote_Product_Detail__r.Name  = &apos;Water Damage&apos; 
+
+, true , false)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Include in Doc?</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

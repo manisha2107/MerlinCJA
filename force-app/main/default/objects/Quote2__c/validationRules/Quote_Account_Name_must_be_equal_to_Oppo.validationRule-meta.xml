@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Quote_Account_Name_must_be_equal_to_Oppo</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+!ISBLANK(Opportunity__c),
+Account__c &lt;&gt;  Opportunity__r.AccountId
+)</errorConditionFormula>
+    <errorDisplayField>Account__c</errorDisplayField>
+    <errorMessage>Quote Account must be same as Opportunity&apos;s Account.</errorMessage>
+</ValidationRule>

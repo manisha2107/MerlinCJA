@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IBC_Code</fullName>
+    <active>true</active>
+    <description>Represent IBC Code</description>
+    <label>IBC Code</label>
+    <picklistValues>
+        <picklist>Industry_Category__c</picklist>
+        <values>
+            <fullName>Business %26 Professional Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Construction</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Farming</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fishing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Logging</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Manufacturing %26 Processing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mining</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mining%2FOil %26 Gas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Realty</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Retail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transport</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Utilities</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Warehousing</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

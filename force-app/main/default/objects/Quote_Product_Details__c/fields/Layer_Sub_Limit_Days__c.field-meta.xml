@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Layer_Sub_Limit_Days__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Layer sub-limit days applied on a subscribed quote product.</inlineHelpText>
+    <label>Layer Sub-Limit Days</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

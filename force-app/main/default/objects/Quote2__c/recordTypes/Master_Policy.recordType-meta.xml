@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Master_Policy</fullName>
+    <active>true</active>
+    <compactLayoutAssignment>Master_Policy_Compact_Layout</compactLayoutAssignment>
+    <description>This will be used to track program deals which include Sponsored Program and Open Market Program.</description>
+    <label>Master Policy</label>
+    <picklistValues>
+        <picklist>Category__c</picklist>
+        <values>
+            <fullName>New Quote</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Renewal Quote</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Line_of_Business__c</picklist>
+        <values>
+            <fullName>Commercial Lines</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Financial Lines</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Professional Lines</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Next_Related_LI__c</picklist>
+        <values>
+            <fullName>Extended Reporting Period</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Insurer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Project</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Quote_Type__c</picklist>
+        <values>
+            <fullName>Commercial Crime Bond</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Commercial General Liability</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Commercial Property</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Commercial Surety</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contingent Liability</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contract Surety</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contractor Pollution Liability</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Course-of-Construction</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cyber Liability</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Employment Practice Liability</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Environmental Impairment Liability</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Errors %26 Omission Liability</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fiduciary Liability</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Financial Institution Bond</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Intellectual Property Liability</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Representation and Warranties</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tax Indemnity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wrap-Up Liability</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status__c</picklist>
+        <values>
+            <fullName>Activated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Draft</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Expired</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

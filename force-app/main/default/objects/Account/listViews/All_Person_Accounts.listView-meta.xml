@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Person_Accounts</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>HiddenAccount__c</columns>
+    <columns>Brokerage_Account__c</columns>
+    <columns>ACCOUNT.PHONE1</columns>
+    <columns>IBC_Code__c</columns>
+    <columns>PC_EMAIL</columns>
+    <columns>FinServ__TotalPremium__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ACCOUNT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>PersonAccount.PersonAccount</value>
+    </filters>
+    <label>All Person Accounts</label>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+        <allPartnerUsers></allPartnerUsers>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Professional_Lines</fullName>
+    <columns>Name</columns>
+    <columns>Policy_Limit__c</columns>
+    <columns>Aggregate__c</columns>
+    <columns>DeductibleAmount</columns>
+    <filterScope>Everything</filterScope>
+    <label>Professional Lines</label>
+</ListView>

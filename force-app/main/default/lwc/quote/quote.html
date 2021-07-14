@@ -1,0 +1,425 @@
+<template>
+
+  <lightning-card>
+
+    <div class="slds-m-horizontal--x-large">
+      <lightning-icon class='myClass' icon-name="standard:quote" alternative-text="Connected"
+        variant="inverse"></lightning-icon>
+      <span class='slds-text-heading_medium slds-m-left_small'><strong>Quote for a New Certificate</strong></span>
+
+    </div>
+
+
+  </lightning-card>
+  <br>
+  <!-- <lightning-card>
+
+    <div class="slds-grid slds-gutters">
+     
+      <div class="slds-col">
+        <p class = "slds-m-left_medium"></p>
+        <p class = "slds-m-left_medium slds-text-title_bold">Product Name</p>
+        <p class = "slds-m-left_medium slds-text-title_bold">Quote For</p>
+        <p class = "slds-m-left_medium slds-text-title_bold">Phone</p>
+        <p class = "slds-m-left_medium slds-text-title_bold">Quote Issue Date</p>
+        <p class = "slds-m-left_medium slds-text-title_bold" >Term (months)</p>
+      </div>
+
+      <div class="slds-col">
+        <p class = "slds-m-left_small">{ProductName}</p>
+        <p class = "slds-m-left_small">{policyName} </p>
+        <p class = "slds-m-left_small" style="line-height: 1.6;">{myName} , {address} </p>
+        <p class = "slds-m-left_small" style="line-height: 1.6;">{accPhone}</p>
+        <p class = "slds-m-left_small" style="line-height: 1.6;">
+          <lightning-formatted-date-time
+           value={effectiveDate}
+           day="numeric"
+           month="numeric"
+           year="numeric">
+        </lightning-formatted-date-time></p>
+        <p class = "slds-m-left_small" style="line-height: 1.6;">{policyTerm}</p>
+      </div>
+    </div>
+
+  </lightning-card>
+  <br> -->
+<lightning-card>
+  <template if:true={quotecomp} class="slds-scrollable_none">
+    <table class="slds-var-m-bottom_large d">
+      <thead>
+  
+      </thead>
+      <tbody>
+        <tr class="inputRows">
+          <td>
+            <p class = "slds-text-title_bold slds-p-left_small" >Product Name</p>
+          </td>
+          <td>
+            <p class = "slds-m-left_small">{ProductName}</p>
+            
+          </td>
+        </tr>
+        <tr class="inputRows">
+          <td>
+            <p class = "slds-text-title_bold slds-p-left_small" >Quote For</p>          
+          </td>
+          <td>
+            <p class = "slds-m-left_small">{policyName} {myName} , {address}</p>
+          </td>
+        </tr>
+        <tr class="inputRows">
+          <td>
+            <p class = "slds-text-title_bold slds-p-left_small" >Phone</p>          
+          </td>
+          <td>
+            <p class = "slds-m-left_small">{accPhone}</p>
+          </td>
+        </tr>
+        <tr class="inputRows">
+          <td>
+            <p class = "slds-text-title_bold slds-p-left_small" >Quote Issue Date</p>          
+          </td>
+          <td>
+            <p class = "slds-m-left_small" style="line-height: 1.6;">
+              <lightning-formatted-date-time
+               value={effectiveDate}
+               day="numeric"
+               month="numeric"
+               year="numeric">
+            </lightning-formatted-date-time></p>
+          </td>
+        </tr>
+        <tr class="inputRows">
+          <td>
+            <p class = "slds-text-title_bold slds-p-left_small" >Term (months)</p>          
+          </td>
+          <td>
+            <p class = "slds-m-left_small">{policyTerm}</p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+
+
+
+
+
+
+
+
+  </template>
+</lightning-card>
+  <br>
+  <div class="slds-text-heading_small headingColor" style="font-weight:bold">
+    Quote Summary
+  </div>
+
+  <lightning-card>
+    <template if:true={quotecomp} class="slds-scrollable_none">
+      <!--total premium table-->
+      <template if:true={quotecomp}>
+        <div class={tableBox}>
+          <table class="slds-table slds-table_bordered slds-table_cell-buffer slds-var-m-bottom_large">
+            <thead>
+              <tr>
+                <th>
+                  <div class="slds-text-heading_small headingColor">
+                    Policy Product Name
+                  </div>
+                </th>
+                <th>
+                  <div class="slds-text-heading_small headingColor">
+                    Policy Limit
+                  </div>
+                </th>
+                <th>
+                  <div class="slds-text-heading_small headingColor">
+                    Aggregate
+                  </div>
+
+                  
+                </th>
+                <th>
+
+                  <div class="slds-text-heading_small headingColor">
+                    Deductible Amount
+                  </div>
+                
+                </th>
+                <th>
+                  <div class="slds-text-heading_small headingColor">
+                    Premium Amount
+                  </div>
+                
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <template for:each={JSONPPD} for:item="row"
+                class="slds-table slds-table_bordered slds-table_cell-buffer slds-var-m-bottom_large">
+                <tr class="inputRows" key={row.Id}>
+                  <td>
+                    <p class = "slds-text-title_bold" >{row.Policy_Product_Name__c}</p>
+                  </td>
+                  <td>
+                    <lightning-formatted-number value={row.Policy_Limit__c} format-style="currency" minimum-fraction-digits="0"
+                    currency-code="CAD"></lightning-formatted-number>
+                  </td>
+                  <td>
+                    <lightning-formatted-number value={row.Aggregate__c} format-style="currency" minimum-fraction-digits="0"
+                    currency-code="CAD"></lightning-formatted-number>
+                    
+                  </td>
+                  <td>
+                    <lightning-formatted-number value={row.DeductibleAmount} format-style="currency" minimum-fraction-digits="0"
+                    currency-code="CAD"></lightning-formatted-number>
+                    
+                  </td>
+                  <td>
+                    <lightning-formatted-number value={row.PremiumAmount} format-style="currency" minimum-fraction-digits="0"
+                    currency-code="CAD"></lightning-formatted-number>
+                    
+                    
+                  </td>
+                </tr>
+              </template>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- <lightning-datatable 
+         data={JSONPPD} 
+         columns={columns} 
+         key-field="Id" 
+         resize-column-disabled
+         hide-checkbox-column>
+        </lightning-datatable> -->
+      </template>
+
+      <template if:true={error}>
+        {error}
+      </template>
+    </template>
+  </lightning-card>
+  <br>
+  <!--total premium table-->
+
+  <div class="slds-text-heading_small headingColor" style="font-weight:bold">
+    Total Premium Amount
+  </div>
+  
+  <lightning-card>
+    <template if:true={ArrayPremium} class="slds-scrollable_none">
+      <table class="slds-table slds-table_bordered slds-table_cell-buffer slds-var-m-bottom_large d">
+        <thead>
+          <tr>
+            <th>
+              <div class="slds-text-heading_small headingColor">
+                Description
+              </div>
+            </th>
+            <th>
+              <div class="slds-text-heading_small headingColor">
+                Total Premium
+              </div>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="inputRows">
+            <td>
+              <p  class = "slds-text-title_bold" >Net Premium</p>
+              
+            </td>
+            <td>
+              <lightning-formatted-number value={polAmo} format-style="currency" minimum-fraction-digits="0"
+              currency-code="CAD"></lightning-formatted-number>
+              
+            </td>
+          </tr>
+        </tbody>
+      </table>
+   
+    </template>
+  </lightning-card>
+  <br>
+
+  <!-- Tax Table-->
+  <div class="slds-text-heading_small headingColor" style="font-weight:bold">
+    Tax Details
+  </div>
+  
+  <lightning-card>
+    <template if:true={ArraybillingState} class="slds-scrollable_none">
+      <table class="slds-table slds-table_bordered slds-table_cell-buffer slds-var-m-bottom_large d">
+        <thead>
+          <tr>
+            <th>
+              <div class="slds-text-heading_small headingColor">
+                Description
+              </div>
+            </th>
+            <th>
+              <div class="slds-text-heading_small headingColor">
+                Total Premium
+              </div>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="inputRows">
+            <td>
+              <p class = "slds-text-title_bold">{ProvinceWithTax}</p><!--ProvinceWithTax-->
+            </td>
+            <td>
+              <lightning-formatted-number value={TaxAppliedIn} format-style="currency" minimum-fraction-digits="0"
+              currency-code="CAD"></lightning-formatted-number>
+              <!--TaxAppliedIn-->
+              
+            </td>
+          </tr>
+          <tr class="inputRows">
+            <td>
+              <p class = "slds-text-title_bold">{SecondRowOfTax}</p>
+    
+              
+            </td>
+            <td>
+              <lightning-formatted-number value={TaxApplied} format-style="currency" minimum-fraction-digits="0"
+              currency-code="CAD"></lightning-formatted-number>
+              
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <!-- <lightning-datatable data={ArraybillingState} 
+                          columns={SumPremium} 
+                          key-field="Id"
+                          resize-column-disabled
+                          min-column-width=10px
+                          hide-checkbox-column>
+</lightning-datatable> -->
+    </template>
+  </lightning-card>
+  <br>
+
+
+  <!--Fee table-->
+
+<div class="slds-text-heading_small headingColor" style="font-weight:bold">
+  Fee Details
+</div>
+
+
+  <lightning-card>
+    <template if:true={quotecomp} class="slds-scrollable_none">
+      <table class="slds-table slds-table_bordered slds-table_cell-buffer slds-var-m-bottom_large d">
+        <thead>
+          <tr>
+            <th>
+              <div class="slds-text-heading_small headingColor">
+                Fee
+              </div>
+            </th>
+            <th>
+              <div class="slds-text-heading_small headingColor">
+                Amount
+              </div>
+             
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="inputRows">
+            <td>
+             
+             <p class = "slds-text-title_bold" >{Transaction_Fee}</p> 
+            </td>
+            <td>
+             
+              <lightning-formatted-number value={TransactionFee} format-style="currency" minimum-fraction-digits="0"
+              currency-code="CAD"></lightning-formatted-number>
+
+
+              
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </template>
+  </lightning-card>
+  <br>
+
+<div class="slds-text-heading_small headingColor" style="font-weight:bold">
+  Total
+</div>
+  <lightning-card>
+    <template if:true={quotecomp} class="slds-scrollable_none">
+      <table class="slds-table slds-table_bordered slds-table_cell-buffer slds-var-m-bottom_large d">
+        <thead>
+          <tr>
+            <th>
+              <div class="slds-truncate ">
+
+                <div class="slds-text-heading_small headingColor">
+                  Detail
+                </div>
+
+                </div>
+            </th>
+            <th>
+
+                <div class="slds-text-heading_small headingColor">
+                  Amount
+                </div>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="inputRows">
+            <td>
+              <p class = "slds-text-title_bold ">{Net_Premium}</p>
+            </td>
+            <td>
+              <lightning-formatted-number value={FinalNetPremium} format-style="currency" minimum-fraction-digits="0"
+                        currency-code="CAD"></lightning-formatted-number>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+</template>
+  </lightning-card>
+  <br>
+
+  <div>
+  <div class="slds-text-heading_small headingColor">
+    Notes
+  </div>
+</div>
+
+    <div>
+      <ul class="slds-list_dotted">
+        <li>Quote entails all information related to Policy and it's Coverages</li>
+        <li>Change in coverage options must be finalized before the issuance of policy</li>
+        <li>Your default currency is set as <span class = "slds-text-title_bold" >CA$</span></li>
+      </ul>
+    </div>
+    
+
+  </br>
+
+  <div class="buttons slds-no-print">
+    <button class="slds-button slds-button_brand" onclick={PrintQuote}> Print Quote </button> &NonBreakingSpace;
+    &NonBreakingSpace;
+    <button class="slds-button slds-button_brand" onclick={handleQuoteClick}> Continue with Purchase</button>
+    
+    
+    <!--<button class="slds-button slds-button_brand" onclick={ExitQuote}> Save & Exit </button>-->
+
+  </div>
+
+
+
+
+</template>

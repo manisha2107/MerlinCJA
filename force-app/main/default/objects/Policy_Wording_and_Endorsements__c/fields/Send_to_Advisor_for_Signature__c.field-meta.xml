@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Send_to_Advisor_for_Signature__c</fullName>
+    <externalId>false</externalId>
+    <formula>&quot;&amp;solmgr=1&quot; +
+&quot;&amp;id=&quot; + Id +
+&quot;&amp;templateid=&quot; +  Conga_Template__r.Id  +
+&quot;&amp;csvisible=1&quot; +
+&quot;&amp;CSRecipient1=&quot; +   Policy__r.NameInsured.PersonContactID__c    +
+
+&quot;&amp;qmode=congasign&quot;</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Send to Advisor for Signature</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

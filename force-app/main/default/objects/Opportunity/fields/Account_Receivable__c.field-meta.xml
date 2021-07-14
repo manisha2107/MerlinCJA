@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_Receivable__c</fullName>
+    <externalId>false</externalId>
+    <formula>Premium_Amount__c -  Retail_Commission__c +  Transaction_Fees__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Amount receivable from the brokerage (Gross Amount - Retail Commission + Transaction Fees)</inlineHelpText>
+    <label>Account Receivable</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

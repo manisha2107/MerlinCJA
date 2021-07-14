@@ -1,0 +1,40 @@
+<template>
+
+    <lightning-card title="Insurance, Claims and Eligibility" icon-name="custom:custom14">
+        <ul class="slds-list_ordered">
+            <template for:each={accRecord} for:item="pQues">
+
+
+                <li key={pQues.Id}>
+
+                    <div>
+                        {pQues.Question__r.Question_Description__c}
+                    </div>
+
+                    <lightning-combobox name="province "  
+                                        id={pQues.Id}
+                                        value={province}
+                                                    placeholder="Select"
+                                                    options={options}
+                                                    onchange={selectionChangeHandler}
+                                                    required >
+                    </lightning-combobox>
+
+                    <!--<div>
+                        <select class="slds-select slds-size_1-of-3" name="optionSelect"  value = {} onchange={selectionChangeHandler}>
+                            <option value="NONE">None</option>
+                            <option value="YES">Yes</option>
+                            <option value="NO">No</option>
+                        </select>
+                    </div>
+                -->
+                    <br>
+
+                </li>
+
+                
+            </template>
+        </ul>
+    </lightning-card>
+
+</template>

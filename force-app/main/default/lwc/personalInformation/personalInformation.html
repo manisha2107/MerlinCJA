@@ -1,0 +1,98 @@
+<template>
+
+    <div class="stepTwo">
+        <lightning-card title="Applicant Information" icon-name="standard:account">
+            <div style="margin-left: 6%" if:true={error}>
+                <lightning-badge label={error} style="color: red;"></lightning-badge>
+            </div>
+
+
+            <template if:true={accRecord} >
+                <div class="slds-m-around--xx-large">
+                    <div class="container-fluid " >
+                        <lightning-input class="invvalidation slds-p-top_x-small" 
+                        label="First Name" placeholder="Enter First Name"
+                            name="accName" required="required" type="text" value={accRecord.FirstName}
+                            onchange={handleFieldChange} disabled></lightning-input>
+                            
+                        <lightning-input class="invvalidation slds-p-top_x-small" label="Last Name" placeholder="Enter Last Name"
+                            name="accName" required="required" type="text" value={accRecord.LastName}
+                            onchange={handleFieldChange} disabled></lightning-input>
+                            
+                        <lightning-input class="invvalidation slds-p-top_x-small" label="Email Address" placeholder="Enter Email Address"
+                            name="accEmail" required="required" type="email" value={accRecord.PersonEmail}
+                            onchange={handleFieldChange} disabled>
+                        </lightning-input>
+                        
+                        <!-- <lightning-input class="invvalidation slds-p-top_x-small" label="Phone Number"  message-when-pattern-mismatch="Not a valid phone number"
+                        placeholder="Enter your Phone Number In This Format xxx-xxx-xxxx" max-length="12"
+                            name="accPhone" required="required" type="phone" value={showPhone}
+                            onchange={handleFieldChange} pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                         >
+                        
+                        </lightning-input> -->
+                        <lightning-input 
+                        class="slds-p-top_x-small"
+                        placeholder="Enter your Phone Number In This Format xxx-xxx-xxxx"  
+                        type="tel" 
+                        label="Mobile Phone" value={accRecord.Phone}  onchange={handleFieldChange} 
+                        pattern="^\(\d{3}\)\s\d{3}-\d{4}$" 
+                        message-when-pattern-mismatch="Not a valid phone number"
+                       
+                        >
+                        </lightning-input>
+
+                        <lightning-input class="invvalidation slds-p-top_x-small" label="Billing Street" placeholder="Enter Billing Street"
+                            name="accName" required="required" type="text" value={accRecord.BillingStreet}
+                            onchange={handleFieldChange}></lightning-input>
+
+                        <lightning-input class="invvalidation slds-p-top_x-small" label="Suite Number" placeholder="Enter Suite Number"
+                            name="accName" type="text" value={accRecord.Suit__c} onchange={handleFieldChange}>
+                        </lightning-input>
+                        
+                        <lightning-input class="invvalidation slds-p-top_x-small" label="Billing City" placeholder="Enter Billing City"
+                            name="accPhone" type="text" value={accRecord.BillingCity} 
+                            onchange={handleFieldChange} required>
+                        </lightning-input>
+                        
+                        <lightning-combobox class="invvalidation slds-p-top_x-small" name="accMailingState" label="Billing Province"
+                            placeholder="Enter Billing Province" value={accRecord.BillingState} options={options}
+                            onchange={handleFieldChange} required>
+                        </lightning-combobox>
+                        
+                        <!-- <lightning-input class="invvalidation slds-p-top_x-small" label="Billing PostalCode"
+                            placeholder="Enter Billing PostalCode" name="accEmail" required="required" type="text"
+                            value={accRecord.BillingPostalCode} onchange={handleFieldChange}>
+                        </lightning-input> -->
+                        <lightning-input placeholder="Enter Billing PostalCode" class="input_required slds-p-top_x-small" type="text" 
+                        label="Postal Code"  onchange={handleFieldChange} maxlength="7" 
+                        pattern="[A|B|C|E|G|H|J|K|L|M|N|P|R|S|T|V|X|Y|a|b|c|e|g|h|j|k|l|m|n|p|r|s|t|v|x|y][0-9][A-Za-z] [0-9][A-Za-z][0-9]" 
+                        required message-when-value-missing="cannot accept empty field" 
+                        message-when-pattern-mismatch="Not a valid postal code"></lightning-input>
+                        
+                        <lightning-input class="invvalidation slds-p-top_x-small" label="Billing Country"
+                            placeholder="Enter Billing Country" name="accEmail" required="required" type="text"
+                            value={accRecord.BillingCountry} onchange={handleFieldChange} disabled>
+                        </lightning-input>
+                        
+
+                        <lightning-input class="invvalidation slds-p-top_x-small" label="Sponsoring Insurance Company"
+                            placeholder="Enter Sponsoring Insurance Company" name="accEmail" type="text"
+                            value={accRecord.HiddenAccount__r.Name} onchange={handleFieldChange} disabled>
+                        </lightning-input>
+                        <br />
+
+                    </div>
+
+                    <lightning-button label="Save & Next" onclick={handleSave} variant="brand"></lightning-button>
+
+                </div>
+
+
+            </template>
+        </lightning-card>
+    </div>
+
+
+
+</template>

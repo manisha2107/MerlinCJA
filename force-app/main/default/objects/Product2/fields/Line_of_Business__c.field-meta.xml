@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Line_of_Business__c</fullName>
+    <externalId>false</externalId>
+    <label>Line of Business</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Professional Liability</fullName>
+                <default>false</default>
+                <label>Professional Liability</label>
+            </value>
+            <value>
+                <fullName>Casualty</fullName>
+                <default>false</default>
+                <label>Casualty</label>
+            </value>
+            <value>
+                <fullName>Property</fullName>
+                <default>false</default>
+                <label>Property</label>
+            </value>
+            <value>
+                <fullName>Cyber Liability</fullName>
+                <default>false</default>
+                <label>Cyber Liability</label>
+            </value>
+            <value>
+                <fullName>Management Liability</fullName>
+                <default>false</default>
+                <label>Management Liability</label>
+            </value>
+            <value>
+                <fullName>Fidelity Bonds</fullName>
+                <default>false</default>
+                <label>Fidelity Bonds</label>
+            </value>
+            <value>
+                <fullName>Surety Bonds</fullName>
+                <default>false</default>
+                <label>Surety Bonds</label>
+            </value>
+            <value>
+                <fullName>Transaction Liability</fullName>
+                <default>false</default>
+                <label>Transaction Liability</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

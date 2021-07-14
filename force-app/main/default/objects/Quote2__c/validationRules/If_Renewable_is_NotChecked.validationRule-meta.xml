@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>If_Renewable_is_NotChecked</fullName>
+    <active>false</active>
+    <description>if is renewable is not checked then renewal date should be null</description>
+    <errorConditionFormula>AND( Is_Renewable__c =TRUE,  ISBLANK( Renewal_Date__c ) )</errorConditionFormula>
+    <errorDisplayField>Renewal_Date__c</errorDisplayField>
+    <errorMessage>Please enter a Renewal Date</errorMessage>
+</ValidationRule>

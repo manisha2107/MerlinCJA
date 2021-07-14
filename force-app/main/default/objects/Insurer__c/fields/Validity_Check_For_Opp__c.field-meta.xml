@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Validity_Check_For_Opp__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>If true will not allow the user o create a new insurer</description>
+    <externalId>false</externalId>
+    <label>Validity Check For Opp</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

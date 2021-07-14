@@ -1,0 +1,4 @@
+.myClass {
+     fill:var(--sds-c-icon-color-background, rgb(152,61,126));
+     background-color:var(--sds-c-icon-color-background, rgb(152,61,126));
+}

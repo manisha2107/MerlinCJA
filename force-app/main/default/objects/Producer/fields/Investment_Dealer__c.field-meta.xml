@@ -1,0 +1,1336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Investment_Dealer__c</fullName>
+    <externalId>false</externalId>
+    <label>Investment Dealer</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>3i Financial Investment Services Inc.</fullName>
+                <default>false</default>
+                <label>3i Financial Investment Services Inc.</label>
+            </value>
+            <value>
+                <fullName>Acadia Financial Services Inc.</fullName>
+                <default>false</default>
+                <label>Acadia Financial Services Inc.</label>
+            </value>
+            <value>
+                <fullName>ACC Global Financial Inc.</fullName>
+                <default>false</default>
+                <label>ACC Global Financial Inc.</label>
+            </value>
+            <value>
+                <fullName>Acker Finley Inc.</fullName>
+                <default>false</default>
+                <label>Acker Finley Inc.</label>
+            </value>
+            <value>
+                <fullName>Acumen Capital Finance Partners Limited</fullName>
+                <default>false</default>
+                <label>Acumen Capital Finance Partners Limited</label>
+            </value>
+            <value>
+                <fullName>Addington Financial Corporation</fullName>
+                <default>false</default>
+                <label>Addington Financial Corporation</label>
+            </value>
+            <value>
+                <fullName>AGF Securities (Canada) Limited</fullName>
+                <default>false</default>
+                <label>AGF Securities (Canada) Limited</label>
+            </value>
+            <value>
+                <fullName>Agora Dealer Services Corp.</fullName>
+                <default>false</default>
+                <label>Agora Dealer Services Corp.</label>
+            </value>
+            <value>
+                <fullName>Aldersley Securities Inc.</fullName>
+                <default>false</default>
+                <label>Aldersley Securities Inc.</label>
+            </value>
+            <value>
+                <fullName>Aligned Capital Partners Inc.</fullName>
+                <default>false</default>
+                <label>Aligned Capital Partners Inc.</label>
+            </value>
+            <value>
+                <fullName>Altimum Mutuals Inc.</fullName>
+                <default>false</default>
+                <label>Altimum Mutuals Inc.</label>
+            </value>
+            <value>
+                <fullName>Amerity Wealth Management Inc.</fullName>
+                <default>false</default>
+                <label>Amerity Wealth Management Inc.</label>
+            </value>
+            <value>
+                <fullName>Argosy Securities Inc.</fullName>
+                <default>false</default>
+                <label>Argosy Securities Inc.</label>
+            </value>
+            <value>
+                <fullName>ARTECH Asset Advisory Services Inc.</fullName>
+                <default>false</default>
+                <label>ARTECH Asset Advisory Services Inc.</label>
+            </value>
+            <value>
+                <fullName>Arton Investments, Inc.</fullName>
+                <default>false</default>
+                <label>Arton Investments, Inc.</label>
+            </value>
+            <value>
+                <fullName>Assante Capital Management Ltd.</fullName>
+                <default>false</default>
+                <label>Assante Capital Management Ltd.</label>
+            </value>
+            <value>
+                <fullName>Assante Financial Management Ltd.</fullName>
+                <default>false</default>
+                <label>Assante Financial Management Ltd.</label>
+            </value>
+            <value>
+                <fullName>ATB Capital Markets Inc.</fullName>
+                <default>false</default>
+                <label>ATB Capital Markets Inc.</label>
+            </value>
+            <value>
+                <fullName>ATB Securities Inc.</fullName>
+                <default>false</default>
+                <label>ATB Securities Inc.</label>
+            </value>
+            <value>
+                <fullName>AURAY Capital Canada Inc.</fullName>
+                <default>false</default>
+                <label>AURAY Capital Canada Inc.</label>
+            </value>
+            <value>
+                <fullName>B2B Bank Financial Services Inc.</fullName>
+                <default>false</default>
+                <label>B2B Bank Financial Services Inc.</label>
+            </value>
+            <value>
+                <fullName>B2B Bank Securities Services Inc.</fullName>
+                <default>false</default>
+                <label>B2B Bank Securities Services Inc.</label>
+            </value>
+            <value>
+                <fullName>Barclays Capital Canada Inc.</fullName>
+                <default>false</default>
+                <label>Barclays Capital Canada Inc.</label>
+            </value>
+            <value>
+                <fullName>Beacon Securities Limited</fullName>
+                <default>false</default>
+                <label>Beacon Securities Limited</label>
+            </value>
+            <value>
+                <fullName>Belay Wealth Inc.</fullName>
+                <default>false</default>
+                <label>Belay Wealth Inc.</label>
+            </value>
+            <value>
+                <fullName>BFIN Securities LP</fullName>
+                <default>false</default>
+                <label>BFIN Securities LP</label>
+            </value>
+            <value>
+                <fullName>Bloom Burton Securities Inc.</fullName>
+                <default>false</default>
+                <label>Bloom Burton Securities Inc.</label>
+            </value>
+            <value>
+                <fullName>Bloomberg Tradebook Canada Company</fullName>
+                <default>false</default>
+                <label>Bloomberg Tradebook Canada Company</label>
+            </value>
+            <value>
+                <fullName>BMO Investments Inc.</fullName>
+                <default>false</default>
+                <label>BMO Investments Inc.</label>
+            </value>
+            <value>
+                <fullName>BMO InvestorLine Inc.</fullName>
+                <default>false</default>
+                <label>BMO InvestorLine Inc.</label>
+            </value>
+            <value>
+                <fullName>BMO Nesbitt Burns Inc.</fullName>
+                <default>false</default>
+                <label>BMO Nesbitt Burns Inc.</label>
+            </value>
+            <value>
+                <fullName>BNP Paribas (Canada) Securities Inc.</fullName>
+                <default>false</default>
+                <label>BNP Paribas (Canada) Securities Inc.</label>
+            </value>
+            <value>
+                <fullName>Brant Securities Limited</fullName>
+                <default>false</default>
+                <label>Brant Securities Limited</label>
+            </value>
+            <value>
+                <fullName>Caldwell Securities Ltd.</fullName>
+                <default>false</default>
+                <label>Caldwell Securities Ltd.</label>
+            </value>
+            <value>
+                <fullName>Canaccord Genuity Corp.</fullName>
+                <default>false</default>
+                <label>Canaccord Genuity Corp.</label>
+            </value>
+            <value>
+                <fullName>Canadian ShareOwner Investments Inc.</fullName>
+                <default>false</default>
+                <label>Canadian ShareOwner Investments Inc.</label>
+            </value>
+            <value>
+                <fullName>Canadian Western Financial Ltd.</fullName>
+                <default>false</default>
+                <label>Canadian Western Financial Ltd.</label>
+            </value>
+            <value>
+                <fullName>CanDeal.ca Inc.</fullName>
+                <default>false</default>
+                <label>CanDeal.ca Inc.</label>
+            </value>
+            <value>
+                <fullName>Candor Financial Group Inc.</fullName>
+                <default>false</default>
+                <label>Candor Financial Group Inc.</label>
+            </value>
+            <value>
+                <fullName>Canfin Magellan Investments Inc.</fullName>
+                <default>false</default>
+                <label>Canfin Magellan Investments Inc.</label>
+            </value>
+            <value>
+                <fullName>Cantor Fitzgerald Canada Corporation</fullName>
+                <default>false</default>
+                <label>Cantor Fitzgerald Canada Corporation</label>
+            </value>
+            <value>
+                <fullName>Carte Wealth Management Inc.</fullName>
+                <default>false</default>
+                <label>Carte Wealth Management Inc.</label>
+            </value>
+            <value>
+                <fullName>Casgrain &amp; Company Limited</fullName>
+                <default>false</default>
+                <label>Casgrain &amp; Company Limited</label>
+            </value>
+            <value>
+                <fullName>CI Investment Services Inc.</fullName>
+                <default>false</default>
+                <label>CI Investment Services Inc.</label>
+            </value>
+            <value>
+                <fullName>CIBC Investor Services Inc.</fullName>
+                <default>false</default>
+                <label>CIBC Investor Services Inc.</label>
+            </value>
+            <value>
+                <fullName>CIBC Securities Inc.</fullName>
+                <default>false</default>
+                <label>CIBC Securities Inc.</label>
+            </value>
+            <value>
+                <fullName>CIBC World Markets Inc.</fullName>
+                <default>false</default>
+                <label>CIBC World Markets Inc.</label>
+            </value>
+            <value>
+                <fullName>Citadel Securities Canada ULC</fullName>
+                <default>false</default>
+                <label>Citadel Securities Canada ULC</label>
+            </value>
+            <value>
+                <fullName>Citigroup Global Markets Canada Inc.</fullName>
+                <default>false</default>
+                <label>Citigroup Global Markets Canada Inc.</label>
+            </value>
+            <value>
+                <fullName>CJ Securities Inc.</fullName>
+                <default>false</default>
+                <label>CJ Securities Inc.</label>
+            </value>
+            <value>
+                <fullName>Clarus Securities Inc.</fullName>
+                <default>false</default>
+                <label>Clarus Securities Inc.</label>
+            </value>
+            <value>
+                <fullName>CMC Markets Canada Inc.</fullName>
+                <default>false</default>
+                <label>CMC Markets Canada Inc.</label>
+            </value>
+            <value>
+                <fullName>Co-operators Financial Investment Services Inc.</fullName>
+                <default>false</default>
+                <label>Co-operators Financial Investment Services Inc.</label>
+            </value>
+            <value>
+                <fullName>Cormark Securities Inc.</fullName>
+                <default>false</default>
+                <label>Cormark Securities Inc.</label>
+            </value>
+            <value>
+                <fullName>Creation Wealth Capital Inc.</fullName>
+                <default>false</default>
+                <label>Creation Wealth Capital Inc.</label>
+            </value>
+            <value>
+                <fullName>Credential Asset Management Inc.</fullName>
+                <default>false</default>
+                <label>Credential Asset Management Inc.</label>
+            </value>
+            <value>
+                <fullName>Credential Qtrade Securities Inc.</fullName>
+                <default>false</default>
+                <label>Credential Qtrade Securities Inc.</label>
+            </value>
+            <value>
+                <fullName>Credit Suisse Securities (Canada), Inc.</fullName>
+                <default>false</default>
+                <label>Credit Suisse Securities (Canada), Inc.</label>
+            </value>
+            <value>
+                <fullName>CTI Capital Securities Inc.</fullName>
+                <default>false</default>
+                <label>CTI Capital Securities Inc.</label>
+            </value>
+            <value>
+                <fullName>Cumberland Private Wealth Management Inc.</fullName>
+                <default>false</default>
+                <label>Cumberland Private Wealth Management Inc.</label>
+            </value>
+            <value>
+                <fullName>CWB McLean &amp; Partners Wealth Management Ltd.</fullName>
+                <default>false</default>
+                <label>CWB McLean &amp; Partners Wealth Management Ltd.</label>
+            </value>
+            <value>
+                <fullName>D.W. Good Investment Company Ltd.</fullName>
+                <default>false</default>
+                <label>D.W. Good Investment Company Ltd.</label>
+            </value>
+            <value>
+                <fullName>De Thomas Wealth Management Corp.</fullName>
+                <default>false</default>
+                <label>De Thomas Wealth Management Corp.</label>
+            </value>
+            <value>
+                <fullName>Desjardins Financial Security Investments Inc.</fullName>
+                <default>false</default>
+                <label>Desjardins Financial Security Investments Inc.</label>
+            </value>
+            <value>
+                <fullName>Desjardins Financial Services Firm Inc.</fullName>
+                <default>false</default>
+                <label>Desjardins Financial Services Firm Inc.</label>
+            </value>
+            <value>
+                <fullName>Desjardins Securities Inc.</fullName>
+                <default>false</default>
+                <label>Desjardins Securities Inc.</label>
+            </value>
+            <value>
+                <fullName>Deutsche Bank Securities Limited</fullName>
+                <default>false</default>
+                <label>Deutsche Bank Securities Limited</label>
+            </value>
+            <value>
+                <fullName>Doheny Securities Limited</fullName>
+                <default>false</default>
+                <label>Doheny Securities Limited</label>
+            </value>
+            <value>
+                <fullName>Donro Financial Ltd.</fullName>
+                <default>false</default>
+                <label>Donro Financial Ltd.</label>
+            </value>
+            <value>
+                <fullName>Dubeau Capital &amp; Cie Ltée.</fullName>
+                <default>false</default>
+                <label>Dubeau Capital &amp; Cie Ltée.</label>
+            </value>
+            <value>
+                <fullName>Echelon Wealth Partners Inc.</fullName>
+                <default>false</default>
+                <label>Echelon Wealth Partners Inc.</label>
+            </value>
+            <value>
+                <fullName>Educators Financial Group Inc.</fullName>
+                <default>false</default>
+                <label>Educators Financial Group Inc.</label>
+            </value>
+            <value>
+                <fullName>Edward Jones Investments</fullName>
+                <default>false</default>
+                <label>Edward Jones Investments</label>
+            </value>
+            <value>
+                <fullName>Eight Capital Corp.</fullName>
+                <default>false</default>
+                <label>Eight Capital Corp.</label>
+            </value>
+            <value>
+                <fullName>Emerging Equities Inc.</fullName>
+                <default>false</default>
+                <label>Emerging Equities Inc.</label>
+            </value>
+            <value>
+                <fullName>EquiLend Canada Corp.</fullName>
+                <default>false</default>
+                <label>EquiLend Canada Corp.</label>
+            </value>
+            <value>
+                <fullName>Equity Associates Inc.</fullName>
+                <default>false</default>
+                <label>Equity Associates Inc.</label>
+            </value>
+            <value>
+                <fullName>Excel Private Wealth Inc.</fullName>
+                <default>false</default>
+                <label>Excel Private Wealth Inc.</label>
+            </value>
+            <value>
+                <fullName>Fernhill Financial Corporation</fullName>
+                <default>false</default>
+                <label>Fernhill Financial Corporation</label>
+            </value>
+            <value>
+                <fullName>Fidelity Clearing Canada ULC</fullName>
+                <default>false</default>
+                <label>Fidelity Clearing Canada ULC</label>
+            </value>
+            <value>
+                <fullName>FIN-XO Securities Inc.</fullName>
+                <default>false</default>
+                <label>FIN-XO Securities Inc.</label>
+            </value>
+            <value>
+                <fullName>First Leaside Securities Inc.</fullName>
+                <default>false</default>
+                <label>First Leaside Securities Inc.</label>
+            </value>
+            <value>
+                <fullName>Fortification Capital inc.</fullName>
+                <default>false</default>
+                <label>Fortification Capital inc.</label>
+            </value>
+            <value>
+                <fullName>Fortrade Canada Limited</fullName>
+                <default>false</default>
+                <label>Fortrade Canada Limited</label>
+            </value>
+            <value>
+                <fullName>Foster &amp; Associates Financial Services Inc.</fullName>
+                <default>false</default>
+                <label>Foster &amp; Associates Financial Services Inc.</label>
+            </value>
+            <value>
+                <fullName>Friedberg Mercantile Group Ltd.</fullName>
+                <default>false</default>
+                <label>Friedberg Mercantile Group Ltd.</label>
+            </value>
+            <value>
+                <fullName>Frontier Capital Funds Inc.</fullName>
+                <default>false</default>
+                <label>Frontier Capital Funds Inc.</label>
+            </value>
+            <value>
+                <fullName>FTC Investor Services Inc.</fullName>
+                <default>false</default>
+                <label>FTC Investor Services Inc.</label>
+            </value>
+            <value>
+                <fullName>FundEX Investments Inc.</fullName>
+                <default>false</default>
+                <label>FundEX Investments Inc.</label>
+            </value>
+            <value>
+                <fullName>Funds Direct Canada Inc.</fullName>
+                <default>false</default>
+                <label>Funds Direct Canada Inc.</label>
+            </value>
+            <value>
+                <fullName>GAIN Capital - FOREX.com Canada Limited</fullName>
+                <default>false</default>
+                <label>GAIN Capital - FOREX.com Canada Limited</label>
+            </value>
+            <value>
+                <fullName>Generation IACP Inc.</fullName>
+                <default>false</default>
+                <label>Generation IACP Inc.</label>
+            </value>
+            <value>
+                <fullName>GF Securities (Canada) Company Limited</fullName>
+                <default>false</default>
+                <label>GF Securities (Canada) Company Limited</label>
+            </value>
+            <value>
+                <fullName>Global Maxfin Investments Inc.</fullName>
+                <default>false</default>
+                <label>Global Maxfin Investments Inc.</label>
+            </value>
+            <value>
+                <fullName>Goldman Sachs Canada Inc.</fullName>
+                <default>false</default>
+                <label>Goldman Sachs Canada Inc.</label>
+            </value>
+            <value>
+                <fullName>Goldstein Financial Investments Inc.</fullName>
+                <default>false</default>
+                <label>Goldstein Financial Investments Inc.</label>
+            </value>
+            <value>
+                <fullName>Goodwood Inc.</fullName>
+                <default>false</default>
+                <label>Goodwood Inc.</label>
+            </value>
+            <value>
+                <fullName>GP Wealth Management Corporation</fullName>
+                <default>false</default>
+                <label>GP Wealth Management Corporation</label>
+            </value>
+            <value>
+                <fullName>Gravitas Securities Inc.</fullName>
+                <default>false</default>
+                <label>Gravitas Securities Inc.</label>
+            </value>
+            <value>
+                <fullName>Greg Pompeo Enterprises Inc.</fullName>
+                <default>false</default>
+                <label>Greg Pompeo Enterprises Inc.</label>
+            </value>
+            <value>
+                <fullName>Groupe Cloutier Investments inc.</fullName>
+                <default>false</default>
+                <label>Groupe Cloutier Investments inc.</label>
+            </value>
+            <value>
+                <fullName>Hampton Securities Limited</fullName>
+                <default>false</default>
+                <label>Hampton Securities Limited</label>
+            </value>
+            <value>
+                <fullName>Harbourfront Wealth Management Inc.</fullName>
+                <default>false</default>
+                <label>Harbourfront Wealth Management Inc.</label>
+            </value>
+            <value>
+                <fullName>Haywood Securities Inc.</fullName>
+                <default>false</default>
+                <label>Haywood Securities Inc.</label>
+            </value>
+            <value>
+                <fullName>Highgate Group Inc.</fullName>
+                <default>false</default>
+                <label>Highgate Group Inc.</label>
+            </value>
+            <value>
+                <fullName>HSBC Investment Funds (Canada) Inc.</fullName>
+                <default>false</default>
+                <label>HSBC Investment Funds (Canada) Inc.</label>
+            </value>
+            <value>
+                <fullName>HSBC Securities (Canada) Inc.</fullName>
+                <default>false</default>
+                <label>HSBC Securities (Canada) Inc.</label>
+            </value>
+            <value>
+                <fullName>HUB Capital Inc.</fullName>
+                <default>false</default>
+                <label>HUB Capital Inc.</label>
+            </value>
+            <value>
+                <fullName>Independent Trading Group (ITG) Inc.</fullName>
+                <default>false</default>
+                <label>Independent Trading Group (ITG) Inc.</label>
+            </value>
+            <value>
+                <fullName>Industrial Alliance Securities Inc.</fullName>
+                <default>false</default>
+                <label>Industrial Alliance Securities Inc.</label>
+            </value>
+            <value>
+                <fullName>INFOR Financial Inc.</fullName>
+                <default>false</default>
+                <label>INFOR Financial Inc.</label>
+            </value>
+            <value>
+                <fullName>Instinet Canada Cross Limited</fullName>
+                <default>false</default>
+                <label>Instinet Canada Cross Limited</label>
+            </value>
+            <value>
+                <fullName>Instinet Canada Limited</fullName>
+                <default>false</default>
+                <label>Instinet Canada Limited</label>
+            </value>
+            <value>
+                <fullName>Integral Wealth Securities Limited</fullName>
+                <default>false</default>
+                <label>Integral Wealth Securities Limited</label>
+            </value>
+            <value>
+                <fullName>Interactive Brokers Canada Inc.</fullName>
+                <default>false</default>
+                <label>Interactive Brokers Canada Inc.</label>
+            </value>
+            <value>
+                <fullName>INTL FCStone Financial (Canada) Inc.</fullName>
+                <default>false</default>
+                <label>INTL FCStone Financial (Canada) Inc.</label>
+            </value>
+            <value>
+                <fullName>Investia Financial Services Inc.</fullName>
+                <default>false</default>
+                <label>Investia Financial Services Inc.</label>
+            </value>
+            <value>
+                <fullName>Investors Group Financial Services Inc.</fullName>
+                <default>false</default>
+                <label>Investors Group Financial Services Inc.</label>
+            </value>
+            <value>
+                <fullName>Investors Group Securities Inc.</fullName>
+                <default>false</default>
+                <label>Investors Group Securities Inc.</label>
+            </value>
+            <value>
+                <fullName>IPC Investment Corporation</fullName>
+                <default>false</default>
+                <label>IPC Investment Corporation</label>
+            </value>
+            <value>
+                <fullName>IPC Securities Corporation</fullName>
+                <default>false</default>
+                <label>IPC Securities Corporation</label>
+            </value>
+            <value>
+                <fullName>J.P. Morgan Securities Canada Inc.</fullName>
+                <default>false</default>
+                <label>J.P. Morgan Securities Canada Inc.</label>
+            </value>
+            <value>
+                <fullName>JC Clark Ltd.</fullName>
+                <default>false</default>
+                <label>JC Clark Ltd.</label>
+            </value>
+            <value>
+                <fullName>Jefferies Securities, Inc.</fullName>
+                <default>false</default>
+                <label>Jefferies Securities, Inc.</label>
+            </value>
+            <value>
+                <fullName>JitneyTrade Inc.</fullName>
+                <default>false</default>
+                <label>JitneyTrade Inc.</label>
+            </value>
+            <value>
+                <fullName>JonesTrading Canada Inc.</fullName>
+                <default>false</default>
+                <label>JonesTrading Canada Inc.</label>
+            </value>
+            <value>
+                <fullName>JVK Life &amp; Wealth Advisory Group Inc.</fullName>
+                <default>false</default>
+                <label>JVK Life &amp; Wealth Advisory Group Inc.</label>
+            </value>
+            <value>
+                <fullName>K.J. Harrison &amp; Partners Inc.</fullName>
+                <default>false</default>
+                <label>K.J. Harrison &amp; Partners Inc.</label>
+            </value>
+            <value>
+                <fullName>Kernaghan &amp; Partners Ltd.</fullName>
+                <default>false</default>
+                <label>Kernaghan &amp; Partners Ltd.</label>
+            </value>
+            <value>
+                <fullName>Keybase Financial Group Inc.</fullName>
+                <default>false</default>
+                <label>Keybase Financial Group Inc.</label>
+            </value>
+            <value>
+                <fullName>Kingwest &amp; Company</fullName>
+                <default>false</default>
+                <label>Kingwest &amp; Company</label>
+            </value>
+            <value>
+                <fullName>Lakeshore Securities Inc.</fullName>
+                <default>false</default>
+                <label>Lakeshore Securities Inc.</label>
+            </value>
+            <value>
+                <fullName>Laurentian Bank Securities Inc.</fullName>
+                <default>false</default>
+                <label>Laurentian Bank Securities Inc.</label>
+            </value>
+            <value>
+                <fullName>LBC Financial Services</fullName>
+                <default>false</default>
+                <label>LBC Financial Services</label>
+            </value>
+            <value>
+                <fullName>Leduc International Financial Services Inc.</fullName>
+                <default>false</default>
+                <label>Leduc International Financial Services Inc.</label>
+            </value>
+            <value>
+                <fullName>Leede Jones Gable Inc.</fullName>
+                <default>false</default>
+                <label>Leede Jones Gable Inc.</label>
+            </value>
+            <value>
+                <fullName>Leith Wheeler Investment Funds Ltd.</fullName>
+                <default>false</default>
+                <label>Leith Wheeler Investment Funds Ltd.</label>
+            </value>
+            <value>
+                <fullName>Lightyear Capital Inc.</fullName>
+                <default>false</default>
+                <label>Lightyear Capital Inc.</label>
+            </value>
+            <value>
+                <fullName>Liquidnet Canada Inc.</fullName>
+                <default>false</default>
+                <label>Liquidnet Canada Inc.</label>
+            </value>
+            <value>
+                <fullName>LP Financial Planning Services Ltd.</fullName>
+                <default>false</default>
+                <label>LP Financial Planning Services Ltd.</label>
+            </value>
+            <value>
+                <fullName>M Partners Inc.</fullName>
+                <default>false</default>
+                <label>M Partners Inc.</label>
+            </value>
+            <value>
+                <fullName>Mackie Research Capital Corporation</fullName>
+                <default>false</default>
+                <label>Mackie Research Capital Corporation</label>
+            </value>
+            <value>
+                <fullName>Macquarie Capital Markets Canada Ltd.</fullName>
+                <default>false</default>
+                <label>Macquarie Capital Markets Canada Ltd.</label>
+            </value>
+            <value>
+                <fullName>Maison Placements Canada Inc.</fullName>
+                <default>false</default>
+                <label>Maison Placements Canada Inc.</label>
+            </value>
+            <value>
+                <fullName>Mandeville Private Client Inc.</fullName>
+                <default>false</default>
+                <label>Mandeville Private Client Inc.</label>
+            </value>
+            <value>
+                <fullName>Manulife Securities Incorporated</fullName>
+                <default>false</default>
+                <label>Manulife Securities Incorporated</label>
+            </value>
+            <value>
+                <fullName>Manulife Securities Investment Services Inc.</fullName>
+                <default>false</default>
+                <label>Manulife Securities Investment Services Inc.</label>
+            </value>
+            <value>
+                <fullName>MarketAxess Canada Company</fullName>
+                <default>false</default>
+                <label>MarketAxess Canada Company</label>
+            </value>
+            <value>
+                <fullName>Mawer Direct Investing Ltd.</fullName>
+                <default>false</default>
+                <label>Mawer Direct Investing Ltd.</label>
+            </value>
+            <value>
+                <fullName>McLean Financial Management Inc.</fullName>
+                <default>false</default>
+                <label>McLean Financial Management Inc.</label>
+            </value>
+            <value>
+                <fullName>MD Management Limited</fullName>
+                <default>false</default>
+                <label>MD Management Limited</label>
+            </value>
+            <value>
+                <fullName>Merrill Lynch Canada Inc.</fullName>
+                <default>false</default>
+                <label>Merrill Lynch Canada Inc.</label>
+            </value>
+            <value>
+                <fullName>MF Global Canada Co.</fullName>
+                <default>false</default>
+                <label>MF Global Canada Co.</label>
+            </value>
+            <value>
+                <fullName>Middlefield Capital Corporation</fullName>
+                <default>false</default>
+                <label>Middlefield Capital Corporation</label>
+            </value>
+            <value>
+                <fullName>Miles Santo and Associates Inc.</fullName>
+                <default>false</default>
+                <label>Miles Santo and Associates Inc.</label>
+            </value>
+            <value>
+                <fullName>Mirabaud Canada Inc.</fullName>
+                <default>false</default>
+                <label>Mirabaud Canada Inc.</label>
+            </value>
+            <value>
+                <fullName>Mizuho Securities Canada Inc.</fullName>
+                <default>false</default>
+                <label>Mizuho Securities Canada Inc.</label>
+            </value>
+            <value>
+                <fullName>Monarch Wealth Corporation</fullName>
+                <default>false</default>
+                <label>Monarch Wealth Corporation</label>
+            </value>
+            <value>
+                <fullName>Moneystrat Securities Inc.</fullName>
+                <default>false</default>
+                <label>Moneystrat Securities Inc.</label>
+            </value>
+            <value>
+                <fullName>Morgan Stanley Canada Limited</fullName>
+                <default>false</default>
+                <label>Morgan Stanley Canada Limited</label>
+            </value>
+            <value>
+                <fullName>Morgan Stanley Wealth Management Canada Inc.</fullName>
+                <default>false</default>
+                <label>Morgan Stanley Wealth Management Canada Inc.</label>
+            </value>
+            <value>
+                <fullName>MUFG Securities (Canada), Ltd.</fullName>
+                <default>false</default>
+                <label>MUFG Securities (Canada), Ltd.</label>
+            </value>
+            <value>
+                <fullName>National Bank Financial Inc.</fullName>
+                <default>false</default>
+                <label>National Bank Financial Inc.</label>
+            </value>
+            <value>
+                <fullName>National Bank Investments Inc.</fullName>
+                <default>false</default>
+                <label>National Bank Investments Inc.</label>
+            </value>
+            <value>
+                <fullName>Networth Financial Corp.</fullName>
+                <default>false</default>
+                <label>Networth Financial Corp.</label>
+            </value>
+            <value>
+                <fullName>Nour Private Wealth Inc.</fullName>
+                <default>false</default>
+                <label>Nour Private Wealth Inc.</label>
+            </value>
+            <value>
+                <fullName>OANDA (Canada) Corporation ULC</fullName>
+                <default>false</default>
+                <label>OANDA (Canada) Corporation ULC</label>
+            </value>
+            <value>
+                <fullName>Odlum Brown Limited</fullName>
+                <default>false</default>
+                <label>Odlum Brown Limited</label>
+            </value>
+            <value>
+                <fullName>Olympian Financial Inc.</fullName>
+                <default>false</default>
+                <label>Olympian Financial Inc.</label>
+            </value>
+            <value>
+                <fullName>OMG Wealth Management Inc.</fullName>
+                <default>false</default>
+                <label>OMG Wealth Management Inc.</label>
+            </value>
+            <value>
+                <fullName>OmniVita Custom Wealth Management Inc.</fullName>
+                <default>false</default>
+                <label>OmniVita Custom Wealth Management Inc.</label>
+            </value>
+            <value>
+                <fullName>OTT Financial Canada Inc.</fullName>
+                <default>false</default>
+                <label>OTT Financial Canada Inc.</label>
+            </value>
+            <value>
+                <fullName>PACE Securities Corp.</fullName>
+                <default>false</default>
+                <label>PACE Securities Corp.</label>
+            </value>
+            <value>
+                <fullName>Paradigm Capital Inc.</fullName>
+                <default>false</default>
+                <label>Paradigm Capital Inc.</label>
+            </value>
+            <value>
+                <fullName>Pavilion Global Markets Ltd.</fullName>
+                <default>false</default>
+                <label>Pavilion Global Markets Ltd.</label>
+            </value>
+            <value>
+                <fullName>PEAK Investment Services Inc.</fullName>
+                <default>false</default>
+                <label>PEAK Investment Services Inc.</label>
+            </value>
+            <value>
+                <fullName>PEAK Securities Inc.</fullName>
+                <default>false</default>
+                <label>PEAK Securities Inc.</label>
+            </value>
+            <value>
+                <fullName>Pembroke Private Wealth Management Ltd.</fullName>
+                <default>false</default>
+                <label>Pembroke Private Wealth Management Ltd.</label>
+            </value>
+            <value>
+                <fullName>Perimeter Markets Inc.</fullName>
+                <default>false</default>
+                <label>Perimeter Markets Inc.</label>
+            </value>
+            <value>
+                <fullName>Perry Securities Ltd.</fullName>
+                <default>false</default>
+                <label>Perry Securities Ltd.</label>
+            </value>
+            <value>
+                <fullName>Pershing Securities Canada Limited</fullName>
+                <default>false</default>
+                <label>Pershing Securities Canada Limited</label>
+            </value>
+            <value>
+                <fullName>Peters &amp; Co. Limited</fullName>
+                <default>false</default>
+                <label>Peters &amp; Co. Limited</label>
+            </value>
+            <value>
+                <fullName>Pewter Financial Ltd.</fullName>
+                <default>false</default>
+                <label>Pewter Financial Ltd.</label>
+            </value>
+            <value>
+                <fullName>PFSL Investments Canada Ltd.</fullName>
+                <default>false</default>
+                <label>PFSL Investments Canada Ltd.</label>
+            </value>
+            <value>
+                <fullName>Phillips, Hager &amp; North Investment Funds Ltd.</fullName>
+                <default>false</default>
+                <label>Phillips, Hager &amp; North Investment Funds Ltd.</label>
+            </value>
+            <value>
+                <fullName>PI Financial Corp.</fullName>
+                <default>false</default>
+                <label>PI Financial Corp.</label>
+            </value>
+            <value>
+                <fullName>Pictet Canada L.P.</fullName>
+                <default>false</default>
+                <label>Pictet Canada L.P.</label>
+            </value>
+            <value>
+                <fullName>Planmar Financial Corp.</fullName>
+                <default>false</default>
+                <label>Planmar Financial Corp.</label>
+            </value>
+            <value>
+                <fullName>Planning Circle Financial Group Inc.</fullName>
+                <default>false</default>
+                <label>Planning Circle Financial Group Inc.</label>
+            </value>
+            <value>
+                <fullName>Pollitt &amp; Co. Inc.</fullName>
+                <default>false</default>
+                <label>Pollitt &amp; Co. Inc.</label>
+            </value>
+            <value>
+                <fullName>Portfolio HiWay Inc.</fullName>
+                <default>false</default>
+                <label>Portfolio HiWay Inc.</label>
+            </value>
+            <value>
+                <fullName>Portfolio Strategies Corporation</fullName>
+                <default>false</default>
+                <label>Portfolio Strategies Corporation</label>
+            </value>
+            <value>
+                <fullName>Professional Investments (Kingston) Inc.</fullName>
+                <default>false</default>
+                <label>Professional Investments (Kingston) Inc.</label>
+            </value>
+            <value>
+                <fullName>Professionals&apos; Financial – Private Management Inc.</fullName>
+                <default>false</default>
+                <label>Professionals&apos; Financial – Private Management Inc.</label>
+            </value>
+            <value>
+                <fullName>Progressive Financial Strategy Capital Group Corp.</fullName>
+                <default>false</default>
+                <label>Progressive Financial Strategy Capital Group Corp.</label>
+            </value>
+            <value>
+                <fullName>PWL Capital Inc.</fullName>
+                <default>false</default>
+                <label>PWL Capital Inc.</label>
+            </value>
+            <value>
+                <fullName>Quadrus Investment Services Ltd.</fullName>
+                <default>false</default>
+                <label>Quadrus Investment Services Ltd.</label>
+            </value>
+            <value>
+                <fullName>Queen Financial Group Inc.</fullName>
+                <default>false</default>
+                <label>Queen Financial Group Inc.</label>
+            </value>
+            <value>
+                <fullName>Queensbury Securities Inc.</fullName>
+                <default>false</default>
+                <label>Queensbury Securities Inc.</label>
+            </value>
+            <value>
+                <fullName>Queensbury Strategies Inc.</fullName>
+                <default>false</default>
+                <label>Queensbury Strategies Inc.</label>
+            </value>
+            <value>
+                <fullName>Questrade, Inc.</fullName>
+                <default>false</default>
+                <label>Questrade, Inc.</label>
+            </value>
+            <value>
+                <fullName>R.J. O&apos;Brien &amp; Associates Canada Inc.</fullName>
+                <default>false</default>
+                <label>R.J. O&apos;Brien &amp; Associates Canada Inc.</label>
+            </value>
+            <value>
+                <fullName>Rabo Securities Canada, Inc.</fullName>
+                <default>false</default>
+                <label>Rabo Securities Canada, Inc.</label>
+            </value>
+            <value>
+                <fullName>Raymond James Ltd.</fullName>
+                <default>false</default>
+                <label>Raymond James Ltd.</label>
+            </value>
+            <value>
+                <fullName>RBC Direct Investing Inc.</fullName>
+                <default>false</default>
+                <label>RBC Direct Investing Inc.</label>
+            </value>
+            <value>
+                <fullName>RBC Dominion Securities Inc.</fullName>
+                <default>false</default>
+                <label>RBC Dominion Securities Inc.</label>
+            </value>
+            <value>
+                <fullName>Red Cloud Securities Inc.</fullName>
+                <default>false</default>
+                <label>Red Cloud Securities Inc.</label>
+            </value>
+            <value>
+                <fullName>Regent Capital Partners Inc.</fullName>
+                <default>false</default>
+                <label>Regent Capital Partners Inc.</label>
+            </value>
+            <value>
+                <fullName>Renaissance Capital Inc.</fullName>
+                <default>false</default>
+                <label>Renaissance Capital Inc.</label>
+            </value>
+            <value>
+                <fullName>Retire First Ltd.</fullName>
+                <default>false</default>
+                <label>Retire First Ltd.</label>
+            </value>
+            <value>
+                <fullName>RF Securities Clearing LP</fullName>
+                <default>false</default>
+                <label>RF Securities Clearing LP</label>
+            </value>
+            <value>
+                <fullName>RGF Wealth Management Ltd.</fullName>
+                <default>false</default>
+                <label>RGF Wealth Management Ltd.</label>
+            </value>
+            <value>
+                <fullName>Richardson Wealth Limited</fullName>
+                <default>false</default>
+                <label>Richardson Wealth Limited</label>
+            </value>
+            <value>
+                <fullName>Rissling Financial Corporation</fullName>
+                <default>false</default>
+                <label>Rissling Financial Corporation</label>
+            </value>
+            <value>
+                <fullName>Roth Canada, ULC</fullName>
+                <default>false</default>
+                <label>Roth Canada, ULC</label>
+            </value>
+            <value>
+                <fullName>Rothenberg Capital Management Inc.</fullName>
+                <default>false</default>
+                <label>Rothenberg Capital Management Inc.</label>
+            </value>
+            <value>
+                <fullName>Royal Mutual Funds Inc.</fullName>
+                <default>false</default>
+                <label>Royal Mutual Funds Inc.</label>
+            </value>
+            <value>
+                <fullName>Sandstone Asset Management Inc.</fullName>
+                <default>false</default>
+                <label>Sandstone Asset Management Inc.</label>
+            </value>
+            <value>
+                <fullName>Sanford C. Bernstein (Canada) Limited</fullName>
+                <default>false</default>
+                <label>Sanford C. Bernstein (Canada) Limited</label>
+            </value>
+            <value>
+                <fullName>Scotia Capital Inc.</fullName>
+                <default>false</default>
+                <label>Scotia Capital Inc.</label>
+            </value>
+            <value>
+                <fullName>Scotia Securities Inc.</fullName>
+                <default>false</default>
+                <label>Scotia Securities Inc.</label>
+            </value>
+            <value>
+                <fullName>Security Financial Services &amp; Investment Corp.</fullName>
+                <default>false</default>
+                <label>Security Financial Services &amp; Investment Corp.</label>
+            </value>
+            <value>
+                <fullName>Secutor Capital Management Corporation</fullName>
+                <default>false</default>
+                <label>Secutor Capital Management Corporation</label>
+            </value>
+            <value>
+                <fullName>Sentinel Financial Management Corp.</fullName>
+                <default>false</default>
+                <label>Sentinel Financial Management Corp.</label>
+            </value>
+            <value>
+                <fullName>Shah Financial Planning Inc.</fullName>
+                <default>false</default>
+                <label>Shah Financial Planning Inc.</label>
+            </value>
+            <value>
+                <fullName>Sherbrooke Street Capital (SSC) Inc.</fullName>
+                <default>false</default>
+                <label>Sherbrooke Street Capital (SSC) Inc.</label>
+            </value>
+            <value>
+                <fullName>Sightline Wealth Management LP</fullName>
+                <default>false</default>
+                <label>Sightline Wealth Management LP</label>
+            </value>
+            <value>
+                <fullName>Sinclair-Cockburn Financial Services Inc.</fullName>
+                <default>false</default>
+                <label>Sinclair-Cockburn Financial Services Inc.</label>
+            </value>
+            <value>
+                <fullName>SMBC Nikko Securities Canada, Ltd.</fullName>
+                <default>false</default>
+                <label>SMBC Nikko Securities Canada, Ltd.</label>
+            </value>
+            <value>
+                <fullName>Société Générale Capital Canada Inc.</fullName>
+                <default>false</default>
+                <label>Société Générale Capital Canada Inc.</label>
+            </value>
+            <value>
+                <fullName>Sprott Capital Partners LP</fullName>
+                <default>false</default>
+                <label>Sprott Capital Partners LP</label>
+            </value>
+            <value>
+                <fullName>State Street Global Markets Canada Inc.</fullName>
+                <default>false</default>
+                <label>State Street Global Markets Canada Inc.</label>
+            </value>
+            <value>
+                <fullName>Steadyhand Investment Funds Inc.</fullName>
+                <default>false</default>
+                <label>Steadyhand Investment Funds Inc.</label>
+            </value>
+            <value>
+                <fullName>StephenAvenue Securities Inc.</fullName>
+                <default>false</default>
+                <label>StephenAvenue Securities Inc.</label>
+            </value>
+            <value>
+                <fullName>Sterling Mutuals Inc.</fullName>
+                <default>false</default>
+                <label>Sterling Mutuals Inc.</label>
+            </value>
+            <value>
+                <fullName>Stifel Nicolaus Canada Inc.</fullName>
+                <default>false</default>
+                <label>Stifel Nicolaus Canada Inc.</label>
+            </value>
+            <value>
+                <fullName>Stuart Investment Management Limited</fullName>
+                <default>false</default>
+                <label>Stuart Investment Management Limited</label>
+            </value>
+            <value>
+                <fullName>Sun Life Financial Investment Services (Canada) Inc.</fullName>
+                <default>false</default>
+                <label>Sun Life Financial Investment Services (Canada) Inc.</label>
+            </value>
+            <value>
+                <fullName>Tangerine Investment Funds Limited</fullName>
+                <default>false</default>
+                <label>Tangerine Investment Funds Limited</label>
+            </value>
+            <value>
+                <fullName>TD Investment Services Inc.</fullName>
+                <default>false</default>
+                <label>TD Investment Services Inc.</label>
+            </value>
+            <value>
+                <fullName>TD Securities Inc.</fullName>
+                <default>false</default>
+                <label>TD Securities Inc.</label>
+            </value>
+            <value>
+                <fullName>TD Waterhouse Canada Inc.</fullName>
+                <default>false</default>
+                <label>TD Waterhouse Canada Inc.</label>
+            </value>
+            <value>
+                <fullName>TeamMax Investment Corp.</fullName>
+                <default>false</default>
+                <label>TeamMax Investment Corp.</label>
+            </value>
+            <value>
+                <fullName>Tradelogiq Markets Inc.</fullName>
+                <default>false</default>
+                <label>Tradelogiq Markets Inc.</label>
+            </value>
+            <value>
+                <fullName>Tradex Management Inc.</fullName>
+                <default>false</default>
+                <label>Tradex Management Inc.</label>
+            </value>
+            <value>
+                <fullName>TriAct Canada Marketplace LP</fullName>
+                <default>false</default>
+                <label>TriAct Canada Marketplace LP</label>
+            </value>
+            <value>
+                <fullName>Tudor, Pickering, Holt &amp; Co. Securities - Canada, ULC</fullName>
+                <default>false</default>
+                <label>Tudor, Pickering, Holt &amp; Co. Securities - Canada, ULC</label>
+            </value>
+            <value>
+                <fullName>TWMG Inc.</fullName>
+                <default>false</default>
+                <label>TWMG Inc.</label>
+            </value>
+            <value>
+                <fullName>UBS Securities Canada Inc.</fullName>
+                <default>false</default>
+                <label>UBS Securities Canada Inc.</label>
+            </value>
+            <value>
+                <fullName>Velocity Trade Capital Ltd.</fullName>
+                <default>false</default>
+                <label>Velocity Trade Capital Ltd.</label>
+            </value>
+            <value>
+                <fullName>Virtu Financial Canada, ULC</fullName>
+                <default>false</default>
+                <label>Virtu Financial Canada, ULC</label>
+            </value>
+            <value>
+                <fullName>Virtu ITG Canada Corp.</fullName>
+                <default>false</default>
+                <label>Virtu ITG Canada Corp.</label>
+            </value>
+            <value>
+                <fullName>W.D. Latimer Co. Limited</fullName>
+                <default>false</default>
+                <label>W.D. Latimer Co. Limited</label>
+            </value>
+            <value>
+                <fullName>Watt Carmichael Inc.</fullName>
+                <default>false</default>
+                <label>Watt Carmichael Inc.</label>
+            </value>
+            <value>
+                <fullName>Wealthforce Inc.</fullName>
+                <default>false</default>
+                <label>Wealthforce Inc.</label>
+            </value>
+            <value>
+                <fullName>Wealthsimple Advisor Services Inc.</fullName>
+                <default>false</default>
+                <label>Wealthsimple Advisor Services Inc.</label>
+            </value>
+            <value>
+                <fullName>Wellington-Altus Private Wealth Inc.</fullName>
+                <default>false</default>
+                <label>Wellington-Altus Private Wealth Inc.</label>
+            </value>
+            <value>
+                <fullName>Wells Fargo Securities Canada, Ltd.</fullName>
+                <default>false</default>
+                <label>Wells Fargo Securities Canada, Ltd.</label>
+            </value>
+            <value>
+                <fullName>WFG Securities Inc.</fullName>
+                <default>false</default>
+                <label>WFG Securities Inc.</label>
+            </value>
+            <value>
+                <fullName>Worldsource Financial Management Inc.</fullName>
+                <default>false</default>
+                <label>Worldsource Financial Management Inc.</label>
+            </value>
+            <value>
+                <fullName>Worldsource Securities Inc.</fullName>
+                <default>false</default>
+                <label>Worldsource Securities Inc.</label>
+            </value>
+            <value>
+                <fullName>Y.I.S. Financial Inc.</fullName>
+                <default>false</default>
+                <label>Y.I.S. Financial Inc.</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Arton Investments</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Arton Investments</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

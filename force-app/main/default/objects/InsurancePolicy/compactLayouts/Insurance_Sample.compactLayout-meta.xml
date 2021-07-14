@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Insurance_Sample</fullName>
+    <fields>PolicyName</fields>
+    <fields>Name</fields>
+    <fields>Status</fields>
+    <fields>Brokerage__c</fields>
+    <fields>IsActive</fields>
+    <fields>Policy_Holder__c</fields>
+    <fields>PremiumAmount</fields>
+    <fields>RecordTypeId</fields>
+    <label>Insurance(Sample)</label>
+</CompactLayout>

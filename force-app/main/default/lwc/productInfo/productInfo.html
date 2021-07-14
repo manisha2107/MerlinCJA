@@ -1,0 +1,343 @@
+<template>
+  <lightning-card>
+
+
+      <div class="slds-m-horizontal--x-large">
+        <lightning-icon class='myClass' icon-name="standard:quote" alternative-text="Connected"
+          ></lightning-icon>
+        <span class='slds-text-heading_medium slds-m-left_small'><strong>Certificate Selection Process</strong></span>
+
+      </div>
+
+
+  </lightning-card>
+  <lightning-card>
+      <div class="slds-m-horizontal--x-large">
+          <div class="container-fluid">
+              
+            <template if:true={loaded}>
+
+              <template if:true={currentQPD}>
+
+                <h1 style="font-weight: bold;" 
+                class = "slds-p-bottom_medium" 
+                key={currentQPD.productOptionId}
+                >{currentQPD.productOptionName}</h1>
+
+                <!-- Check If the Current QPD is Product or Not -->
+               
+
+                <template if:true={checkProduct} class="container-fluid slds-p-bottom_x-small">
+
+                   
+                    <div class = "slds-p-left_medium slds-p-bottom_x-small">
+    
+                     
+                        <template for:each={currentQPD.productQPD} 
+                        for:item='checkboxItem' class="slds-p-bottom_x-small">
+                         
+      
+      
+                            <div class=" slds-clearfix" key={checkboxItem.label}>
+                                  
+                              <div class="slds-grid slds-gutters slds-p-bottom_medium slds-m-left_medium" key={checkboxItem.label}
+                                    style="white-space: pre-wrap;">
+                                    <div class="slds-m-left_medium slds-m-right_small" key={checkboxItem.label}>
+      
+                                        <lightning-input 
+                                        type="radio"
+                                        name='Product'   
+                                        value={checkboxItem.value} 
+                                        id={checkboxItem.label}
+                                        class='checkValid'
+                                        required
+                                        onchange={handleProductChange} 
+                                        checked={checkboxItem.checked} 
+                                        style="float:right;"></lightning-input>
+      
+                                    </div>
+      
+                                    <div class="slds-col slds-size_11-of-12" key={checkboxItem.label}
+                                        style="margin-left:0px; padding-left:0px">
+                                        {checkboxItem.label}
+                                        <br>
+                                    </div>
+      
+                                </div>
+      
+                            
+                        </div>
+      
+                        </template>
+                      </div>
+
+
+                      <template if:true={checkConditionsforProductDets}>
+                        <p  class="slds-p-left_xx-large">
+                            <span style="font-weight: bold;">Premium: {getCurPremium} </span>
+                            
+      
+                          </p>
+                          <p class="slds-p-left_xx-large">
+                            <span style="font-weight: bold;">Cumulative Cost: {CumulPremium}</span>
+                            
+                          </p>
+                        
+                        <div>
+                            <p  class="slds-p-left_medium slds-p-bottom_medium slds-p-top_x-small">What is your <span
+                                style="font-weight: bold;">Retroactive Date</span></p>
+                            <p  class="slds-p-left_medium slds-p-bottom_medium">A <span
+                                style="font-weight: bold;">Retroactive Date</span> is the date from which you have maintained
+                              uninterrupted professional liability insurance. If you do not have a
+                              Retroactive Date, it will become the effective date of this Certificate.</p>
+                            </div>
+                          <div  >
+        
+                            <div class="slds-p-right_xx-large ">
+                              <lightning-input class="slds-p-left_medium slds-p-bottom_medium" 
+                              type="date"
+                                name="input1" label="Enter a date" style="width: 50vh;"></lightning-input>
+        
+                            </div>
+                            
+                            <div class="slds-p-right_xx-large ">
+                              <p class="slds-text-color_error 
+                              slds-p-left_medium">
+                                Please note that, in the event
+                                of a
+                                claim, you will be required to
+                                produce
+                                evidence of continuous coverage if your Retroactive Date precedes your
+                                Certificate’s effective date.</p>
+        
+                            </div>
+        
+        
+                          </div>
+      
+                      </template>
+                    
+                </template>
+
+                <!-- End Of Product -->
+
+
+                <!-- Check If the Current QPD is Endorsement or Not -->
+
+                <template if:true={checkEndorsement} >
+
+                    <!-- <p key={QPDProd.productQPD}>{QPD.showList}</p> -->
+    
+                    <!-- LOOP OVER ENDORSEMENT -->
+                    <br/>
+                    <template  for:each={currentQPD.productQPD} for:item="QPDProd">
+                      <li class = "slds-p-left__xx-large" key={QPDProd.QPDId}>
+    
+                        {QPDProd.QPDName}
+    
+                      </li>
+                    </template>
+                    <p  class="slds-p-left_xx-large slds-p-top_medium">
+                        <span style="font-weight: bold;">Premium: {getCurPremium} </span>
+                        
+  
+                      </p>
+                      <p class="slds-p-left_xx-large slds-p-top_xx-small">
+                        <span style="font-weight: bold;">Cumulative Cost: {CumulPremium} </span>
+                        
+                      </p>
+                    <div class='slds-text-heading_medium slds-m-left_small slds-text-title_bold 
+                    slds-p-top_medium slds-p-bottom_medium' >Do you want to buy this Endorsement?
+                    </div>
+                   
+                    <template for:each={currentQPD.selectionOption} for:item='checkboxItem'>
+                        <div class=" slds-clearfix" key={checkboxItem.label}>     
+                        <div class="slds-grid slds-gutters slds-p-bottom_medium slds-m-left_medium" key={checkboxItem.label}
+                                style="white-space: pre-wrap;">
+                                <div class="slds-m-left_medium slds-m-right_small" key={checkboxItem.label}>
+                                    
+                                    <input type="radio" name='Endorsement'   value={checkboxItem.value} 
+                                        onchange={handleEndorsementChange} checked={checkboxItem.checked} 
+                                        style="float:right; background-color:rgb(152, 61, 126)">
+                                </div>
+                                <div class="slds-col slds-size_11-of-12" key={checkboxItem.label}
+                                    style="margin-left:0px; padding-left:0px">
+                                    {checkboxItem.label}
+                                </div>
+                            </div>
+                    </div>
+
+                    
+                    </template>
+    
+                    
+                    
+                    
+                    
+    
+                </template>
+    
+                
+                <!-- Endorsement Ended -->
+                
+
+                <!-- Firm rider Started -->
+                <template if:true={FirmRiderCheck}>
+
+
+                    <p class = "slds-m-left_small slds-p-bottom_medium">A 
+                      <span style="font-weight: bold;"> Personal Corporation </span>
+                      is a corporation owned solely by you or your spouse that
+                      has no other employees, and is incorporated for the purpose of limiting personal
+                      and tax liability. A Firm is any agency, corporation, partnership, or other
+                      organization directly employing or contracting one or more insured agents.</p>
+                 
+                    <p class = "slds-p-left_xx-large" > <strong>Premium</strong>:{getCurPremium} </p>
+                    <p class = "slds-p-left_xx-large slds-p-bottom_medium" > 
+                      <strong>Cumulative Premium</strong>: {CumulPremium} </p>
+    
+                      <p  class='slds-m-left_small slds-p-bottom_medium'>
+                        Do you wish to extend coverage for vicarious liability to a
+                        <span style="font-weight: bold;"> Personal Corporation
+                          or Firm?</span>
+                      </p>
+      
+                      
+                    <div class = "slds-m-horizontal--x-large slds-p-left__xx-large" >
+    
+                      
+                    
+    
+                      <template for:each={currentQPD.selectionOption} for:item="Option">
+                      <div key={Option.label}>
+
+                        
+
+                        <input type="radio" name='FirmRiderOptions'   
+                        value={Option.value} 
+                        onchange={showFirmRiderQuestions} 
+                        checked={Option.checked} >
+                      
+                          <label key={Option.label} class="slds-radio__label slds-p-left_small" >
+                          <span class="slds-radio_faux"></span>
+                          <span class="slds-form-element__label">{Option.label}</span>
+                        </label>
+                      </div>
+                      </template>
+                  </div>
+    
+                   <!-- LOOP OVER QUESTIONS -->
+                   <template if:true={wantToBuyFirmRider}>
+    
+    
+                    <template for:each={firmQuestion} for:item='Question'>
+    
+    
+                        <!-- QUESTION TYPE PICKLIST -->
+                        <template if:true={Question.type} 
+                        class = "slds-p-left__xx-large slds-p-bottom_medium">
+                          <lightning-combobox name="Options" 
+                          key={Question.Question} id={Question.Id} 
+                          placeholder="Select"
+                            options={Question.options} 
+                            value={firmRiderQuestionPick} 
+                            label={Question.Question}
+                            onchange={handleFirmRiderQuestionsPick} 
+                            disabled={currentQPD.prodLocked} required>
+                          </lightning-combobox>
+                        </template>
+    
+                        <!-- QUESTION TYPE TEXT -->
+    
+                        <template if:false={Question.type}>
+                          
+                          <lightning-input key={Question.Question}  type="text" label="Provide the name of the firms or corporate entities requiring this coverage"  value={firmRiderQuestionText}
+                            onchange={handleFirmRiderQuestionsText} disabled={currentQPD.prodLocked}></lightning-input>
+                            
+                        </template>
+    
+                      
+    
+                    </template>
+    
+                  </template>
+    
+    
+                  </template>
+                <!-- Firm Rider Ended -->
+
+                <template if:true={currentQPD.conditionforQuestion} class="slds-p-bottom_small">
+                       
+                    <template for:each={currentQPD.EligibilityQuestion}  for:item='Question'>
+                      <div key={Question.Id}>
+  
+                      
+                          <lightning-combobox name="Options" data-id={Question.index} label={Question.Question}
+                            placeholder="Select" options={Question.options} value={Question.userAns}  
+                            onchange={ansSelectedFunc} class="slds-p-bottom_small invvalidation"
+                            disabled={currentQPD.prodLocked}
+                            required>
+                          </lightning-combobox>
+                          <template if:true={currentQPD.prodLocked}>
+
+                          
+                            <template if:true={Question.showError}>
+                              <p class = "slds-text-color_error">
+                                {Question.Error}
+                              </p>
+                            </template>
+                        </template>
+                        
+                      </div>
+  
+                    
+                  </template>
+  
+  
+                </template>
+
+                <!-- Endorsement End -->
+                
+                <lightning-button variant="brand"  
+                label="Previous" title="Previous Option" onclick={handlePrevious}></lightning-button>
+                <template if:false={currentQPD.buttonToShow}>
+                    <lightning-button variant="brand" class=" slds-m-left_x-small"
+                    label="Continue" title="Continue" onclick={checkEligibilityofProduct}></lightning-button>
+                </template>
+                <template if:true={currentQPD.buttonToShow}>
+                    <lightning-button variant="brand" 
+                    class=" slds-m-left_x-small" label="Next" 
+                    title="Next Option" onclick={handleNext}></lightning-button>
+                </template>
+              </template>
+              
+              <template if:false={checkProductExist}>
+                <b class="slds-text-color_error">There are no Products </b>
+                <br>
+                <lightning-button 
+                variant="success" 
+                label="Exit" 
+                title="Go To Policy" 
+                onclick={NavigateToPolicy}></lightning-button>
+            </template>
+            </template>
+            <template if:false={loaded}>
+                <lightning-spinner alternative-text="Loading"></lightning-spinner>
+            </template>
+
+              
+          
+                  
+              
+              
+
+
+          </div>
+      </div>
+          
+  </lightning-card>
+  
+  
+  
+  
+</template>

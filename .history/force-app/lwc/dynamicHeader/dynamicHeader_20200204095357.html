@@ -1,0 +1,6 @@
+<template>
+    <lightning-input onchange={inputChange}></lightning-input>
+    <template if:true={imageUrl}>
+        <img src={imageUrl}/>
+    </template>    
+</template>

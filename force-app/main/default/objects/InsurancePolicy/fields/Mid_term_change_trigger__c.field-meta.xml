@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mid_term_change_trigger__c</fullName>
+    <externalId>false</externalId>
+    <formula>&quot;&amp;solmgr=1&quot; +
+&quot;&amp;id=&quot; + Id +
+&quot;&amp;templateid=&quot; + Mid_term_conga_template__c   +
+&quot;&amp;QueryStringField= COC_Queries_ID_for_Conga_Trigger__c &quot; +
+&quot;&amp;defaultpdf=1&quot; +
+&quot;&amp;ofn=&quot; + Name +
+&quot;&amp;SC0=1&quot; +
+&quot;&amp;SC1=SalesforceFile&quot; +
+&quot;&amp;CongaEmailTemplateId=a0of0000003OQZ9AAO&quot; +
+&quot;&amp;EmailToId=&quot; +   Broker__r.Id  +
+&quot;&amp;QMode=SendEmail&quot;</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Mid Term Changes Trigger</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

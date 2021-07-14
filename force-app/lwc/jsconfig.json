@@ -1,0 +1,49 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "c/dynamicHeader": [
+                "../main/default/lwc/dynamicHeader/dynamicHeader.js"
+            ],
+            "c/eligibilityTest": [
+                "../main/default/lwc/eligibilityTest/eligibilityTest.js"
+            ],
+            "c/personalInformation": [
+                "../main/default/lwc/personalInformation/personalInformation.js"
+            ],
+            "c/productInfo": [
+                "../main/default/lwc/productInfo/productInfo.js"
+            ],
+            "c/selfRegistration": [
+                "selfRegistration/selfRegistration.js"
+            ],
+            "c/errorPanel": [
+                "../main/default/lwc/errorPanel/errorPanel.js"
+            ],
+            "c/extendedReportingPeriod": [
+                "../main/default/lwc/extendedReportingPeriod/extendedReportingPeriod.js"
+            ],
+            "c/parentComponent": [
+                "../main/default/lwc/parentComponent/parentComponent.js"
+            ],
+            "c/parentNavigation": [
+                "../main/default/lwc/parentNavigation/parentNavigation.js"
+            ]
+        },
+        "experimentalDecorators": true
+    },
+    "include": [
+        "**/*",
+        "../../.sfdx/typings/lwc/**/*.d.ts"
+    ],
+    "typeAcquisition": {
+        "include": [
+            "jest"
+        ]
+    },
+    "paths": {
+        "c/*": [
+            "*"
+        ]
+    }
+}

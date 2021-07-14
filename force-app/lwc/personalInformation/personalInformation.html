@@ -1,0 +1,56 @@
+<template>
+
+    <div class="stepTwo">
+        <lightning-card title="Applicant Information" icon-name="standard:account">
+            <div style="margin-left: 6%" if:true={error}>
+                <lightning-badge label={error} style="color: red;"></lightning-badge>
+            </div>
+
+
+            <template if:true={accRecord}>
+                <div class="slds-m-around--xx-large">
+                    <div class="container-fluid">
+                        <lightning-input label="Enter First Name" name="accName" required="required" type="text"
+                            value={accRecord.FirstName} onchange={handleFieldChange}></lightning-input>
+                        <lightning-input label="Enter Last Name" name="accName" required="required" type="text"
+                            value={accRecord.LastName} onchange={handleFieldChange}></lightning-input>
+                        <lightning-input label="Enter Mailing Street" name="accName" required="required" type="text"
+                            value={accRecord.PersonMailingStreet} onchange={handleFieldChange}></lightning-input>
+                        <lightning-input label="Enter Mailing City" name="accPhone" type="text"
+                            value={accRecord.PersonMailingCity} onchange={handleFieldChange}></lightning-input>
+                        <lightning-combobox name="accMailingState" label="Enter Mailing State"
+                            value={accRecord.PersonMailingState} options={options} onchange={handleFieldChange}>
+                        </lightning-combobox>
+                        <lightning-input label="Enter Mailing PostalCode" name="accEmail" required="required"
+                            type="text" value={accRecord.PersonMailingPostalCode} onchange={handleFieldChange}>
+                        </lightning-input>
+                        <lightning-input label="Enter Mailing Country" name="accEmail" required="required" type="text"
+                            value={accRecord.PersonMailingCountry} onchange={handleFieldChange} disabled>
+                        </lightning-input>
+
+                        <lightning-input label="Enter Email Address" name="accEmail" required="required" type="email"
+                            value={accRecord.PersonEmail} onchange={handleFieldChange} disabled>
+                        </lightning-input>
+
+                        <lightning-input label="Enter Sponsoring Insurance Company" name="accEmail" type="text"
+                            value={accRecord.HiddenAccount__r.Name} onchange={handleFieldChange} disabled>
+                        </lightning-input>
+                        <br />
+
+                    </div>
+
+                    <template if:true={showSubmitButton}>
+
+                        <lightning-button label="Submit" onclick={handleSave} variant="brand"></lightning-button>
+                    </template>
+    
+                </div>
+
+                
+            </template>
+        </lightning-card>
+    </div>
+
+
+
+</template>

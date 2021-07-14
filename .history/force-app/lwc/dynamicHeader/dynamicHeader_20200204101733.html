@@ -1,0 +1,8 @@
+<template>
+    <lightning-input onchange={inputChange}></lightning-input>
+
+    Dynamic Header
+    <template if:true={imageUrl}>
+        <img src={imageUrl}/>
+    </template>    
+</template>

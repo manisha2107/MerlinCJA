@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Name_insured_billing_address__c</fullName>
+    <externalId>false</externalId>
+    <formula>NameInsured.BillingStreet &amp; &quot;, &quot; &amp;
+ NameInsured.BillingCity &amp; &quot;, &quot; &amp;
+ NameInsured.BillingState &amp; &quot;, &quot; &amp;
+ NameInsured.BillingPostalCode &amp; &quot;, &quot; &amp;
+	NameInsured.BillingCountry</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Name insured billing address</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

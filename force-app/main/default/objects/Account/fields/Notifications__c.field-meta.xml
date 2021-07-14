@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Notifications__c</fullName>
+    <externalId>false</externalId>
+    <label>Notifications</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Cancellation</fullName>
+                <default>true</default>
+                <label>Cancellation</label>
+            </value>
+            <value>
+                <fullName>Non-Renewal</fullName>
+                <default>false</default>
+                <label>Non-Renewal</label>
+            </value>
+            <value>
+                <fullName>&quot;Claim&quot; (Payment)</fullName>
+                <default>false</default>
+                <label>&quot;Claim&quot; (Payment)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

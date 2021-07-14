@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cancel_Insurance_Certificate</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <hasMenubar>false</hasMenubar>
+    <hasScrollbars>true</hasScrollbars>
+    <hasToolbar>false</hasToolbar>
+    <height>600</height>
+    <isResizable>true</isResizable>
+    <linkType>url</linkType>
+    <masterLabel>Cancel Insurance Certificate</masterLabel>
+    <openType>newWindow</openType>
+    <position>none</position>
+    <protected>false</protected>
+    <showsLocation>false</showsLocation>
+    <showsStatus>false</showsStatus>
+    <url>/apex/APXTConga4__Conga_Composer?SolMgr=1
+&amp;serverUrl={!API.Partner_Server_URL_370}
+&amp;Id={!InsurancePolicy.Id}
+
+&amp;TemplateId=a0xf000000Wig4HAAR
+&amp;csvisible=1
+&amp;CSRecipient1={!InsurancePolicy.ContactId__c}
+&amp;CSRecipient2={!InsurancePolicy.BrokerId__c}
+&amp;CSRole2=CC
+&amp;CSRecipient3={!InsurancePolicy.OwnerId}
+&amp;CSRole3=CC</url>
+</WebLink>

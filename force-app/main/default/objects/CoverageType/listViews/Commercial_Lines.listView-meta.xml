@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Commercial_Lines</fullName>
+    <columns>Name</columns>
+    <columns>Policy_Limit__c</columns>
+    <columns>Rate__c</columns>
+    <columns>Co_Insurance__c</columns>
+    <columns>Sub_Limit__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>All Commercial Lines</label>
+</ListView>

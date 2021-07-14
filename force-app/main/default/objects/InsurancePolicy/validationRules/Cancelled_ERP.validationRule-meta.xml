@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cancelled_ERP</fullName>
+    <active>false</active>
+    <description>If the status is &quot;Cancelled&quot; the stage can not be changed to any previous stage.</description>
+    <errorConditionFormula>AND( ISPICKVAL( Status , &apos;Cancelled&apos;) , 
+ OR(
+ISPICKVAL( Status , &apos;Draft&apos;),
+ISPICKVAL( Status , &apos;Quoted&apos;),
+ISPICKVAL( Status , &apos;Pending Payment&apos;),
+ISPICKVAL( Status , &apos;Requested Cancellation&apos;),
+ISPICKVAL( Status , &apos;Active&apos;),
+ISPICKVAL( Status , &apos;In Active&apos;) ,
+ISPICKVAL( Status , &apos;Non Renewed&apos;),
+ISPICKVAL( Status , &apos;Purchased ERP&apos;),
+ISPICKVAL( Status , &apos;Expired&apos;)
+ ) 
+)</errorConditionFormula>
+    <errorDisplayField>Status</errorDisplayField>
+    <errorMessage>This ERP has been cancelled.</errorMessage>
+</ValidationRule>

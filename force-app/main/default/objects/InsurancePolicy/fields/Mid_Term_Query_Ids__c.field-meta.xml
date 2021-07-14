@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mid_Term_Query_Ids__c</fullName>
+    <externalId>false</externalId>
+    <formula>&quot;&amp;queryid=a0pf0000003XPQxAAO,a0pf0000003XMDlAAO,a0pf0000003XL8MAAW,a0pf0000003XYi9AAG,a0pf0000003XcLLAA0,a0pf0000003XcMRAA0,a0pf0000003XcMbAAK,a0pf0000003XcRJAA0,a0pf0000003XdVsAAK,a0pf0000003XcOfAAK,a0pf0000003XcOkAAK,a0pf0000003XcOpAAK,a0pf0000003XcOuAAK,a0pf0000003XcOzAAK,a0pf0000003Xdc2AAC,a0pf0000003XcP4AAK,a0pf0000003XcP9AAK,a0pf0000003XcOqAAK,a0pf0000003XcPEAA0,a0pf0000003XcPFAA0,a0pf0000003XcPJAA0,a0pf0000003XcPOAA0,a0pf0000003XcPTAA0,a0pf0000003XcPYAA0,a0pf0000003XcPdAAK,a0pf0000003XcPeAAK,a0pf0000003XcPiAAK,a0pf0000003XcPsAAK,a0pf0000003XcPxAAK,a0pf0000003Xg3FAAS,a0pf0000003Xg1WAAS,a0pf0000003XgHmAAK,a0pf0000003XgIUAA0,a0pf0000003XgIZAA0,a0pf0000003XgIeAAK,a0pf0000003XgIjAAK,a0pf0000003XgIoAAK,a0pf0000003XgItAAK,a0pf0000003XgIyAAK,a0pf0000003XgJ3AAK&quot;</formula>
+    <label>Mid Term Query Ids</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

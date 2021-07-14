@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Active_Policy_can_not_change</fullName>
+    <active>false</active>
+    <errorConditionFormula>ISPICKVAL(Status, &apos;Active&apos;)  &amp;&amp; !ISCHANGED( Status )</errorConditionFormula>
+    <errorMessage>You can not change active policy</errorMessage>
+</ValidationRule>

@@ -1,0 +1,34 @@
+<template>
+
+    <lightning-card title="Coverage" icon-name="custom:custom14">
+
+    <fieldset class="slds-form-element">
+        <legend class="slds-form-element__legend slds-form-element__label">
+            Please select a Professional Liability insurance coverage option</legend>
+        <div class="slds-form-element__control">
+
+        <template for:each={poList} for:item="pQues">
+          <span class="slds-radio" key={pQues.Id} >
+            <input type="radio" value="radio-43" name="default" checked = ""/>
+            <label class="slds-radio__label" for="radio-43">
+              <span class="slds-radio_faux"></span>
+              <span class="slds-form-element__label">{pQues.Name}</span>
+            </label>
+          </span>
+        </template>
+        </div>
+      </fieldset>
+    </lightning-card>
+
+    <!-- <lightning-card title="Account Collection" icon-name="custom:custom14">
+            <template for:each={poList} for:item="pQues">
+                <lightning-radio-group name="radioGroup"
+                          label="Radio Group"
+                          options={pQues.Id}
+                          value={pQues.name}
+                          type="radio"></lightning-radio-group>
+                
+            </template>
+    </lightning-card> -->
+
+</template>

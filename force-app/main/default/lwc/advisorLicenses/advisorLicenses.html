@@ -1,0 +1,98 @@
+<template>
+    
+    <template  if:true={ListOfRoles}>
+        <div style="height: 300px;">
+            <!-- <lightning-datatable
+                    key-field="id"
+                    data={ArrayOfSelectedLis}
+                    onsave={TablehandleSave}
+                    draft-values={draftValues}
+                    columns={columns}>
+            </lightning-datatable> -->
+            <table > 
+                <thead>
+                    <tr >
+                        <template for:each={columns} for:item="column">
+                            <th key={column.LicensesTypeSplit}><div class="slds-truncate">{column.label}</div></th>
+                        </template>
+                    </tr>
+                </thead>
+                
+                <tbody>
+                    <template for:each={ArrayOfSelectedLis} for:item="row" >
+                        <tr  key={row.id}>
+                            <td>{row.LicensesTypeSplit}</td>
+                            <td>
+                                 <lightning-input type="number" name="input2" value={row.TotalAnnualEarning}></lightning-input>
+                            </td>
+                            <td>
+                                <lightning-input type="percentage" name="input2" value={row.PercentageOfTotalIncome}></lightning-input></td>
+                            <td>
+                                <lightning-dual-listbox 
+                                label="Select Province"
+                                source-label="Available"
+                                selected-label="Selected"
+                                options={Province}
+                                size='3'
+                                ></lightning-dual-listbox>
+                            </td>
+                        </tr>
+                    </template>
+                </tbody>
+                
+            </table>
+        </div>    
+    </template>
+    <br/>
+
+
+    <template if:true={ListOfRoles}>
+        <lightning-radio-group label="Type of Roles" 
+                            name="radioButtonGroup" 
+                            onchange={RoleSelected} 
+                            options={ListOfRoles}
+                            value={Role}
+                            type="radio">
+        </lightning-radio-group>
+    </template>
+
+    <template if:true={IsLicensedAdvisor}>
+        <!--Hard coded questions starts-->  
+        <li key={discountQuestion}>I have obtained my initial license and registration within the past 365 days.
+       
+        <lightning-combobox name="LicOptions"
+            value={AssistantRoleAns}
+            placeholder="Select"
+            options={ansoptions}
+            onchange={OnchangeNewlyAssistantyAns}>
+        </lightning-combobox>
+     
+        
+        </li>
+        <!--Hard coded questions ends--> 
+    </template>
+
+     <!--Upload button-->
+    <template if:true={AssHardCodeQues} >
+        <div class="slds-m-around_medium">
+            <lightning-input type="file" 
+            accept=".xlsx, .xls, .csv, .png, .doc, .docx, .pdf"
+            label="Attachment" onchange={openfileUpload}></lightning-input>
+        </div>
+        <template if:true={fileData}>
+            <p>{fileData.filename}</p>
+        </template>
+        <lightning-button variant="brand" label="Upload" title="Submit" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+
+        <br/>
+        <br>
+    </template>
+    
+    <template if:true={showSubmitButton}  > 
+        
+            <lightning-button label="Submit" onclick={handleSave} variant="brand"></lightning-button>
+        
+        
+    </template>
+    
+</template>

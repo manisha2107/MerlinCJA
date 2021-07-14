@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Quote_ERP</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(RecordType.DeveloperName == &quot;Extended_Reporting_Period_of_Policy&quot;, Quote__r.RecordType.DeveloperName ==&quot;Non_Program_Quote&quot;)</errorConditionFormula>
+    <errorMessage>You cannot create a Extended Report Period of Policy from Quote</errorMessage>
+</ValidationRule>

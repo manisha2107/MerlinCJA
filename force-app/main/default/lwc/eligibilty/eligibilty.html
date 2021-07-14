@@ -1,0 +1,263 @@
+<template>
+    <template if:true={Loaded}>
+        <lightning-card>
+
+            <div class="slds-m-horizontal--x-large">
+                <lightning-icon class='myClass' icon-name="standard:drafts" alternative-text="Connected"
+                    variant="inverse"></lightning-icon>
+                <span class='slds-text-heading_medium slds-m-left_small'><strong>Screening Process</strong></span>
+            </div>
+
+        </lightning-card>
+
+        <lightning-card class=" slds-p-right_x-large slds-p-bottom_large  ">
+
+            <div class="slds-m-horizontal--x-large">
+
+
+                <template if:true={listOfLicnseTypes}>
+
+                    <div class='slds-p-bottom_medium slds-text-heading_medium slds-m-left_small slds-text-title_bold'>
+                        <span class = "slds-text-color_error">*</span>Select the Licenses that you, the applicant, currently hold in good standing:</div>
+
+
+                    <template for:each={listOfLicnseTypes} for:item="License">
+
+                        <div class=" slds-clearfix" key={License.label}>
+                            
+                              <div class="slds-grid slds-gutters slds-p-bottom_medium slds-m-left_medium" key={License.label}
+                                    style="white-space: pre-wrap;">
+                                    <div class="slds-m-left_medium slds-m-right_small" key={License.label}>
+
+                                        <input type="radio" name='License'   value={License.value}
+                                            onchange={onChangeOfLicense} checked={License.checked} style="float:right;">
+
+                                    </div>
+
+                                    <div class="slds-col slds-size_11-of-12" key={License.label}
+                                        style="margin-left:0px; padding-left:0px">
+                                        {License.label}
+                                        <br>
+                                    </div>
+
+                                </div>
+
+                            
+                        </div>
+                    </template>
+                </template>
+
+
+
+                <template if:true={selectedLicense}>
+
+                    <div class='slds-p-bottom_medium slds-text-heading_medium slds-m-left_small 
+                    slds-text-title_bold'><span class = "slds-text-color_error">*</span>Select your role:
+                    </div>
+
+                    <div class ="slds-grid slds-gutters slds-p-bottom_medium slds-m-left_medium" 
+                    style="white-space: pre-wrap;">
+
+
+                    <div class="slds-col slds-size_12-of-12 slds-m-left_medium slds-m-right_small" >
+
+                    <lightning-radio-group class={invvalidation} name="radioButtonGroup2" onchange={roleSelectedFunction}
+                        options={listOfRoles} value={roleSelected} type="radio" >
+                    </lightning-radio-group>
+
+                    </div>
+                </div>
+                </template>
+
+
+
+                <template if:true={roleSelected}>
+                    <div class = "slds-p-bottom_medium slds-m-left_small slds-p-bottom_small">
+                        <div class="container-fluid">
+
+                            <template if:true={showQuestions} >
+                                    <template for:each={allProgramQuestions} for:item="quesItem" class="slds-p-bottom_small">
+
+                                            <div key={quesItem.Id} >
+
+                                            <lightning-combobox name="Options" id={quesItem.Id} 
+                                            label={quesItem.Question__r.Question_Description__c}
+                                            value={quesItem.ReponseField__c} placeholder="Select"
+                                            options={ansoptions} onchange={ansSelected}
+                                            class="slds-p-bottom_small invvalidation" required>  
+                                            </lightning-combobox>
+                                           
+
+                                        </div>
+                                    </template>
+                            </template>
+                            <template if:true={showFileQuestion}>
+                                <div>I have obtained my initial license and registration within the past 365 days.
+
+                                    <lightning-combobox name="LicOptions" value={AssistantRoleAns} placeholder="Select"
+                                        options={ansoptions} onchange={licensedAdvisor} class="invvalidation">
+                                    </lightning-combobox>
+                                </div>
+                                <template if:true={fileUpload}>
+                                    <c-upload-button rec-from-parent={accRecord.Id}
+                                        onuploadfileevent={getUploadButBoolean}></c-upload-button>
+                                </template>
+                                <template if:true={showFileError}>
+                                    <div class = "slds-text-color_error"> Please upload the file before proceding</div>
+                                </template>
+                            </template>
+                        </div>
+                    </div>
+                </template>
+
+
+                <template if:true={selectedLicense}>
+
+
+
+                    <template if:true={getCheckForInsurer} data-id="InsurerPicklist">
+
+                        <div class='slds-p-bottom_medium slds-text-heading_medium slds-m-left_small slds-text-title_bold'>
+                            <span class = "slds-text-color_error">*</span>List all insurance companies with which you, the
+                             applicant, currently have a written contract to sell their products.
+                        </div>
+    
+                        <div class = "slds-m-left_small slds-p-bottom_medium">
+
+
+                        <div onkeyup={handleKeyUp}>
+
+                            <lightning-input name="enter-search"  type="search"></lightning-input>
+                        </div>
+                        <div class="slds-scrollable--y " style="max-height:9rem" if:true={queryTerm2}>
+                            <template for:each={queryTerm2} for:item='accName'>
+                                <template if:true={accName.show} data-id={accName.index}>
+                                    <div key={accName.index} data-id={accName.index} onclick={makePill2}>
+                                        {accName.label}
+                                    </div>
+                                </template>
+                            </template>
+                        </div>
+                        <lightning-pill-container  items={getPills2} onitemremove={handleItemRemove2}>
+                        </lightning-pill-container>
+
+                        </div>
+
+                    </template>
+
+                    <!-- SEARCH  -->
+
+
+                    <template if:true={getCheckForBroker} data-id="InsurerPicklist">
+
+                        <div class='slds-p-top_medium slds-text-heading_medium slds-m-left_small slds-text-title_bold'>
+                            <span class = "slds-text-color_error">*</span>List all investment dealers with which you, the
+                             applicant, currently have a written contract to sell their products.
+                        </div>
+
+                        <div class = "slds-m-left_small slds-p-bottom_medium">
+
+                        <div onkeyup={handleKeyUp2}>
+                            <lightning-input name="enter-search"  type="search"></lightning-input>
+                        </div>
+                        <div class="slds-scrollable--y" style="max-height:9rem" if:true={queryTerm}>
+                            <template for:each={queryTerm} for:item='accName'>
+                                <template if:true={accName.show} data-id={accName.index} onclick={hide}>
+                                    <div key={accName.index} data-id={accName.index} onclick={makePill}>
+                                        {accName.label}
+                                    </div>
+                                </template>
+
+
+                            </template>
+
+                        </div>
+                        <lightning-pill-container items={getPills} onitemremove={handleItemRemove}>
+                        </lightning-pill-container>
+
+
+                    </div>
+
+                    </template>
+
+
+                    <div class='slds-p-top_medium slds-text-heading_medium slds-m-left_small slds-text-title_bold'>
+                        <span class = "slds-text-color_error">*</span>Select all provincial jurisdictions in which each license applies.</div>
+
+                    <lightning-dual-listbox id="selectOptions" class = "slds-m-left_small slds-p-bottom_medium" name="Provinces" 
+                        source-label="Available Options" selected-label="Selected Options" options={Province}
+                        value={ProvincesSelected} onchange={HandleMultiPicklistValChange}>
+                    </lightning-dual-listbox>
+                    <!-- END OF SEARCH -->
+                    
+
+                    <div class="slds-card__body slds-card__body_inner slds-p-bottom_medium">
+                    <div class={tableResponsive}>
+                    <table class="slds-table slds-table_bordered slds-table_cell-buffer slds-var-m-bottom_large tableResponsive">
+                            <thead>
+                                <tr class="slds-text-title_caps">
+                                    <template for:each={columns} for:item="column">
+                                        <th key={column.label}>
+                                            <div class="slds-truncate">{column.label}</div>
+                                        </th>
+                                    </template>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <template for:each={SplitLicenses} for:item="row">
+                                    <tr class="inputRows " key={row.Id}>
+                                        <td class="slds-p-bottom_medium">{row.LicensesTypeSplit}</td>
+                                        <td>
+                                            <lightning-input id={row.Id} type="number" formatter="currency" min="0"
+                                                name="input2" value={row.TotalAnnualEarning} step="0"
+                                                class="invvalidation slds-p-bottom_medium" onchange={TotalAnnualEarningFUNC} >
+                                            </lightning-input>
+                                            <template if:true={TotalIncomeTableNotFilled}  class='slds-wrap slds-text-color_error'>
+                                                complete the fields
+                                            </template>
+
+                                        </td>
+                                        <td>
+
+                                            <lightning-input data-id={row.Id} type="text" class="invvalidation slds-p-bottom_medium"
+                                                name="input2" value={row.PercentageOfTotalIncome} min="0" max="100" 
+                                                onchange={PercentageOfTotalIncomeFUNC}
+                                                pattern="^100(\.0{0,2})? *%?$|^\d{1,2}(\.\d{1,2})? *%?$"
+                                                 step="0.01"
+                                                 max-length="6"
+                                                 onblur={OnBlurOfPercentageIncome} >
+                                            </lightning-input>
+                                            <!--pattern="(^(100(?:\.0{1,2})?))|(?!^0*$)(?!^0*\.0*$)^\d{1,2}(\.\d{1,2})?$"   -->
+                                        </td>
+
+                                    </tr>
+
+                                </template>
+                            </tbody>
+                        </table>
+                    </div>
+
+
+
+                        <lightning-button variant="brand" label="Previous " onclick={goBack}
+                            class=" slds-m-left_x-small"></lightning-button>
+
+                        <lightning-button variant="brand" label="Save & Next "
+                            onclick={SaveTableData} class=" slds-m-left_x-small"></lightning-button>
+                    </div>
+
+
+
+                </template>
+
+
+            </div>
+
+
+        </lightning-card>
+    </template>
+
+
+
+</template>

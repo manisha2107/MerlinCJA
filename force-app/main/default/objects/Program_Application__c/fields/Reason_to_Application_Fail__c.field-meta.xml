@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reason_to_Application_Fail__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Applicant to provide additional details to verify his application if it rejected due to wrong answers.</inlineHelpText>
+    <label>Reason to Application Fail</label>
+    <length>32768</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Html</type>
+    <visibleLines>25</visibleLines>
+</CustomField>

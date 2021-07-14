@@ -1,0 +1,582 @@
+<!--
+  @description       : Component is used to To cancel firm and advisors own insurance policy certificate from Community 
+  @author            : Ahad Farooque
+  @last modified on  : 02-19-2021
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+ 
+-->
+<template>
+
+    <div class="noPolicyFound slds-hide">
+
+       
+      <!--  <lightning-card title="Cancel Certificate" icon-name="utility:cancel_file_request">
+        </lightning-card>-->
+        
+        <lightning-card>
+
+            <div class="slds-m-horizontal--x-large">
+                <lightning-icon class='myClass' icon-name="utility:cancel_file_request" alternative-text="Connected"
+                    variant="inverse"></lightning-icon>
+                <span class='slds-text-heading_medium slds-m-left_small'><strong>Cancel Certificate</strong></span>
+    
+            </div>
+    
+        </lightning-card>
+        
+        <template if:true={noactivePolicy}>
+
+              
+   <lightning-card>
+     
+          <div class="slds-p-right_x-large slds-p-bottom_large">
+        
+        <legend class="slds-form-element__legend slds-form-element__label slds-text-heading_medium">
+  
+  <p class="slds-p-horizontal_medium">No Active Policy Found.</p>
+        
+            </legend>
+  
+       
+        </br>
+        </div>
+  
+  
+  </lightning-card>
+  </template>
+ 
+      </div>
+
+      <div class="purchasedERPdiv slds-hide">
+
+       <!-- <lightning-card title="Cancel Certificate" icon-name="utility:cancel_file_request">
+
+        </lightning-card>-->
+
+        <lightning-card>
+
+            <div class="slds-m-horizontal--x-large">
+                <lightning-icon class='myClass' icon-name="utility:cancel_file_request" alternative-text="Connected"
+                    variant="inverse"></lightning-icon>
+                <span class='slds-text-heading_medium slds-m-left_small'><strong>Cancel Certificate</strong></span>
+    
+            </div>
+    
+        </lightning-card>
+
+
+        <template if:true={purchasedERP}>
+
+              
+   <lightning-card>
+     
+          <div class="slds-p-right_x-large slds-p-bottom_large">
+        
+        <legend class="slds-form-element__legend slds-form-element__label slds-text-heading_medium">
+  
+    <p class="slds-p-horizontal_medium">Policy is already cancelled since you have Purchased ERP.</p>
+        
+            </legend>
+  
+       
+        </br>
+        </div>
+  
+  
+  </lightning-card>
+  </template>
+ 
+      </div>
+
+
+    <div class="firstStep">
+
+  <!--  <lightning-card title="Cancel Certificate" icon-name="utility:cancel_file_request">
+
+    </lightning-card>-->
+
+    <lightning-card>
+
+        <div class="slds-m-horizontal--x-large">
+            <lightning-icon class='myClass' icon-name="utility:cancel_file_request" alternative-text="Connected"
+                variant="inverse"></lightning-icon>
+            <span class='slds-text-heading_medium slds-m-left_small'><strong>Cancel Certificate</strong></span>
+
+        </div>
+
+    </lightning-card>
+
+
+    <lightning-card>
+
+
+    <template if:true={showinsurancecertificate}>
+          <div class="slds-p-left_small">
+
+    <fieldset class="slds-form-element">
+    <legend class="slds-form-element__legend slds-form-element__label slds-text-heading_large">
+        Considerations:
+    </legend>
+
+    </br>
+
+    </br>
+
+</br>
+<ul class="slds-list_dotted">
+    <li class="slds-p-top_xx-small" style="font-size:15px;">If you cancel your own certificate, your firm's policy certificate will also be cancelled</li>
+    <li class="slds-p-top_xx-small" style="font-size:15px;">Cancelling firm's certificate won't leave any impact or changes in your own policy certificate</li>
+    <li class="slds-p-top_xx-small" style="font-size:15px;">Once confirmed, an email will be sent to you for signing cancellation documents</li>
+    <li class="slds-p-top_xx-small" style="font-size:15px;">The refunding process will not execute until all the cancellation documents are signed</li>
+
+  </ul>
+   <div class=" slds-p-top_medium" style="font-size:14.5px;">Please review all considerations carefully before continue.</div>
+</br>
+        
+        <lightning-button variant="brand"
+        label="Cancel Certificate"
+        title="Cancel IC"
+        onclick={getInsurancePolicy}
+        class="slds-m-left_xx-small">
+     </lightning-button>
+    </br>
+      </fieldset>
+
+  </div>
+</br>
+        </template>
+
+    
+
+
+
+
+    <template if:true={isReqCancellationforCertificate}>
+
+                <lightning-card>
+                
+                  <div class="slds-p-left_small">
+                
+                <legend class="slds-form-element__legend slds-form-element__label slds-text-heading_medium">
+                    
+                    Cancellation Request for Individual Certificate is under process. Click below to revert your request.
+                
+                    </legend>
+                
+                
+                </br>
+                </br>
+                </br>
+                    
+                    
+                    
+                    <lightning-button variant="brand"
+                    label="Purchase ERP"
+                    title="Purchase ERP"
+                    onclick={handleNavigatetoERP}
+                    class="slds-m-left_xx-small">
+                    </lightning-button>
+
+                    &nbsp;&nbsp;&nbsp;
+                    
+                    <lightning-button variant="brand"
+                     label="Close Cancellation Request"
+                     title="Clos Cancellation Request"
+                     onclick={openRevertReqforMainCertificate}
+                     class="slds-m-left_xx-small">
+                    </lightning-button>
+
+                </br>
+                </br>
+                </div>
+                </lightning-card>
+                </template>
+
+ </lightning-card>
+
+
+
+
+
+</div>
+
+
+
+<!--Cancel Firm Certificate Area--> 
+<div class="secondStep">
+<template if:true={showfirmpolicy}>
+
+    <!-- <lightning-card title="Cancel Firm Certificate" icon-name="utility:cancel_file_request">
+
+        </lightning-card>-->
+
+    <lightning-card>
+
+    <div class="slds-m-horizontal--x-large">
+        <lightning-icon class='myClass' icon-name="utility:cancel_file_request" alternative-text="Connected"
+            variant="inverse"></lightning-icon>
+        <span class='slds-text-heading_medium slds-m-left_small'><strong>Cancel Firm Certificate</strong></span>
+
+    </div>
+
+</lightning-card>
+<lightning-card>
+
+  <div class="slds-p-left_small">
+
+<fieldset class="slds-form-element">
+<legend class="slds-form-element__legend slds-form-element__label slds-text-heading_large">
+    Considerations:</legend>
+
+</br>
+
+</br>
+
+</br>
+<ul class="slds-list_dotted">
+<li class="slds-p-top_xx-small" style="font-size:15px;">If you cancel your own certificate, your firm's policy certificate will also be cancelled</li>
+<li class="slds-p-top_xx-small" style="font-size:15px;">Cancelling firm's certificate won't leave any impact or changes in your own policy certificate</li>
+<li class="slds-p-top_xx-small" style="font-size:15px;">Once confirmed, an email will be sent to you for signing cancellation documents</li>
+<li class="slds-p-top_xx-small" style="font-size:15px;">The refunding process will not execute until all the cancellation documents are signed</li>
+
+</ul>
+<div class=" slds-p-top_medium" style="font-size:14.5px;">Please review all considerations carefully before continue.</div>
+</br>
+    
+    <lightning-button variant="brand"
+     label="Cancel Firm Certificate"
+     title="Cancel Firm Certificate"
+     onclick={showFirmPolicyDetails}
+     class="slds-m-left_xx-small">
+    </lightning-button>
+</br>
+
+  </fieldset>
+</br>
+
+</div>
+</br>
+</lightning-card>
+</template>
+
+
+<!--Cancel Request is in process for Firm Policy-->
+
+    <template if:true={isReqCancellation}>
+        
+<!-- <lightning-card title="Cancel Firm Certificate" icon-name="utility:cancel_file_request">
+
+</lightning-card>-->
+
+<lightning-card>
+
+    <div class="slds-m-horizontal--x-large">
+        <lightning-icon class='myClass' icon-name="utility:cancel_file_request" alternative-text="Connected"
+            variant="inverse"></lightning-icon>
+        <span class='slds-text-heading_medium slds-m-left_small'><strong>Cancel Firm Certificate</strong></span>
+
+    </div>
+
+</lightning-card>
+
+
+<lightning-card>
+
+  <div class="slds-p-left_small">
+
+<legend class="slds-form-element__legend slds-form-element__label slds-text-heading_medium">
+    
+    Cancellation Request is under process. Click below to revert your request.
+
+    </legend>
+
+
+</br>
+</br>
+</br>
+    <lightning-button variant="brand"
+     label="Close Cancellation Request"
+     title="Clos Cancellation Request"
+     onclick={RecallFirmCancellation}
+     class="slds-m-left_xx-small">
+    </lightning-button>
+</br>
+</br>
+</div>
+</lightning-card>
+</template>
+
+<!--Cancel Firm Certificate Area Ends-->    
+  </div>
+
+
+
+ <!--Working-->
+    <div class="goToCancelCertificate slds-hide">
+        <template if:true={insCertificate}>
+            <lightning-card title="Policy Details"  icon-name="standard:entitlement_policy">
+
+                <div class="slds-card__body slds-card__body_inner">Related to Insurance Certificate</div>
+
+            </lightning-card>
+            
+            <lightning-card   class="slds-m-around--xx-medium">
+
+                <div class="slds-grid slds-gutters slds-m-around--xx-small">
+                        <div class="slds-col">
+            <span>               
+             <lightning-input label="Policy Name" disabled name="Name" value={insCertificate.Name} required="required" type="text"></lightning-input>
+                    </span>
+                            </div>
+            <div class="slds-col">
+            <span>          
+            <lightning-input label="Effective Date" disabled name="Name" value={insCertificate.EffectiveDate} required="required" type="date"></lightning-input>
+                    </span>
+                        </div>
+                            </div>
+            
+             <div class="slds-grid slds-gutters slds-m-around--xx-small">
+                        <div class="slds-col">
+            <span>               
+              
+     <!--       <lightning-input label="Premium" disabled type="number" value={insCertificate.PremiumAmount}  formatter="currency" step=".01" required="required"  mode="view" ></lightning-input>
+     -->  
+                <lightning-input label="Premium" disabled type="number" value={insCertificate.PremiumAmount}  formatter="currency" step=".01" required="required"  ></lightning-input>
+
+    </span>
+                            </div>
+            <div class="slds-col">
+            <span>          
+          <lightning-input label="Expiration Date" disabled name="Name" value={insCertificate.ExpirationDate} required="required" type="date"></lightning-input>
+  </span>
+                        </div>
+                            </div>    
+             
+                        
+            
+            </lightning-card>
+
+        </template>
+        <template if:true={firmUnderIndCert}>
+
+            
+         <template if:true={businessinsCertificate}>
+            <lightning-card title="Firm Policy Details"  icon-name="standard:entitlement_policy">
+                    
+         <div class="slds-card__body slds-card__body_inner">Related to your Firm's Insurance Certificate</div>
+                    
+             </lightning-card>
+                                
+                 <lightning-card  class="slds-m-around--xx-medium">
+                    
+                 <div class="slds-grid slds-gutters slds-m-around--xx-small">
+                <div class="slds-col">
+                           
+                    <span>     
+
+                <lightning-input label="Firm Policy Name" disabled name="Name" value={businessinsCertificate.Name} required="required" type="text"></lightning-input>
+        
+            </span>
+              </div>
+
+            <div class="slds-col">
+            <span>          
+
+             <lightning-input label="Effective Date" disabled name="Name" value={businessinsCertificate.EffectiveDate} required="required" type="date"></lightning-input>
+            </span>
+               </div>
+                </div>
+                                
+                <div class="slds-grid slds-gutters slds-m-around--xx-small">
+                 <div class="slds-col">
+                     <span>               
+                                  
+                <lightning-input label="Premium" disabled type="number" value={businessinsCertificate.PremiumAmount}  formatter="currency" step=".01" required="required"  mode="view" ></lightning-input>
+                      </span>
+                  </div>
+                    <div class="slds-col">
+                      <span>          
+                <lightning-input label="Expiration Date" disabled name="Name" value={businessinsCertificate.ExpirationDate} required="required" type="date"></lightning-input>
+                    </span>
+                 </div>
+                     </div>                           
+                        
+                         </lightning-card>
+                            </template>
+                              </template>
+                            
+                       
+          <lightning-card  class="slds-m-around--xx-medium">
+
+            <lightning-button variant="brand"  class="slds-p-left_x-small"
+            label="Cancel Certificate and Purchase Extended Reporting Period"
+             title=""
+            onclick={handleNavigatetoERP}
+            >
+            </lightning-button>    &nbsp; &nbsp; &nbsp;
+
+                  <lightning-button variant="brand"
+                     label="Cancel Certificate(s)"
+                      title="Cancel Certificate(s)"
+                     onclick={openModal}
+                     >
+                     </lightning-button> 
+
+                    
+                                
+         </lightning-card>               
+
+                         
+</div>
+  
+<div class="goToCancelFirmPolicy slds-hide">
+ 
+<template if:true={businessinsCertificate}>
+    <lightning-card title="Firm Policy Details"  icon-name="standard:entitlement_policy">
+
+        <div class="slds-card__body slds-card__body_inner">Related to your Firm's Insurance Certificate</div>
+
+    </lightning-card>
+    
+    <lightning-card  class="slds-m-around--xx-medium">
+
+        <div class="slds-grid slds-gutters slds-m-around--xx-small">
+                <div class="slds-col">
+    <span>               
+     <lightning-input label="Firm Policy Name" disabled name="Name" value={businessinsCertificate.Name} required="required" type="text"></lightning-input>
+            </span>
+                    </div>
+    <div class="slds-col">
+    <span>          
+    <lightning-input label="Effective Date" disabled name="Name" value={businessinsCertificate.EffectiveDate} required="required" type="date"></lightning-input>
+            </span>
+                </div>
+                    </div>
+    
+     <div class="slds-grid slds-gutters slds-m-around--xx-small">
+                <div class="slds-col">
+    <span>               
+      
+        <lightning-input label="Premium" disabled type="number" value={businessinsCertificate.PremiumAmount}  formatter="currency" step=".01" required="required"  mode="view" ></lightning-input>
+            </span>
+                    </div>
+    <div class="slds-col">
+    <span>          
+    <lightning-input label="Expiration Date" disabled name="Name" value={businessinsCertificate.ExpirationDate} required="required" type="date"></lightning-input>
+            </span>
+                </div>
+                    </div>   
+                    
+          
+    </lightning-card>
+
+    </template>
+
+
+<lightning-card  class="slds-m-around--xx-medium">
+
+    <lightning-button variant="brand"
+    label="Cancel Firm Certificate"
+    title="Cancel Certificate"
+    onclick={FirmOpenModal}
+    class="slds-align_absolute-center">
+ </lightning-button>
+    
+</lightning-card>  
+  
+  
+  </div>
+  
+                                                                 <!-- MODEL-->
+
+    <template if:true={isModalOpen}>
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container">
+                <header class="slds-modal__header">
+                    <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick={closeModal}>
+                        <lightning-icon icon-name="utility:close"
+                            alternative-text="close"
+                            variant="inverse"
+                            size="small" ></lightning-icon>
+                        <span class="slds-assistive-text">Close</span>
+                    </button>
+                    <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Insurance Certificate Cancellation</h2>
+                </header>
+                <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                    <p><b>Are you sure your want to cancel both insurance certificates?
+                    </b></p>
+             
+                </div>
+                <footer class="slds-modal__footer">
+                    <button class="slds-button slds-button_neutral" onclick={closeModal} title="Cancel">Cancel</button>
+                    <button class="slds-button slds-button_brand" onclick={submitDetails} title="Yes">Yes</button>
+                </footer>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </template>
+
+                                                             <!--MODAL ENDS HERE-->
+
+
+
+      <template if:true={isFirmModalOpen}>
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container">
+                <header class="slds-modal__header">
+                    <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick={FirmCloseModal}>
+                        <lightning-icon icon-name="utility:close"
+                            alternative-text="close"
+                            variant="inverse"
+                            size="small" ></lightning-icon>
+                        <span class="slds-assistive-text">Close</span>
+                    </button>
+                    <h2 id="modal-heading-02" class="slds-text-heading_medium slds-hyphenate">Firm Insurance Certificate Cancellation</h2>
+                </header>
+                <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-2">
+                    <p><b>Are you sure your want to Cancel your Firm Insurance Certificate?
+                    </b></p>
+             
+                </div>
+                <footer class="slds-modal__footer">
+                    <button class="slds-button slds-button_neutral" onclick={FirmCloseModal} title="Cancel">Cancel</button>
+                    <button class="slds-button slds-button_brand" onclick={submitFirmDetails} title="Yes">Yes</button>
+                </footer>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </template>
+                                     
+    
+            <!-- Modal for Reverting Request for individual certificate -->
+
+
+    <template if:true={openRevertReqforIndCertificate}>
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container">
+                <header class="slds-modal__header">
+                    <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick={FirmCloseModal}>
+                        <lightning-icon icon-name="utility:close"
+                            alternative-text="close"
+                            variant="inverse"
+                            size="small" ></lightning-icon>
+                        <span class="slds-assistive-text">Close</span>
+                    </button>
+                    <h2 id="modal-heading-04" class="slds-text-heading_medium slds-hyphenate">Firm Insurance Certificate Cancellation</h2>
+                </header>
+                <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-4">
+                    <p><b>Are you sure your want to Revert Cancellation Request.
+                    </b></p>
+             
+                </div>
+                <footer class="slds-modal__footer">
+                    <button class="slds-button slds-button_neutral" onclick={modalCancelforIndCert} title="Cancel">Cancel</button>
+                    <button class="slds-button slds-button_brand" onclick={CertCancellationRecalled} title="Yes">Yes</button>
+                </footer>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </template>                                                     
+
+
+ </template>

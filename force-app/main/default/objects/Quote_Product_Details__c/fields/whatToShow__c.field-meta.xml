@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>whatToShow__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(  Deductible_Amount__c &gt;0 &amp;&amp; !ISBLANK(Deductible_Amount__c  ) &amp;&amp;  Deductible_Percentage__c =0,&apos;$&apos; &amp; TEXT(FLOOR(Deductible_Amount__c /1000)) &amp; &apos;,&apos; &amp; RIGHT(TEXT(Deductible_Amount__c ), LEN(TEXT(Deductible_Amount__c )) - LEN(TEXT(FLOOR(Deductible_Amount__c /1000)))),
+
+IF(Deductible_Amount__c  &gt;0 &amp;&amp; !ISBLANK(Deductible_Percentage__c)&amp;&amp;Deductible_Percentage__c&gt;0 ,Text(FLOOR(Deductible_Percentage__c*100))&amp;&quot;%&quot;&amp;&quot; or &quot;&amp;&quot;$&quot;
+
+&amp; TEXT(FLOOR(Deductible_Amount__c /1000)) &amp; &apos;,&apos; &amp; RIGHT(TEXT(Deductible_Amount__c ), LEN(TEXT(Deductible_Amount__c )) - LEN(TEXT(FLOOR(Deductible_Amount__c /1000)))),
+
+
+IF( !ISBLANK(Deductible_Percentage__c) &amp;&amp; Deductible_Percentage__c &gt;0 , TEXT(FLOOR(Deductible_Percentage__c*100)) &amp; &quot;%&quot;,
+
+
+IF(Deductible_Days__c &gt;0 &amp;&amp; !Isnull(Deductible_Days__c) , TEXT(Deductible_Days__c)&amp;&quot; Days &quot;,&quot;&quot;))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>whatToShow</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

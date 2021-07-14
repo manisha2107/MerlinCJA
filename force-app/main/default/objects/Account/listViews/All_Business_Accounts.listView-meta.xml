@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Business_Accounts</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Brokerage_Account__c</columns>
+    <columns>ACCOUNT.PHONE1</columns>
+    <columns>IBC_Code__c</columns>
+    <columns>Total_Premium__c</columns>
+    <columns>ACCOUNT.ADDRESS1_STREET</columns>
+    <columns>ACCOUNT.ADDRESS1_STATE_CODE</columns>
+    <columns>ACCOUNT.ADDRESS1_COUNTRY_CODE</columns>
+    <columns>FinServ__Status__c</columns>
+    <columns>ACCOUNT.RECORDTYPE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ACCOUNT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Account.FinServ__IndustriesBusiness</value>
+    </filters>
+    <label>All Business Accounts</label>
+</ListView>

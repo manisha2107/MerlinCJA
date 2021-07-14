@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PWD_button</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <hasMenubar>false</hasMenubar>
+    <hasScrollbars>true</hasScrollbars>
+    <hasToolbar>false</hasToolbar>
+    <height>600</height>
+    <isResizable>true</isResizable>
+    <linkType>url</linkType>
+    <masterLabel>Generate Policy Documents</masterLabel>
+    <openType>newWindow</openType>
+    <position>none</position>
+    <protected>false</protected>
+    <showsLocation>false</showsLocation>
+    <showsStatus>false</showsStatus>
+    <url>/apex/APXTConga4__Conga_Composer?SolMgr=1
+&amp;serverUrl={!API.Partner_Server_URL_370}
+&amp;Id={!InsurancePolicy.Id}
+
+
+&amp;TemplateId=a0xf000000XHRJ1AAP,a0xf000000XHRIwAAP,a0xf000000XHRIrAAP,a0xf000000XHRJBAA5,a0xf000000XHRJGAA5,a0xf000000XHRJQAA5,a0xf000000XHRJfAAP,a0xf000000XHRJkAAP,a0xf000000XHRJpAAP,a0xf000000YBIBzAAP,a0xf000000YBFzjAAH
+&amp;QueryId=[Tablecreation]a0pf0000003XPQxAAO,[COCE99501]a0pf0000003XL8MAAW,[COCE99901]a0pf0000003XYi9AAG,[Insurer]a0pf0000003XMDlAAO
+&amp;DefaultPDF=1</url>
+</WebLink>

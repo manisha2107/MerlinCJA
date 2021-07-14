@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Financial_Lines</fullName>
+    <columns>Name</columns>
+    <columns>Policy_Limit__c</columns>
+    <columns>Retention__c</columns>
+    <columns>Separate__c</columns>
+    <columns>DeductibleAmount</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>Line_of_Business__c</field>
+        <operation>equals</operation>
+        <value>Financial Lines</value>
+    </filters>
+    <label>All Financial Lines</label>
+</ListView>

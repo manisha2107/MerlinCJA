@@ -1,0 +1,160 @@
+<template>
+
+    <template if:false={loaded}>
+    <lightning-layout  class="slds-align_absolute-center">
+        <!-- CREATE NEW PAYMENT -->
+        <div aria-labelledby="newpaymentform">
+
+            <!-- BOXED AREA -->
+            <fieldset class="slds-box slds-align_absolute-centerslds-theme--default slds-container--medium">
+
+                    <legend id="newexpenseform" class="slds-text-heading--medium slds-align_absolute-center slds-p-vertical--medium">
+                    Payment for INV-001
+                            </legend>
+
+
+                <div style="padding-bottom: 20px;">
+                    {invNotes}
+                </div>                
+                <!-- CREATE NEW PAYMENT FORM -->
+                
+                <form class="slds-form--stacked">                     
+
+        <div class="slds-m-around_medium">
+            
+             <!-- Contact Name--> 
+            <lightning-input disabled 
+                            type="text" 
+                            name='ContactName'  
+                            class='contact_name_required' 
+                            label="Contact Name" 
+                            value={fullName}
+                              >
+                              </lightning-input>
+
+</br>
+
+            <!-- Amount -->
+            <lightning-input disabled
+                            type="number"
+                            label="Total Amount"
+                            value={invAmount}
+                            formatter="currency"
+                            step=".01"
+                            mode="view">
+                        </lightning-input>
+
+</br>
+
+             <!-- Card Holder Name--> 
+            <lightning-input type="text" 
+                             name='holderName'  
+                             class='amount_input_required' 
+                             label="Card Holder Name" 
+                             placeholder="Enter the holder name" 
+                             value={holderName} 
+                             onchange={fieldchangehandler} 
+                             required>
+                            </lightning-input>
+    
+                            
+
+
+</br>
+
+             <!-- Currency 
+        <lightning-input type="text" 
+                             name='currency'  
+                             class='currency_input_required' 
+                             label="Currency" 
+                             value={Currency} 
+                             onchange={fieldchangehandler} 
+                             required>
+                          </lightning-input>-->
+    
+         <!-- Currency ComboBox-->                 
+        <lightning-combobox  name="currency "
+                            label="Currency"
+                            value={value}
+                            class="invvalidation"                  
+                            options={paymentcurrency}
+                            onchange={fieldchangehandler}
+                            required >
+                             </lightning-combobox>                 
+
+</br>
+
+             <!-- Card Number--> 
+            <lightning-input name='CardNumber'
+                             class="invvalidation" 
+                             label="Card Number"  
+                             placeholder="Enter the Card Number" 
+                             value={card} 
+                             minlength=15 maxlength=16
+                             essage-when-too-short='Card number should be 15 or 16 digits!' 
+                             onchange={fieldchangehandler} 
+                             required>
+                            </lightning-input>
+
+</br>
+
+            <!--Expiration Month--> 
+            <div class="slds-grid slds-gutters slds-wrap">
+                <td><lightning-combobox class='invvalidation amount_input_required Month slds-col slds-size_1-of-1 slds-large-size_1-of-3' name="Expiration Month (mm)"
+                            label="Expiration Month (mm)"
+                            value={value}
+                            placeholder="Select"
+                            options={options}
+                            onchange={fieldchangehandler}
+                            required >
+            </lightning-combobox></td>
+
+            
+          <!-- Expiration Year--> 
+                <lightning-input class='invvalidation amount_input_required slds-col slds-size_1-of-1 slds-large-size_1-of-3' 
+                            name='Year' 
+                            label="Expiration Year (yyyy)" 
+                            placeholder="Enter the Year" 
+                            value={expiryyear} 
+                            minlength=4 maxlength=4 
+                            message-when-too-short='Year should be 4 digits!' 
+                            onchange={fieldchangehandler}  
+                            required>
+                            </lightning-input></td>
+              
+
+            <!-- CVV--> 
+                <lightning-input  class='invvalidation amount_input_required slds-col slds-size_1-of-1 slds-large-size_1-of-3'
+                            name='CvcaDigits' 
+                            label="CVV (3 or 4 digits):" 
+                            placeholder="Enter the 3 or 4 CVV" 
+                            value={cvv} 
+                            minlength=3 maxlength=4 
+                            message-when-too-short='CVV should be 3 or 4 digits!' 
+                            onchange={fieldchangehandler} 
+                            required>
+                            </lightning-input></td>
+
+                        </br>                               
+                    </br>
+            </div>
+        </div>
+</form>
+
+
+<lightning-button variant="brand" label="Pay" title="Primary action" onclick={handlePay} class="slds-align_absolute-center slds-p-around_large"></lightning-button>
+
+    </fieldset>
+    <br>
+    </div>
+
+    </lightning-layout> 
+
+
+    </template>
+
+    <template if:true={loaded}>
+        <lightning-spinner alternative-text="Loading"></lightning-spinner>
+    </template>
+
+</template>

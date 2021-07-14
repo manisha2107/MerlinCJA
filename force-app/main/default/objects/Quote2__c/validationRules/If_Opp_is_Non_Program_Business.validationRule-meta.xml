@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>If_Opp_is_Non_Program_Business</fullName>
+    <active>true</active>
+    <description>if opp is of non program type then quote can only be created of non program type</description>
+    <errorConditionFormula>AND( ISPICKVAL( Opportunity__r.Type , &apos;Non Program&apos;) , RecordType.Name = &apos;Master_Policy&apos;)</errorConditionFormula>
+    <errorDisplayField>Opportunity__c</errorDisplayField>
+    <errorMessage>You cannot create a Master Policy quote with Non Program Opportunity, Please select a Opportunity</errorMessage>
+</ValidationRule>

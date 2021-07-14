@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tax</fullName>
+    <active>true</active>
+    <compactLayoutAssignment>Tax_Compact_Layout</compactLayoutAssignment>
+    <description>Represent tax information used by Account Seed</description>
+    <label>Tax</label>
+    <picklistValues>
+        <picklist>AcctSeed__Accounting_Type__c</picklist>
+        <values>
+            <fullName>Tax Exempt Product</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tax Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Taxable Product</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>AcctSeed__Inventory_Type__c</picklist>
+        <values>
+            <fullName>Kit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Manufactured</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Purchased</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Category__c</picklist>
+        <values>
+            <fullName>Excess</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Standard Form</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Family</picklist>
+        <values>
+            <fullName>None</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Line_of_Business__c</picklist>
+        <values>
+            <fullName>Casualty</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cyber Liability</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fidelity Bonds</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Management Liability</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Professional Liability</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Property</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Surety Bonds</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transaction Liability</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Policy_Type__c</picklist>
+        <values>
+            <fullName>Commercial Crime Bond</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Commercial General Liability</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Commercial Property</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Commercial Surety</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contingent Liability</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contract Surety</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contractors Pollution Liability</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Course-of-Construction</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cyber Liability</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Directors%60 and Officers%60 Liability</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Employment Practices Liability</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Environmental Impairment Liability</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Errors %26 Omissions Liability</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fiduciary Liability</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Financial Institution Bond</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Intellectual Property Liability</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Representations and Warranties</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tax Indemnity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wrap-Up Liability</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>QuantityUnitOfMeasure</picklist>
+        <values>
+            <fullName>Each</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type_of_Business__c</picklist>
+        <values>
+            <fullName>Non - Program</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Open Market Program</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sponsored Program</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Underwriting_Practive__c</picklist>
+        <values>
+            <fullName>Commercial Lines</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Financial Lines</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Professional Lines</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IBC_Code__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <inlineHelpText>IBC code of an account</inlineHelpText>
+    <label>IBC Code</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>Program_Audience__c.RecordType.Name</field>
+            <operation>equals</operation>
+            <value>IBC Code</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Program_Audience__c</referenceTo>
+    <relationshipLabel>Accounts (IBC Code)</relationshipLabel>
+    <relationshipName>Accounts1</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

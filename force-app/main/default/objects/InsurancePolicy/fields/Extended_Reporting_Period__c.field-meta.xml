@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Extended_Reporting_Period__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <inlineHelpText>ERP purchased on policy</inlineHelpText>
+    <label>Purchased ERP</label>
+    <referenceTo>Extended_Report_Period__c</referenceTo>
+    <relationshipLabel>Policies</relationshipLabel>
+    <relationshipName>Policies</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

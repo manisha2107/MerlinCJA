@@ -1,0 +1,30 @@
+<template>
+    <lightning-card title="List of Brokerage Accounts - Lightning Web Component" icon-name="custom:custom63">
+        <lightning-combobox
+            name="Accounts"
+            label="Accounts"
+            placeholder="Choose Brokerage Account"
+            value={value}
+            onchange={handleChange}
+            options={statusOptions}>
+        </lightning-combobox>
+
+
+
+
+
+        <lightning-input    
+        label="Stripe API Key" 
+        required="required" 
+        type="text" 
+        value={APIkey}
+         onchange={handleKeyChange}>
+        </lightning-input>
+
+        <br/>
+        <lightning-button label="Submit" onclick={submitAPIKey} variant="brand"></lightning-button>
+
+
+
+    </lightning-card>
+</template>

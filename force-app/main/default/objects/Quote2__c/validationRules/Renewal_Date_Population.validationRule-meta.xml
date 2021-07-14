@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Renewal_Date_Population</fullName>
+    <active>true</active>
+    <description>Whenever Status is changed to Activated, Renewal Date should also be Populated</description>
+    <errorConditionFormula>ISPICKVAL(Status__c, &apos;Activated&apos;) &amp;&amp;
+ ISNULL(Renewal_Date__c) &amp;&amp;
+ RecordType.Name = &apos;Master_Policy&apos;</errorConditionFormula>
+    <errorDisplayField>Renewal_Date__c</errorDisplayField>
+    <errorMessage>Quote Status is Activated, Kindly populate Renewal Date.</errorMessage>
+</ValidationRule>

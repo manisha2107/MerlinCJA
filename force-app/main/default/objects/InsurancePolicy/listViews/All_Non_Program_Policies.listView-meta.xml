@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Non_Program_Policies</fullName>
+    <columns>Name</columns>
+    <columns>PolicyName</columns>
+    <columns>NameInsured</columns>
+    <columns>Product</columns>
+    <columns>Status</columns>
+    <columns>EffectiveDate</columns>
+    <columns>RenewalDate</columns>
+    <columns>PremiumAmount</columns>
+    <columns>CreatedDate</columns>
+    <columns>LastModifiedDate</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RecordType</field>
+        <operation>equals</operation>
+        <value>InsurancePolicy.Non_Program_Policy</value>
+    </filters>
+    <label>All Non-Program Policies</label>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+        <allPartnerUsers></allPartnerUsers>
+    </sharedTo>
+</ListView>

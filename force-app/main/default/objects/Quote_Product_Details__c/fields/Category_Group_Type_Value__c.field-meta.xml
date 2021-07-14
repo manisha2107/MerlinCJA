@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Category_Group_Type_Value__c</fullName>
+    <externalId>false</externalId>
+    <label>Category Group Type Value</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Amount Per Person</fullName>
+                <default>false</default>
+                <label>Amount Per Person</label>
+            </value>
+            <value>
+                <fullName>Amount Per Occurrence</fullName>
+                <default>false</default>
+                <label>Amount Per Occurrence</label>
+            </value>
+            <value>
+                <fullName>Actual Cash Value</fullName>
+                <default>false</default>
+                <label>Actual Cash Value</label>
+            </value>
+            <value>
+                <fullName>Duration</fullName>
+                <default>false</default>
+                <label>Duration</label>
+            </value>
+            <value>
+                <fullName>Percentage</fullName>
+                <default>false</default>
+                <label>Percentage</label>
+            </value>
+            <value>
+                <fullName>Age</fullName>
+                <default>false</default>
+                <label>Age</label>
+            </value>
+            <value>
+                <fullName>Amount</fullName>
+                <default>false</default>
+                <label>Amount</label>
+            </value>
+            <value>
+                <fullName>Range</fullName>
+                <default>false</default>
+                <label>Range</label>
+            </value>
+            <value>
+                <fullName>Boolean</fullName>
+                <default>false</default>
+                <label>Boolean</label>
+            </value>
+            <value>
+                <fullName>Pct</fullName>
+                <default>false</default>
+                <label>Pct</label>
+            </value>
+            <value>
+                <fullName>Benefit for Lifetime</fullName>
+                <default>false</default>
+                <label>Benefit for Lifetime</label>
+            </value>
+            <value>
+                <fullName>Benefit to Age</fullName>
+                <default>false</default>
+                <label>Benefit to Age</label>
+            </value>
+            <value>
+                <fullName>Benefit to Specific period</fullName>
+                <default>false</default>
+                <label>Benefit to Specific period</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>3</visibleLines>
+</CustomField>

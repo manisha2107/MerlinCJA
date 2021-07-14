@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Conga_Sign_Status__c</fullName>
+    <externalId>false</externalId>
+    <label>Conga Sign Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Signed Firm Certificate Cancellation</fullName>
+                <default>false</default>
+                <label>Signed Firm Certificate Cancellation</label>
+            </value>
+            <value>
+                <fullName>SENT</fullName>
+                <default>false</default>
+                <label>SENT</label>
+            </value>
+            <value>
+                <fullName>COMPLETED</fullName>
+                <default>false</default>
+                <label>COMPLETED</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

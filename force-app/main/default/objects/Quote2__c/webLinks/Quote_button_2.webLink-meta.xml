@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Quote_button_2</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <hasMenubar>false</hasMenubar>
+    <hasScrollbars>true</hasScrollbars>
+    <hasToolbar>false</hasToolbar>
+    <height>600</height>
+    <isResizable>true</isResizable>
+    <linkType>url</linkType>
+    <masterLabel>Quote button 2</masterLabel>
+    <openType>newWindow</openType>
+    <position>none</position>
+    <protected>false</protected>
+    <showsLocation>false</showsLocation>
+    <showsStatus>false</showsStatus>
+    <url>/apex/APXTConga4__Conga_Composer?SolMgr=1
+&amp;serverUrl={!API.Partner_Server_URL_370}
+&amp;Id={!Quote2__c.Id}
+
+&amp;TemplateId=a0xf000000XVPgrAAH,a0xf000000XVOiXAAX,a0xf000000XVOicAAH
+
+&amp;CongaEmailTemplateId=a0of0000003OQZ9AAO
+
+&amp;DefaultPDF=1
+
+&amp;OFN=Policy+-+Document
+
+&amp;EmailAdditionalTo={!Quote2__c.Person_Email__c}
+&amp;EmailSubject=Your+Policy+Document</url>
+</WebLink>

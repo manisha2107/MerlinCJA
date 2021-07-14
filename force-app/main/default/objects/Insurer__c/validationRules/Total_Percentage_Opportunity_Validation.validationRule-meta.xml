@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Percentage_Opportunity_Validation</fullName>
+    <active>true</active>
+    <description>If the Validity Check For Opp field is &quot;checked&quot; give an error.</description>
+    <errorConditionFormula>Validity_Check_For_Opp__c</errorConditionFormula>
+    <errorMessage>Can not create another Insurer. Total percentage greater than 100.</errorMessage>
+</ValidationRule>

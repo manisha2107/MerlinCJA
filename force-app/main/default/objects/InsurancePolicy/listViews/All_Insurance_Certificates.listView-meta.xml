@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Insurance_Certificates</fullName>
+    <columns>Name</columns>
+    <columns>Insurance_Manager__c</columns>
+    <columns>NameInsured</columns>
+    <columns>Contact__c</columns>
+    <columns>PolicyName</columns>
+    <columns>Status</columns>
+    <columns>Brokerage__c</columns>
+    <columns>PolicyType</columns>
+    <columns>RenewalDate</columns>
+    <columns>PremiumAmount</columns>
+    <filterScope>Everything</filterScope>
+    <label>All Insurance Certificates</label>
+</ListView>

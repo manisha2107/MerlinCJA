@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NEW_Pwd</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <hasMenubar>false</hasMenubar>
+    <hasScrollbars>true</hasScrollbars>
+    <hasToolbar>false</hasToolbar>
+    <height>600</height>
+    <isResizable>true</isResizable>
+    <linkType>url</linkType>
+    <masterLabel>Coc Project</masterLabel>
+    <openType>newWindow</openType>
+    <position>none</position>
+    <protected>false</protected>
+    <showsLocation>false</showsLocation>
+    <showsStatus>false</showsStatus>
+    <url>/apex/APXTConga4__Conga_Composer?SolMgr=1
+&amp;serverUrl={!API.Partner_Server_URL_370}
+&amp;Id={!InsurancePolicy.Id}
+
+
+&amp;TemplateId={!InsurancePolicy.PolicyDescription}
+
+&amp;QueryId=a0pf0000003XPQxAAO,a0pf0000003XMDlAAO,a0pf0000003XL8MAAW,a0pf0000003XYi9AAG,a0pf0000003XcLLAA0,a0pf0000003XcMRAA0,a0pf0000003XcMbAAK,a0pf0000003XcRJAA0,a0pf0000003XdVsAAK,a0pf0000003XcOfAAK,a0pf0000003XcOfAAK,a0pf0000003XcOkAAK,a0pf0000003XcOpAAK,a0pf0000003XcOuAAK,a0pf0000003XcOzAAK,a0pf0000003Xdc2AAC,a0pf0000003XcP4AAK,a0pf0000003XcP9AAK,a0pf0000003XcOqAAK,a0pf0000003XcPEAA0,a0pf0000003XcPFAA0,a0pf0000003XcPJAA0,a0pf0000003XcPOAA0,a0pf0000003XcPTAA0,
+a0pf0000003XcPYAA0,a0pf0000003XcPdAAK,a0pf0000003XcPeAAK,a0pf0000003XcPiAAK,a0pf0000003XcPsAAK,a0pf0000003XcPxAAK,
+,a0pf0000003XMDlAAO,a0pf0000003Xg1WAAS,a0pf0000003Xg3FAAS,a0pf0000003Xg1WAAS,a0pf0000003XgGpAAK,a0pf0000003XgHmAAK,a0pf0000003XgIUAA0,a0pf0000003XgIZAA0,a0pf0000003XgIeAAK,a0pf0000003XgIjAAK,a0pf0000003XgIoAAK,a0pf0000003XgItAAK,a0pf0000003XgIyAAK,a0pf0000003XgJ3AAK,a0pf0000003XgJgAAK,a0pf0000003XgJlAAK,a0pf0000003XgJqAAK,
+a0pf0000003Xh46AAC,a0pf0000003Xh4GAAS,a0pf0000003Xh4tAAC,a0pf0000003Xh59AAC,a0pf0000003Xh5lAAC,,a0pf0000003Xh6xAAC,a0pf0000003Xh7aAAC,a0pf0000003Xh7fAAC,a0pf0000003Xh65AAC,a0pf0000003Xh7pAAC,a0pf0000003Xh7uAAC,a0pf0000003Xh84AAC,a0pf0000003Xh89AAC,a0pf0000003Xh8EAAS,a0pf0000003Xh8JAAS,a0pf0000003Xh8OAAS,a0pf0000003Xh8TAAS,a0pf0000003Xh8YAAS,a0pf0000003Xh8dAAC,a0pf0000003Xh8iAAC,a0pf0000003Xh8nAAC,a0pf0000003Xh8UAAS,a0pf0000003Xh9QAAS,a0pf0000003Xh9VAAS,a0pf0000003ZZ2qAAG,a0pf0000003ZTojAAG,a0pf0000003ZZ4QAAW
+
+
+
+&amp;DefaultPDF=1</url>
+</WebLink>

@@ -1,0 +1,151 @@
+<template>
+
+    <c-dynamic-header></c-dynamic-header>
+   
+
+    <lightning-progress-indicator current-step={currentStep} type="base" variant="base">
+
+        <lightning-progress-step label="Eligibility Test" value="1"> </lightning-progress-step>
+        <lightning-progress-step label="Applicant Information" value="2"> </lightning-progress-step>
+        <lightning-progress-step label="Screening Questions" value="3"> </lightning-progress-step>
+        <!-- <lightning-progress-step label="Application Suspended" value="3"> </lightning-progress-step> -->
+        <lightning-progress-step label="Certificate Selection Process" value="4"> </lightning-progress-step>
+        <lightning-progress-step label="Quote" value="5"> </lightning-progress-step>
+        <lightning-progress-step label="Invoice Payment" value="6"> </lightning-progress-step>
+
+
+    </lightning-progress-indicator>
+
+    <!-- Parent Component - Step 1 -->
+
+    <div class="stepOne slds-hide">
+        <lightning-card>
+            <div class="app slds-p-around_x-large">
+                <h1 class="slds-text-heading_large">{title} </h1>
+
+                <!--<div>{message}</div>-->
+                <span>I hereby certify that I am currently employed or contracted by </span>
+                <span style="font-weight: bold;">{AccountName}</span>
+                <span> and am authorized by this organization to participate in its Professional Liability Insurance
+                    Program.</span>
+                    <br>
+                    <lightning-input label="" name="accept" type="checkbox" onchange={concentTaken} value="checked">
+                    </lightning-input>
+                    <template if:true={accepted} class="slds-p-left_large">
+                        <lightning-button class="slds-p-top_large" label="Continue" onclick={navigateToPersonalInfo}
+                            variant="brand"></lightning-button>
+                    </template>
+                <br>
+                <span style="font-style: italic">If you are not currently associated with </span> <span
+                    style="font-weight: bold; font-style: italic">{AccountName} </span>,
+                <span style="font-style: italic">please contact your licensed insurance broker for assistance.</span> 
+
+                
+
+                <!--<h3> View Solutions and Get Covered.</h3>
+                -->
+                <!-- Using an if statement -->
+                <!--<template if:true={showFeatures}>
+                    <div class="slds-p-top_large">
+                        <h2 class="slds-text-heading_medium">Steps</h2>
+                    -->
+                <!-- Using a for statement -->
+                <!-- <template for:each={features} for:item='feature'>
+                            <c-child label={feature.label} key={feature.label}>
+                           -->
+                <!-- Specifying the 'icon' slot for c-child -->
+                <!--    <lightning-icon icon-name={feature.icon} size="x-small" slot="icon"></lightning-icon>
+                            </c-child>
+                        </template>
+                    </div>
+                </template>
+
+                <h2 class="slds-text-heading_medium slds-p-top_large">
+                    Considerations
+                </h2>
+                <ul class="slds-list_dotted">
+                    <li class="slds-m-horizontal_xx-small slds-m-bottom_x-small">Please make sure review the Coverage
+                        and Quote before proceeding to Pay. </li>
+                    <li class="slds-m-horizontal_xx-small slds-m-bottom_x-small">Change in coverage plan must be
+                        finalized before the issuance of policy</li>
+                    <li class="slds-m-horizontal_xx-small slds-m-bottom_x-small">The Certificate and Policy document
+                        will entail all information related to Policy and it's Coverages</li>
+                    <li class="slds-m-horizontal_xx-small slds-m-bottom_x-small">For transaction purpose, We will use
+                        'CAD' as your default currency</li>
+
+                </ul>
+
+                <h2 class="slds-text-heading_medium slds-p-top_large">Resources</h2>
+                <a href="https://www.youtube.com/watch?v=f7pM-__mICI">
+                    Policy Claims Guidance
+                </a><br />
+
+                </br>
+-->             </div>
+                <br>
+                
+            
+
+        </lightning-card>
+    </div>
+
+    <!-- Child Components Starts-->
+
+    <!--Personal Information - Step 2 -->
+
+    <div class="stepTwo slds-hide" >
+        <c-personal-information onmyfirstevent={navigateToEligibility} onnavigatetohome={paymentconfirmation}></c-personal-information>
+    </div>
+
+    <!--Eligibility Questions Component - Step 3 -->
+
+    <div class="stepThree slds-hide">
+        <c-eligibilty onmysecondevent={navigateToProductInfo} onmyfirstevent={navigateToPersonalInfo}
+            onmyhomepageevent={gotoHomePageFromEQ}></c-eligibilty>
+        <!-- <c-eligibility-test parentdata={parentdata}  onmysecondevent={handlechildevent2}  onmyhomepageevent={gotoHomePageFromEQ}></c-eligibility-test> -->
+    </div>
+
+
+
+    <!--Eligibility Questions Component - Step 3 -->
+
+    <div class="stepThree2 slds-hide">
+        <lightning-card>
+            <div class="app slds-p-around_x-large">
+                <h1 class="slds-text-heading_large">Your Application is Suspended</h1>
+                <h3>Will get update on email!</h3>
+            </div>
+        </lightning-card>
+    </div>
+
+    <!--Product Info Component - Step 4 -->
+
+    <div class="stepFour slds-hide">
+        <c-product-Info onmythirdevent={navigateToQuoteInfo} onhomepageeventproductinfo={HomeFromProdInfo}
+            onmyfirstevent={navigateToEligibility}>
+        </c-product-Info>
+    </div>
+
+    <!--Quote Component - Step 5 -->
+
+    <div class="stepFive slds-hide">
+        <c-quote onmyfourthevent={handlechildevent4} onquoteevent={HomefromQuote}></c-quote>
+
+    </div>
+
+
+
+    <!--Payment Collection Component - Step 6-->
+    <div class="stepSix slds-hide">
+        <!--        <c-invoice-payment onpaymentevent={paymentconfirmation}></c-invoice-payment>-->
+
+        <c-invoice-payment inv-amount={amount} invoiceobjcja={invoiceandlineobj} opp-tocreate={opportunityWrapper}
+            ppdto-update={ppdListtoActivate} policyto-update={policyObj} full-name={accountfullname}
+            payer-firstname={accountFirstName} payer-lastname={accountLastName} payer-email={accountemail}
+            brokerage-id={brokerage} onpaymentevent={paymentconfirmation} onpaymenterrorevent={handlePaymentError}>
+        </c-invoice-payment>
+    </div>
+
+</template>
+
+</template>

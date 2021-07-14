@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Address_Cannot_be_changed_when_Is_Bound</fullName>
+    <active>false</active>
+    <errorConditionFormula>AND(
+ISPICKVAL( FinServ__Status__c , &apos;Bound&apos;),
+
+ ISCHANGED( BillingAddress )
+
+)</errorConditionFormula>
+    <errorDisplayField>FinServ__Status__c</errorDisplayField>
+    <errorMessage>Please change account status to make changes in address.</errorMessage>
+</ValidationRule>

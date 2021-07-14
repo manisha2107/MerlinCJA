@@ -1,0 +1,42 @@
+.THIS label.uiLabel {
+    padding-right: 12px;
+}
+
+.THIS .field{
+  padding: 5px;
+  border: 1px solid #dce4ec;
+  border-radius: 2px;
+}
+
+.THIS .contactname {
+    padding: 5px;
+   	font-size:12px;
+ 	
+}
+
+.THIS .receiptemail {
+    padding: 5px;
+   	font-size:12px;
+    padding-top:20px;
+    
+}
+
+.THIS .cardholder {
+   	padding: 5px;
+    font-size:12px;
+    padding-top:20px;
+       
+}
+
+.THIS .slds-form-element__label {
+      display: none;
+      visibility: hidden;
+}
+.THIS.exampleHolder{
+    position: relative;
+    display: inline-block;
+    margin-left: 15px;
+    width: 55px;
+    vertical-align: middle;
+    white-space: nowrap;
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Layout_for_Program_Members</fullName>
+    <fields>PolicyName</fields>
+    <fields>Name</fields>
+    <fields>Status</fields>
+    <fields>PremiumAmount</fields>
+    <label>Layout for Program Members</label>
+</CompactLayout>

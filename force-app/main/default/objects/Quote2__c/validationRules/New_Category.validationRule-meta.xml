@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_Category</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( ISPICKVAL( Category__c , &quot;New Quote&quot;), NOT(  ISBLANK(Parent_Quote__c ) )   )</errorConditionFormula>
+    <errorDisplayField>Parent_Quote__c</errorDisplayField>
+    <errorMessage>Parent Quote  should be empty</errorMessage>
+</ValidationRule>

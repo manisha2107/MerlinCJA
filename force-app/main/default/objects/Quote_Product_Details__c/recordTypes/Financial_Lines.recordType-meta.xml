@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Financial_Lines</fullName>
+    <active>true</active>
+    <description>Represent coverage, extension and sub-limit of financial lines product.</description>
+    <label>Financial Lines</label>
+    <picklistValues>
+        <picklist>Category_Group_Type_Value__c</picklist>
+        <values>
+            <fullName>Actual Cash Value</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Age</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Amount</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Amount Per Occurrence</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Amount Per Person</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Benefit for Lifetime</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Benefit to Age</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Benefit to Specific period</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Boolean</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Duration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pct</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Percentage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Range</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Category_Group_Type__c</picklist>
+        <values>
+            <fullName>Bodily Injured</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Collision</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Comprehensive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medical Payments</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Property Damage</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Category_Group__c</picklist>
+        <values>
+            <fullName>Additional Coverage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Auto</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bundled Coverage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Forms and Endorsements</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>General</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Home</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Liability</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Section 2%2FLiability Coverage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Section-1 Property Coverage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Uninsured Motorist Insurance</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Category__c</picklist>
+        <values>
+            <fullName>Coverage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Extension</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sub-limit</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Extension_Category__c</picklist>
+        <values>
+            <fullName>Any One Claims</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Each Occurrence</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Limit_Range__c</picklist>
+        <values>
+            <fullName>100%2F200%2F50</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>15%2F30%2F5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>200%2F500%2F100</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>25%2F50%2F25</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>50%2F100%2F50</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Line_of_Business__c</picklist>
+        <values>
+            <fullName>Commercial Lines</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Financial Lines</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Professional Lines</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status__c</picklist>
+        <values>
+            <fullName>Activated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Draft</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Expired</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type_of_Coverage__c</picklist>
+        <values>
+            <fullName>Any one claim</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Each Occurrence</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type_of_License_Holder__c</picklist>
+        <values>
+            <fullName>Exempt Market Dealer %28EMD%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Investment Industry Regulatory Organization of Canada %28IIROC%29 Registered Representative%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Licensed Life Insurance and%2For Accident and Sickness Insurance Agent %28LLQP%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mutual Fund Dealer Association %28MFDA%29 Registered Representative</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type_of_QPD__c</picklist>
+        <values>
+            <fullName>Endorsement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Firm Rider</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Product</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Initiate_Refund_Process</name>
+        <label>Initiate Refund Process</label>
+        <locationX>433</locationX>
+        <locationY>67</locationY>
+        <actionName>refundFromBrokerAccount</actionName>
+        <actionType>apex</actionType>
+        <inputParameters>
+            <name>policyIds</name>
+            <value>
+                <elementReference>firmPolicyToCancell</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <apiVersion>50.0</apiVersion>
+    <interviewLabel>Refund Process against Cancellation - Firm Policy {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Refund Process against Cancellation - Firm Policy</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>50</locationX>
+        <locationY>50</locationY>
+        <connector>
+            <targetReference>Initiate_Refund_Process</targetReference>
+        </connector>
+    </start>
+    <status>Draft</status>
+    <variables>
+        <name>firmPolicyToCancell</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <objectType>InsurancePolicy</objectType>
+    </variables>
+</Flow>

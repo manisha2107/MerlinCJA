@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>50.0</apiVersion>
+    <assignments>
+        <name>Assign_policy_name</name>
+        <label>Assign policy name</label>
+        <locationX>613</locationX>
+        <locationY>287</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.PolicyName</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Concatenate_Policy_Index_and_Initials</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Is_policy_name_set__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Policy_Index__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>policyindex</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>update_Policy</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>assign_values_to_variables</name>
+        <label>assign values to variables</label>
+        <locationX>416</locationX>
+        <locationY>290</locationY>
+        <assignmentItems>
+            <assignToReference>policyindex</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>get_policies.Policy_Index__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>PolicyTypeInitial</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Getpolicytypeinitial</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>policyindex</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <numberValue>1.0</numberValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Assign_policy_name</targetReference>
+        </connector>
+    </assignments>
+    <formulas>
+        <name>Concatenate_Policy_Index_and_Initials</name>
+        <dataType>String</dataType>
+        <expression>{!Getpolicytypeinitial} +&quot;-&quot;+{!String_name_to_change}+&quot;---&quot;+text({!policyindex})</expression>
+    </formulas>
+    <formulas>
+        <name>Getpolicytypeinitial</name>
+        <dataType>String</dataType>
+        <expression>IF(ISPICKVAL({!$Record.PolicyType} ,&quot;Financial Line&quot;), &quot;FL&quot;,
+IF(ISPICKVAL({!$Record.PolicyType},&quot;Commercial Line&quot;), &quot;CL&quot;,
+IF(ISPICKVAL({!$Record.PolicyType},&quot;Professional Line&quot;),&quot;PL&quot;,null )))</expression>
+    </formulas>
+    <formulas>
+        <name>String_name_to_change</name>
+        <dataType>String</dataType>
+        <expression>if( LEN( text({!policyindex}) ) == 1, &apos;00000&apos;&amp;text({!policyindex}),
+if( LEN( text({!policyindex}) ) == 2, &apos;0000&apos;&amp;text({!policyindex}),
+if(LEN( text({!policyindex}) ) == 3, &apos;000&apos;&amp;text({!policyindex}) ,
+if(LEN( text({!$Record.Policy_Index__c}) ) == 4, &apos;00&apos;&amp;text({!policyindex}) ,
+if(LEN( text({!policyindex}) ) == 5, &apos;0&apos;&amp;text({!policyindex}) ,
+null
+)))))</expression>
+    </formulas>
+    <interviewLabel>Update policy name wrt policy index value {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Update policy name wrt policy index value</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>get_policies</name>
+        <label>get policies</label>
+        <locationX>276</locationX>
+        <locationY>286</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>assign_values_to_variables</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Status</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Active</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Is_policy_name_set__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>InsurancePolicy</object>
+        <sortField>Policy_Index__c</sortField>
+        <sortOrder>Desc</sortOrder>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <name>update_Policy</name>
+        <label>update Policy</label>
+        <locationX>800</locationX>
+        <locationY>286</locationY>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>66</locationX>
+        <locationY>24</locationY>
+        <connector>
+            <targetReference>get_policies</targetReference>
+        </connector>
+        <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Status</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Active</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Is_policy_name_set__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <object>InsurancePolicy</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Obsolete</status>
+    <variables>
+        <name>policyindex</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <scale>2</scale>
+    </variables>
+    <variables>
+        <description>Used to store initials of policy types.</description>
+        <name>PolicyTypeInitial</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <value>
+            <elementReference>$Record.PolicyType</elementReference>
+        </value>
+    </variables>
+</Flow>

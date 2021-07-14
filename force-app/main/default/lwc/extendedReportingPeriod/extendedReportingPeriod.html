@@ -1,0 +1,341 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 03-04-2021
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+  Modifications Log 
+  Ver   Date         Author                               Modification
+  1.0   02-16-2021   ChangeMeIn@UserSettingsUnder.SFDoc   Initial Version
+-->
+<template>
+
+<lightning-progress-indicator  current-step={currentStep} type="base" variant="base">
+    
+    <lightning-progress-step label="General Information"     value="1"> </lightning-progress-step>
+    <lightning-progress-step label="Select ERP Option"  value="2"> </lightning-progress-step>
+    <lightning-progress-step label="Review Details"  value="3"> </lightning-progress-step>
+    <lightning-progress-step label="Pay for Selected Option"   value="4"> </lightning-progress-step>
+
+        </lightning-progress-indicator>
+
+
+        <div class="noERPFound slds-hide">
+
+          <!--  <lightning-card title="Purchase ERP" icon-name="standard:product_request">
+    
+            </lightning-card> -->
+    
+            <lightning-card>
+
+                <div class="slds-m-horizontal--x-large">
+                    <lightning-icon class='myClass' icon-name="standard:product_request" alternative-text="Connected"
+                        variant="inverse"></lightning-icon>
+                    <span class='slds-text-heading_medium slds-m-left_small'><strong>Purchase Extended Reporting Period</strong></span>
+        
+                </div>
+        
+            </lightning-card>
+
+            <template if:true={ERPexists}>
+    
+                  
+       <lightning-card>
+         
+              <div class="slds-p-right_x-large slds-p-bottom_large">
+            
+            <legend class="slds-form-element__legend slds-form-element__label slds-text-heading_medium">
+      
+      <p class="slds-p-horizontal_medium">No extended reporting period found against your policy. Please contact your Insurance Broker.</p>
+            
+                </legend>
+      
+           
+            </br>
+            </div>
+      
+      
+      </lightning-card>
+      </template>
+     
+          </div>
+
+        
+        
+        <div class="noPolicyFound slds-hide">
+
+            <!-- <lightning-card title="Purchase ERP" icon-name="standard:product_request">
+    
+            </lightning-card>-->
+            <lightning-card>
+
+                <div class="slds-m-horizontal--x-large">
+                    <lightning-icon class='myClass' icon-name="standard:product_request" alternative-text="Connected"
+                        variant="inverse"></lightning-icon>
+                    <span class='slds-text-heading_medium slds-m-left_small'><strong>Purchase Extended Reporting Period</strong></span>
+        
+                </div>
+        
+            </lightning-card>
+            <template if:true={noPolicy}>
+    
+                  
+       <lightning-card>
+         
+              <div class="slds-p-right_x-large slds-p-bottom_large">
+            
+            <legend class="slds-form-element__legend slds-form-element__label slds-text-heading_medium">
+      
+      <p class="slds-p-horizontal_medium">No Policy found that is either under Cancellation Process or Activated.</p>
+            
+                </legend>
+      
+           
+            </br>
+            </div>
+      
+      
+      </lightning-card>
+      </template>
+     
+          </div>
+
+          
+          <div class="purchERP slds-hide">
+
+           <!-- <lightning-card title="Purchase ERP" icon-name="standard:product_request">
+    
+            </lightning-card>-->
+
+            <lightning-card>
+
+                <div class="slds-m-horizontal--x-large">
+                    <lightning-icon class='myClass' icon-name="standard:product_request" alternative-text="Connected"
+                        variant="inverse"></lightning-icon>
+                    <span class='slds-text-heading_medium slds-m-left_small'><strong>Purchase</strong></span>
+        
+                </div>
+        
+            </lightning-card>
+    
+            <template if:true={purchasedERP}>
+    
+                  
+       <lightning-card>
+         
+              <div class="slds-p-right_x-large slds-p-bottom_large">
+            
+            <legend class="slds-form-element__legend slds-form-element__label slds-text-heading_medium">
+      
+      <p class="slds-p-horizontal_medium">You have already purchased Extended Reporting Period.</p>
+            
+                </legend>
+      
+           
+            </br>
+            </div>
+      
+      
+      </lightning-card>
+      </template>
+     
+          </div>
+
+
+        <div class="step1 slds-hide">
+            <lightning-card>
+                <div class="app slds-p-around_x-large">
+                    <h1 class="slds-text-heading_large">{title}</h1>
+                    
+                    <!-- Using an if statement -->
+                    <template if:true={showFeatures}>
+                        <div class="slds-p-top_large">
+                            <h2 class="slds-text-heading_medium slds-p-bottom_x-small">Steps</h2>
+            
+                            <!-- Using a for statement -->
+                            <template for:each={features} for:item='feature'>
+                                <c-child label={feature.label} key={feature.label}>
+                                    
+                                    <!-- Specifying the 'icon' slot for c-child -->
+                                    <lightning-icon icon-name={feature.icon} size="x-small" slot="icon"></lightning-icon>
+                                </c-child>
+                            </template>
+                        </div>
+                    </template>
+            
+                    <h2 class="slds-text-heading_medium slds-p-top_large slds-p-bottom_x-small">
+                        Considerations
+                    </h2>
+                    <ul class="slds-list_dotted">
+                        <li class="slds-m-horizontal_xx-small slds-m-bottom_x-small">Please make sure to review the Coverage and Quote before proceeding to Pay. </li>
+                        <li class="slds-m-horizontal_xx-small slds-m-bottom_x-small">Change in coverage plan must be finalized before the issuance of policy.</li>
+                        <li class="slds-m-horizontal_xx-small slds-m-bottom_x-small">The Certificate and Policy document will entail all information related to Policy and it's Coverages.</li>
+                        <li class="slds-m-horizontal_xx-small slds-m-bottom_x-small"> We will use Canadian Dollar as your default currency.</li>
+
+                    </ul>
+            
+                    <h2 class="slds-text-heading_medium slds-p-top_large slds-p-bottom_x-small">Resources</h2>
+                    <a href="https://www.youtube.com/watch?v=f7pM-__mICI" >
+                        Policy Claims Guidance
+                    </a><br/>
+
+                </br>
+
+                <lightning-button class="slds-p-top_large" label="Continue" onclick={goToStepTwo} variant="brand"></lightning-button>
+                    </div>
+            
+                </lightning-card>
+                </div>
+
+<div class="step2 slds-hide">
+
+    <lightning-card>
+
+        <div class="slds-m-horizontal--x-large">
+            <lightning-icon class='myClass' icon-name="custom:custom40" alternative-text="Connected"
+                variant="inverse"></lightning-icon>
+            <span class='slds-text-heading_medium slds-m-left_small'><strong>List of Extended Reporting Periods</strong></span>
+
+        </div>
+
+    </lightning-card>
+    
+    <lightning-card  class=" slds-p-right_x-large slds-p-bottom_large">
+        
+        <!--
+        <div style="margin-left: 6%" if:true={error}>
+            <p class = "slds-text-color_error">
+                {error}
+              </p>
+        </div>-->
+
+           <template if:true={erps}> 
+            <div class="slds-m-horizontal--x-large">
+                <div class="container-fluid">       
+        <lightning-radio-group class="erpvalidation" name="Options" label="Choose one Option" options={erps} value={selectedOption} onchange={handleChange} required> </lightning-radio-group>
+                    </br>
+                    </div>
+                    <lightning-button variant="brand" label="Purchase ERP" onclick={getSelectedERP}></lightning-button> &nbsp;&nbsp;&nbsp;
+                    </div>
+            </template>          
+  
+            </br>
+        </lightning-card>
+            </div>
+           
+
+
+
+
+<div class="step5 slds-hide">
+
+    <lightning-card>
+
+        <div class="slds-m-horizontal--x-large">
+            <lightning-icon class='myClass' icon-name="custom:custom91" alternative-text="Connected"
+                variant="inverse"></lightning-icon>
+            <span class='slds-text-heading_medium slds-m-left_small'><strong>Review Details</strong></span>
+
+        </div>
+
+    </lightning-card>
+    
+
+
+    <lightning-card  class="slds-p-right_x-large slds-p-bottom_large">
+
+        <!--
+        <div style="margin-left: 6%" if:true={error}>
+            <p class = "slds-text-color_error">
+                {error}
+              </p>
+        </div>-->
+
+        <div class="slds-m-around_xx-small">
+                  
+            <template if:true={erps}>
+                    
+                <div class="slds-m-horizontal--x-large">
+                    <div class="container-fluid">    
+               
+               <lightning-input disabled    
+            label="Extended Reporting Period Amount (Premium * Additional Premium Percentage)" 
+            class="acc slds-p-bottom_small" name="premium" type="number"   formatter="currency" step="0.01" value={prembyadditionalprem}></lightning-input>
+
+<!--
+            <lightning-input   disabled  
+                label="Additional Premium Percentage"
+            class="acc" name="additionalpremium" type="number" formatter="percent" mode="view" value={childAddtionalpremiumPercentage}></lightning-input>
+    -->        
+
+            <lightning-input   disabled  
+            label="Unearned Premium (Individual Certificate)"
+        class="acc slds-p-bottom_small" name="totalunearnedpremium" type="number" formatter="currency"  step="0.01"  value={unearnedpremium}></lightning-input>
+       
+        <lightning-input   disabled  
+            label="Unearned Premium (Firm Certificate)"
+        class="acc slds-p-bottom_small" name="totalunearnedpremium" type="number" formatter="currency"  step="0.01"  value={unearnedpremiumFirmCertificate}></lightning-input>
+
+
+             <lightning-input   disabled  
+            label="Transaction Charges"
+        class="acc slds-p-bottom_small" name="transcharges" type="number" formatter="currency"  step="0.01"  value={totaltransactioncharges}></lightning-input>
+    
+        <lightning-input   disabled  
+          label="Tax"
+    class="acc slds-p-bottom_small" name="tax" type="number" formatter="currency"  step="0.01"  value={tax}></lightning-input>
+
+            <lightning-input   disabled  
+            label="Total Extended Reporting Period Amount"
+        class="acc slds-p-bottom_small" name="totalpaiderp" type="number" formatter="currency"  step="0.01"  value={amount}></lightning-input>
+
+        </div>
+        <br/>
+        <lightning-button label="Confirm" onclick={showInvoiceGetPPd} variant="brand"></lightning-button>
+       
+
+    </div>
+
+                    </template>          
+
+
+            </br>
+            </div>
+            </lightning-card>
+</div>
+
+
+<!--
+<div class="step3 slds-hide">
+    <c-invoice-payment inv-amount={amount} inv-id={invoiceID} erprec-id={selectedOption} payer-email={accountemail}
+                       full-name={accountfullname} payer-firstname={accountFirstName} payer-lastname={accountLastName} policy-id={childPolicyid}
+                       account-id={childAccountId} inv-notes={childinvnotes}
+    
+     onpaymentevent={handleERPAfterPayment} onpaymenterrorevent={handlePaymentError}></c-invoice-payment>
+
+</div>
+-->
+
+<!--
+<div class="step3 slds-hide">
+    <c-invoice-payment inv-amount={amount} invoiceobj={invoiceobj} ppdto-update={ppdListtoExpire} opp-tocreate={opportunityWrapper} policyto-update={policyObj}
+    
+    full-name={accountfullname} payer-firstname={accountFirstName} payer-lastname={accountLastName} payer-email={accountemail} brokerage-id={brokerage}
+
+     onpaymentevent={handleERPAfterPayment} onpaymenterrorevent={handlePaymentError}></c-invoice-payment>
+
+</div>
+
+</template>
+-->
+
+<div class="step3 slds-hide">
+    <c-invoice-payment inv-amount={amount} invoiceobjcja={invoiceandlineobj}  opp-tocreate={opportunityWrapper} ppdto-update={ppdListtoExpire}  policyto-update={policyObj}
+    
+    full-name={accountfullname} payer-firstname={accountFirstName} payer-lastname={accountLastName} payer-email={accountemail} brokerage-id={brokerage}
+
+     onpaymentevent={handleERPAfterPayment} onpaymenterrorevent={handlePaymentError}></c-invoice-payment>
+
+</div>
+
+</template>

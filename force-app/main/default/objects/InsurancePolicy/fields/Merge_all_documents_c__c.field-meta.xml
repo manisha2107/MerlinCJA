@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Merge_all_documents_c__c</fullName>
+    <description>##Conga created button:00bf0000000kau4</description>
+    <externalId>false</externalId>
+    <formula>&quot;&amp;solmgr=1&quot; + 
+&quot;&amp;id=&quot; + Id +
+&quot;&amp;qvar0id=a0pf0000003X535AAC&quot; + 
+&quot;&amp;qvar0format=10000&quot; + 
+&quot;&amp;templateid={QVar0}&quot; +
+&quot;&amp;DefaultPDF=1&quot; +
+&quot;&amp;csvisible=1&quot; + 
+&quot;&amp;CSRecipient1=&quot; +  Billing_Contact__c  +
+&quot;&amp;qmode=congasign&quot;</formula>
+    <label>Merge_all_documents__c</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

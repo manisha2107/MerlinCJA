@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Quote_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Quote Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Commercial Crime Bond</fullName>
+                <default>false</default>
+                <label>Commercial Crime Bond</label>
+            </value>
+            <value>
+                <fullName>Commercial General Liability</fullName>
+                <default>false</default>
+                <label>Commercial General Liability</label>
+            </value>
+            <value>
+                <fullName>Commercial Property</fullName>
+                <default>false</default>
+                <label>Commercial Property</label>
+            </value>
+            <value>
+                <fullName>Commercial Surety</fullName>
+                <default>false</default>
+                <label>Commercial Surety</label>
+            </value>
+            <value>
+                <fullName>Contingent Liability</fullName>
+                <default>false</default>
+                <label>Contingent Liability</label>
+            </value>
+            <value>
+                <fullName>Contractor Pollution Liability</fullName>
+                <default>false</default>
+                <label>Contractor Pollution Liability</label>
+            </value>
+            <value>
+                <fullName>Contract Surety</fullName>
+                <default>false</default>
+                <label>Contract Surety</label>
+            </value>
+            <value>
+                <fullName>Course-of-Construction</fullName>
+                <default>false</default>
+                <label>Course-of-Construction</label>
+            </value>
+            <value>
+                <fullName>Cyber Liability</fullName>
+                <default>false</default>
+                <label>Cyber Liability</label>
+            </value>
+            <value>
+                <fullName>Employment Practice Liability</fullName>
+                <default>false</default>
+                <label>Employment Practice Liability</label>
+            </value>
+            <value>
+                <fullName>Environmental Impairment Liability</fullName>
+                <default>false</default>
+                <label>Environmental Impairment Liability</label>
+            </value>
+            <value>
+                <fullName>Errors &amp; Omission Liability</fullName>
+                <default>false</default>
+                <label>Errors &amp; Omission Liability</label>
+            </value>
+            <value>
+                <fullName>Fiduciary Liability</fullName>
+                <default>false</default>
+                <label>Fiduciary Liability</label>
+            </value>
+            <value>
+                <fullName>Financial Institution Bond</fullName>
+                <default>false</default>
+                <label>Financial Institution Bond</label>
+            </value>
+            <value>
+                <fullName>Intellectual Property Liability</fullName>
+                <default>false</default>
+                <label>Intellectual Property Liability</label>
+            </value>
+            <value>
+                <fullName>Representation and Warranties</fullName>
+                <default>false</default>
+                <label>Representation and Warranties</label>
+            </value>
+            <value>
+                <fullName>Tax Indemnity</fullName>
+                <default>false</default>
+                <label>Tax Indemnity</label>
+            </value>
+            <value>
+                <fullName>Wrap-Up Liability</fullName>
+                <default>false</default>
+                <label>Wrap-Up Liability</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SublimitWhattoshow__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(Sub_Limit__c  &gt;0 &amp;&amp;  Sub_Limit_Percentage__c &gt;0,
+     TEXT(Sub_Limit_Percentage__c*100) &amp; &apos;% or $&apos;  &amp;  TEXT(Sub_Limit__c) , &apos;$&apos; &amp; TEXT(FLOOR(Sub_Limit__c/1000)) &amp; &apos;,&apos; &amp; RIGHT(TEXT(Sub_Limit__c), LEN(TEXT(Sub_Limit__c)) - LEN(TEXT(FLOOR(Sub_Limit__c/1000)))) )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>SublimitWhattoshow</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

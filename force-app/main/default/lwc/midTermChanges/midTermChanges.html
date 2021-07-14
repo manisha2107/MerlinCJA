@@ -1,0 +1,173 @@
+<template>
+                                        <!--Address Change Component Button-->
+
+    <div class="changeAddressComp">
+
+        <div class="slds-box slds-theme_default">
+            <lightning-accordion class="example-accordion"
+                                onsectiontoggle={handleToggleSection}
+                                allow-multiple-sections-open>
+                                
+                <lightning-accordion-section name="A" label="Address Change">
+                       
+                    
+                       <p  class="slds-m-left_xx-small slds-p-top_x-small">
+    ⦿ To change your personal address or your firm address </p>
+                    
+           
+                 
+                       </br>
+    
+                       <lightning-button variant="brand" label=">> Proceed" title="Change Address" onclick={showAddressChange} class="slds-m-left_xx-small">
+        
+        </lightning-button>
+    
+                    
+                </lightning-accordion-section>
+            </lightning-accordion> 
+        </div>   
+</div>
+
+
+
+                                                <!--Address Change Component Button-->
+
+
+                                                    <!--Cancellation Component Button-->
+<template if:false={isprimarycancelled}>
+
+    <div class="cancelCertificateComp">
+
+        <div class="slds-box slds-theme_default">
+            <lightning-accordion class="example-accordion"
+                                onsectiontoggle={handleToggleSection}
+                                allow-multiple-sections-open>
+                                
+                <lightning-accordion-section name="A" label="Cancel Certificate">
+                       
+                    
+                       <p  class="slds-m-left_xx-small slds-p-top_x-small">
+    ⦿  Offers clients to Cancel their policy. You can either cancel your own policy or your firm's policy (if purchased before). </p>
+                    
+            <p class="slds-m-left_xx-small slds-p-top_x-small"> 	
+    ⦿  After Choosing to cancel primary policy, your firm's policy will also be cancelled automatically.</p>
+                  
+    <p class="slds-m-left_xx-small slds-p-top_x-small"> 	
+    ⦿  Once Cancelled, the policy documents will be sent to you via email for signing the cancellation documents, once all the required documents are signed, the refund will be provided accordingly.</p>                
+                       </br>
+    
+                       <lightning-button variant="brand" label=">> Proceed" title="Cancel Certificate Component" onclick={showCancelCertificate} class="slds-m-left_xx-small">
+        
+        </lightning-button>
+    
+                    
+                </lightning-accordion-section>
+            </lightning-accordion> 
+        </div>   
+</div>
+
+</template>
+
+                                                <!--Cancellation Component Button Ends-->
+
+
+
+<!--Firm Policy Component Button-->
+<template if:false={isfirmpolicypurchased}>
+
+    <div class="firmInsuranceComp">
+
+        <div class="slds-box slds-theme_default">
+            <lightning-accordion class="example-accordion"
+                                onsectiontoggle={handleToggleSection}
+                                allow-multiple-sections-open>
+                                
+                <lightning-accordion-section name="A" label="Enhance Coverage">
+                       
+                    
+     <p class="slds-m-left_xx-small slds-p-top_x-small"> ⦿  Offers customer pre-quoted enhancements, additional limits of liability or the option to add an "Insured" or "Company" to be insured under the policy</p>
+                    
+            <p class="slds-m-left_xx-small slds-p-top_x-small"> 	
+              ⦿  Additional Premium will be charged and would be pro-rated to the remaining policy term, but subject to a minimum.  </p>
+                  
+                    
+                       </br>
+    
+                       <lightning-button variant="brand" label=">>Proceed" title="ERP" onclick={showFirmInsurance} class="slds-m-left_xx-small">
+        
+        </lightning-button>
+    
+                    
+                </lightning-accordion-section>
+            </lightning-accordion> 
+        </div>   
+
+</div>
+
+
+</template>
+                                                <!--Firm Policy Component Button Ends-->
+
+
+<!--ERP Component Button-->
+<template if:false={isERPpurchased}>
+
+<div class="ERPComp">
+
+    <div class="slds-box slds-theme_default">
+        <lightning-accordion class="example-accordion"
+                            onsectiontoggle={handleToggleSection}
+                            allow-multiple-sections-open>
+                            
+            <lightning-accordion-section name="A" label="Extended Reporting Period">
+                   
+                
+                   <p class="slds-m-left_xx-small slds-p-top_x-small"> ⦿ Offers customer pre-quoted enhancements, additional limits of liability or the option to add an "Insured" or "Company" to be insured under the policy</p>
+                
+        <p class="slds-m-left_xx-small slds-p-top_x-small"> 	
+          ⦿ Additional Premium will be charged and would be pro-rated to the remaining policy term, but subject to a minimum.  </p>
+              
+                
+                   </br>
+
+                   <lightning-button variant="brand" label=">>Proceed" title="ERP" onclick={showERPComponent} class="slds-m-left_xx-small">
+    
+    </lightning-button>
+
+                
+            </lightning-accordion-section>
+        </lightning-accordion> 
+    </div>   
+
+
+</div>
+</template>
+
+
+                                                <!--ERP Component Button Ends-->
+
+
+<!--Child Components-->
+
+    <div class="compZerochangeAddressComp slds-hide">
+        <c-change-account-address></c-change-account-address>
+</div>
+
+
+    <div class="compOneCancelCertificate slds-hide">
+        <c-cancel-insurance-certificate></c-cancel-insurance-certificate>
+</div>
+
+
+<div class="compTwoFirmInsurance slds-hide">
+    <c-firm-insurance></c-firm-insurance>
+</div>
+
+
+<div class="compThreeERP slds-hide">
+    <c-extended-reporting-period></c-extended-reporting-period>
+</div>
+
+
+
+</template>

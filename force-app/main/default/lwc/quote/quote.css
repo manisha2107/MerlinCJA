@@ -1,0 +1,68 @@
+.h1{
+
+  font-weight: bold;
+}
+.headingColor{
+  color:rgb(152,61,126)
+}
+
+.table1 {
+  border-collapse: separate;
+  border-spacing: 7px;
+}
+
+.tableheader{
+
+  border-bottom: 7px solid lightslategrey;
+  border-width: 1.45px;
+  font-size: 15px;
+  font-style: italic;
+}
+
+.table2 {
+  border-spacing: 7px;
+   border-collapse: separate;
+
+}
+
+.space {
+padding-left: 30px;
+width:25%;
+}
+
+.quoteheading{
+
+padding-left: 10px;
+font-size: 30px;
+
+}
+
+.notesheading{
+
+padding-left: 10px;
+font-size: 20px;
+
+}
+
+.buttons{
+
+padding-left: 10px;
+}
+.overflow-auto{
+  overflow: auto;
+}
+
+
+
+.myClass {
+  fill:var(--sds-c-icon-color-background, rgb(152,61,126));
+  background-color:var(--sds-c-icon-color-background, rgb(152,61,126));
+}
+
+article.slds-card {overflow: auto !important;}
+
+
+table.d {
+  table-layout: fixed;
+  width: 100%;  
+}

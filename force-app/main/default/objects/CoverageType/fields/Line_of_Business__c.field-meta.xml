@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Line_of_Business__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Line of business of a coverage, extension or a sub-limit</inlineHelpText>
+    <label>Line of Business</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Financial Lines</fullName>
+                <default>false</default>
+                <label>Financial Lines</label>
+            </value>
+            <value>
+                <fullName>Commercial Lines</fullName>
+                <default>false</default>
+                <label>Commercial Lines</label>
+            </value>
+            <value>
+                <fullName>Professional Lines</fullName>
+                <default>false</default>
+                <label>Professional Lines</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Commercial_Lines</fullName>
+    <active>true</active>
+    <compactLayoutAssignment>Commercial_Lines</compactLayoutAssignment>
+    <description>Represent coverage, extension and sub-limit of commercial lines product.</description>
+    <label>Commercial Lines</label>
+    <picklistValues>
+        <picklist>BenefitPaymentFrequency</picklist>
+        <values>
+            <fullName>Annually</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Monthly</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quarterly</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Semi-Annual%28twice a year%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Semi-Monthly%28twice a month%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Category</picklist>
+        <values>
+            <fullName>Coverage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Extensions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sub-limit</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CategoryGroup</picklist>
+        <values>
+            <fullName>Additional Coverage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Auto</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bundled Coverage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Forms and Endorsements</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>General</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Home</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Liability</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Section 2%2FLiability Coverage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Section-1 Property Coverage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Uninsured Motorist Insurance</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CategoryGroupType</picklist>
+        <values>
+            <fullName>Bodily Injury</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Collision</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Comprehensive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medical Payments</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Property Damage</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CategoryGroupTypeValue</picklist>
+        <values>
+            <fullName>Actual Cash Value</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Age</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Amount</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Amount Per Occurance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Amount Per Person</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Benefit for Lifetime</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Benefit to Age</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Benefit to Specific period</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Boolean</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Duration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pct</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Percentage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Range</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>DeathBenefitOptionType</picklist>
+        <values>
+            <fullName>Adjustable</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Decreasing based on a commuted value</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>IncomeOptionType</picklist>
+        <values>
+            <fullName>Carry Forward</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer Specified</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Deposit At interest</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dividend Payment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Indexed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Interest Only</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>LimitRange</picklist>
+        <values>
+            <fullName>100%2F200%2F50</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>15%2F30%2F5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>200%2F500%2F100</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>25%2F50%2F25</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>50%2F100%2F50</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Line_of_Business__c</picklist>
+        <values>
+            <fullName>Commercial Lines</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Financial Lines</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Professional Lines</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status__c</picklist>
+        <values>
+            <fullName>Active</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Draft</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Expired</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

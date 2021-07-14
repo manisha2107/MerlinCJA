@@ -1,0 +1,112 @@
+<template>
+    <div class="stepOne">
+
+    <lightning-card title="Applicant Information" icon-name="standard:account">
+        <div style="margin-left: 6%" if:true={error}>
+            <lightning-badge label={error} style="color: red;"></lightning-badge>
+        </div>
+
+        <template if:true={accRecord}>
+            <div class="slds-m-around--xx-large">
+                <div class="container-fluid">
+                        <lightning-input     label="Enter Account Name"        class="acc" name="accName" required="required" type="text" value={firmName} onchange={handleFieldChange}></lightning-input>
+                        <lightning-input     label="Enter Mailing Street"      class="acc" name="accName" required="required" type="text" value={firmStreet} onchange={handleStreetChange}></lightning-input>
+                        <lightning-input     label="Enter Mailing City"        class="acc" name="accPhone" type="text" value={firmCity} onchange={handleCityChange}></lightning-input>
+                        <lightning-combobox  label="State"                     class='acc' value={firmState} placeholder="Select" options={options} onchange={handleStateChange} required > </lightning-combobox>
+                  <!--      <lightning-input label="Enter Mailing State"       class="acc" name="accEmail" required="required" type="text" value={firmState} onchange={handleStateChange}></lightning-input>-->
+                        <lightning-input     label="Enter Mailing Postal Code" class="acc" name="accEmail" required="required" type="text" value={firmPostalCode} onchange={handlePostalCodeChange}></lightning-input>
+                        <lightning-input     label="Enter Mailing Country"     class="acc" name="accEmail" type="text" value={firmCountry} onchange={handleCountryChange}></lightning-input>
+                  
+                </div>
+                <br/>
+                <lightning-button label="Submit" onclick={createFirmAccount} variant="brand"></lightning-button>
+            </div>
+        </template>
+    </lightning-card>
+
+</div>
+
+
+    <div class="stepTwo slds-hide">
+        <template if:true={endorsementrec}>
+            <lightning-card title="Policy Details"  icon-name="standard:entitlement_policy">
+
+                <div class="slds-card__body slds-card__body_inner">Please review and confirm Firm's Insurance Certificate Details.</div>
+
+            </lightning-card>
+            
+            <lightning-card   class="slds-m-around--xx-medium">
+
+                <div class="slds-grid slds-gutters slds-m-around--xx-small">
+                        <div class="slds-col">
+            <span>               
+             <lightning-input label="Policy Name" disabled name="Name" value={firmpolicyName} required="required" type="text"></lightning-input>
+                    </span>
+                            </div>
+            <div class="slds-col">
+            <span>          
+            <lightning-input label="Effective Date" disabled name="Name" value={todaydate} required="required" type="date"></lightning-input>
+                    </span>
+                        </div>
+                            </div>
+            
+             <div class="slds-grid slds-gutters slds-m-around--xx-small">
+                        <div class="slds-col">
+            <span>               
+              
+                <lightning-input label="Premium" disabled type="number" value={premiumPerMonth}  formatter="currency" step=".01" required="required"  mode="view" ></lightning-input>
+                    </span>
+                            </div>
+            <div class="slds-col">
+            <span>          
+            <lightning-input label="Expiration Date" disabled name="Name" value={policyRec.Quote__r.Expiration_Date__c} required="required" type="date"></lightning-input>
+                    </span>
+                        </div>
+                            </div>  
+                            
+                            <!-- -->
+
+                <div class="slds-grid slds-gutters slds-m-around--xx-small">
+                                <div class="slds-col">
+                    <span>               
+                      
+                <lightning-input label="Contact" disabled type="text" value={accRecord.Name}  formatter="currency" step=".01" required="required"  mode="view" ></lightning-input>
+                        </span>
+                            </div>
+                <div class="slds-col">
+                 <span>          
+                <lightning-input label="Sponsored Company" disabled name="Name" value={policyRec.Policy_Holder__r.Name} required="required" type="date"></lightning-input>
+                            </span>
+                                </div>
+                                    </div>             
+
+
+                            <br>                
+
+                            <lightning-button class="slds-p-left_small"
+                                  label="Submit"
+                                  onclick={handlePolicySave}
+                                  variant="brand"
+                                ></lightning-button>
+            
+            </lightning-card>
+
+           
+
+        </template>
+</div>
+
+<div class="stepThree slds-hide">
+   
+   <!--
+    <c-invoice-payment inv-amount={premiumPerMonth} inv-id={invoiceRec.Id}  payer-email={accRecord.PersonEmail} full-name={accRecord.Name} payer-firstname={accRecord.FirstName} payer-lastname={accRecord.LastName}  inv-notes={invoiceNotes}></c-invoice-payment>
+-->
+
+<c-invoice-payment full-name={contactfirstname}  inv-amount={premiumPerMonth} inv-id={invoiceId} inv-notes={invoiceNotes} payer-email={payeremail} onpaymentevent={handleUpdateAfterPayment} ></c-invoice-payment>
+
+
+</div>
+
+
+
+</template>

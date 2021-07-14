@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Question_With_Quote</fullName>
+    <active>false</active>
+    <label>Question With Quote</label>
+    <picklistValues>
+        <picklist>Consequence__c</picklist>
+        <values>
+            <fullName>Approval Process</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Auto-Fail</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>None</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

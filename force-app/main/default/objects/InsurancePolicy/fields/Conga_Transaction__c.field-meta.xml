@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Conga_Transaction__c</fullName>
+    <externalId>false</externalId>
+    <label>Conga Transaction</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Send with Conga Sign</fullName>
+                <default>false</default>
+                <label>Send with Conga Sign</label>
+            </value>
+            <value>
+                <fullName>Attach to Master Record</fullName>
+                <default>true</default>
+                <label>Attach to Master Record</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

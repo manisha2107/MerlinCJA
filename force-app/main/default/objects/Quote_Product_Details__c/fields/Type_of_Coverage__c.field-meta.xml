@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type_of_Coverage__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Type of a quote product</inlineHelpText>
+    <label>Type of Coverage</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Any one claim</fullName>
+                <default>false</default>
+                <label>Any one claim</label>
+            </value>
+            <value>
+                <fullName>Each Occurrence</fullName>
+                <default>false</default>
+                <label>Each Occurrence</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

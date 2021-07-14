@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Insurer_of_Product</fullName>
+    <active>true</active>
+    <description>If the record type is &quot;Insurer of Product&quot; then Product is required and Opportunity should be null.</description>
+    <errorConditionFormula>RecordType.Name  = &quot;Insurer of Product&quot; &amp;&amp; Opportunity__c &lt;&gt; null</errorConditionFormula>
+    <errorDisplayField>Opportunity__c</errorDisplayField>
+    <errorMessage>Record type is &quot;Insurer of Product&quot;, please remove the Opportunity or change the record type to &quot;Insurer of Opportunity&quot;</errorMessage>
+</ValidationRule>

@@ -1,0 +1,273 @@
+<template>
+  
+    <template if:true={accRecord}>
+        <lightning-card title="Personal Account Address"  icon-name="standard:address">
+
+            <div class="slds-card__body slds-card__body_inner">Please review and confirm Address Information</div>
+
+        </lightning-card>
+        
+        <lightning-card   class="slds-m-around--xx-medium">
+
+          <div class="slds-grid slds-gutters slds-m-around--xx-small">
+            <div class="slds-col">
+    <span>
+        <lightning-input label="Street" class="acc" name="Name" onchange={handleStreetChange} value={accRecord.PersonMailingStreet}  required="required" type="text"></lightning-input>
+    </span>
+  </div>
+       </div>   
+
+            <div class="slds-grid slds-gutters slds-m-around--xx-small">
+                    <div class="slds-col">
+        <span>      
+         
+         <lightning-input label="City" class="acc" name="Name"  onchange={handleCityChange} value={accRecord.PersonMailingCity} required="required" type="text" ></lightning-input>
+        </span>
+                        </div>
+        <div class="slds-col">
+        <span>
+
+          <lightning-combobox  label="State" class="acc"  value={accRecord.PersonMailingState} placeholder="Select" options={options} onchange={handleStateChange} required > </lightning-combobox>
+    <!--    <lightning-input label="State" onchange={handleStateChange} value={accRecord.PersonMailingState} name="Name"  required="required" type="text"></lightning-input>-->
+                </span>
+                    </div>
+                        </div>
+        
+         <div class="slds-grid slds-gutters slds-m-around--xx-small">
+                    <div class="slds-col">
+        <span>               
+          
+            <lightning-input label="ZIP Code" class="acc" onchange={handlePostalCodeChange} value={accRecord.PersonMailingPostalCode} type="text" required="required"  ></lightning-input>
+                </span>
+                        </div>
+        <div class="slds-col">
+        <span>          
+        <lightning-input label="Country" class="acc" onchange={handleCountryChange} value={accRecord.PersonMailingCountry} name="Name"  required="required" type="text"></lightning-input>
+                </span>
+                    </div>
+                        </div>  
+                        
+                        <!-- -->
+
+                        <br>                
+
+                        <lightning-button class="slds-p-left_small"
+                              label="Save"
+                              onclick={handleAccSave}
+                              variant="brand"
+                            ></lightning-button>
+        
+        </lightning-card>
+
+       
+
+    </template>
+
+    <template if:true={businessAccountRec}>
+      <lightning-card title="Business Account Address"  icon-name="standard:address">
+
+          <div class="slds-card__body slds-card__body_inner">Please review and confirm Address Information</div>
+
+      </lightning-card>
+      
+      <lightning-card   class="slds-m-around--xx-medium">
+
+        <div class="slds-grid slds-gutters slds-m-around--xx-small">
+          <div class="slds-col">
+  <span>
+      <lightning-input label="Street" class="bacc" name="Name" onchange={handleBAStreetChange} value={businessAccountRec.ShippingStreet}  required="required" type="text"></lightning-input>
+  </span>
+</div>
+     </div>   
+
+          <div class="slds-grid slds-gutters slds-m-around--xx-small">
+                  <div class="slds-col">
+      <span>               
+       <lightning-input label="City" class="bacc" name="Name"  onchange={handleBACityChange} value={businessAccountRec.ShippingCity} required="required" type="text" ></lightning-input>
+              </span>
+                      </div>
+      <div class="slds-col">
+      <span>     
+        <lightning-combobox  label="State" class="bacc"  value={businessAccountRec.ShippingState} placeholder="Select" options={options} onchange={handleBAStateChange} required > </lightning-combobox>
+       
+  <!--    <lightning-input label="State" onchange={handleBAStateChange} value={businessAccountRec.ShippingState} name="Name"  required="required" type="text"></lightning-input>-->
+              </span>
+                  </div>
+                      </div>
+      
+       <div class="slds-grid slds-gutters slds-m-around--xx-small">
+                  <div class="slds-col">
+      <span>               
+        
+          <lightning-input label="ZIP Code" class="bacc" onchange={handleBAPostalCodeChange} value={businessAccountRec.ShippingPostalCode} type="text" required="required"  ></lightning-input>
+              </span>
+                      </div>
+      <div class="slds-col">
+      <span>          
+      <lightning-input label="Country" class="bacc" onchange={handleBACountryChange} value={businessAccountRec.ShippingCountry} name="Name"  required="required" type="text"></lightning-input>
+              </span>
+                  </div>
+                      </div>  
+                      
+                      <!-- -->
+
+                      <br>                
+
+                      <lightning-button class="slds-p-left_small"
+                            label="Save"
+                            onclick={handleBusinessAccountSave}
+                            variant="brand"
+                          ></lightning-button>
+      
+      </lightning-card>
+
+     
+
+  </template>
+
+
+
+  
+  
+  <!--
+  
+  <template if:true={accRecord}>
+
+        <lightning-card title="Personal Account Address"  icon-name="standard:address"></lightning-card>
+        <lightning-card>
+        
+
+                <fieldset class="slds-form--compound  slds-m-right_x-small">
+                        <legend class="slds-form-element__label slds-text-title_caps slds-m-left_small ">Address</legend>
+                        <div class="form-element__group  slds-m-left_small">
+          <div class="slds-form-element__row">
+            <label class="slds-form-element__control slds-size--1-of-1">
+              <span class="slds-form-element__helper">Street</span>
+
+              <input class="slds-input" type="text" onchange={handleStreetChange} required value={accRecord.PersonMailingStreet}/>
+
+            </label>
+          </div>
+          <div class="slds-form-element__row">
+            <label class="slds-form-element__control slds-size--1-of-2">
+              <span class="slds-form-element__helper">City</span>
+
+              <input class="slds-input" required="required" type="text" onchange={handleCityChange} value={accRecord.PersonMailingCity}/>
+
+            </label>
+            <label class="slds-form-element__control slds-size--1-of-2">
+              <span class="slds-form-element__helper">State</span>
+
+              <input class="slds-input" required="required" type="text" onchange={handleStateChange} value={accRecord.PersonMailingState}
+              />
+            </label>
+          </div>
+          <div class="slds-form-element__row">
+            <label class="slds-form-element__control slds-size--1-of-2">
+              <span class="slds-form-element__helper">ZIP Code</span>
+
+              <input class="slds-input" required="required" type="text" onchange={handlePostalCodeChange} value={accRecord.PersonMailingPostalCode}/>
+
+            </label>
+            <label class="slds-form-element__control slds-size--1-of-2">
+              <span class="slds-form-element__helper">Country</span>
+
+              <input class="slds-input" required="required" type="text" onchange={handleCountryChange} value={accRecord.PersonMailingCountry}/>
+              
+            </label>
+          </div>
+        </div>
+    </fieldset>
+
+    <br />
+ &nbsp;&nbsp;&nbsp;&nbsp;   <lightning-button
+      label="Save"
+      onclick={handleAccSave}
+      variant="brand"
+    ></lightning-button>
+</lightning-card>             
+  </template>
+-->
+
+
+<!--
+  <template if:true={businessAccountRec}>
+
+    <lightning-card title="Business Account Address" icon-name="standard:address"></lightning-card>
+    <lightning-card>
+    
+
+            <fieldset class="slds-form--compound  slds-m-right_x-small">
+                    <legend class="slds-form-element__label slds-text-title_caps slds-m-left_small ">Address</legend>
+                    <div class="form-element__group  slds-m-left_small">
+      <div class="slds-form-element__row">
+        <label class="slds-form-element__control slds-size--1-of-1">
+          <span class="slds-form-element__helper">Street</span>
+          <input
+            class="slds-input"
+            type="text"
+            required="required"
+            onchange={handleBAStreetChange}
+            value={businessAccountRec.ShippingStreet}
+          />
+        </label>
+      </div>
+      <div class="slds-form-element__row">
+        <label class="slds-form-element__control slds-size--1-of-2">
+          <span class="slds-form-element__helper">City</span>
+          <input
+            class="slds-input"
+            required="required"
+            type="text"
+            onchange={handleBACityChange}
+            value={businessAccountRec.ShippingCity}
+          />
+        </label>
+        <label class="slds-form-element__control slds-size--1-of-2">
+          <span class="slds-form-element__helper">State</span>
+          <input
+            class="slds-input"
+            required="required"
+            type="text"
+            onchange={handleBAStateChange}
+            value={businessAccountRec.ShippingState}
+          />
+        </label>
+      </div>
+      <div class="slds-form-element__row">
+        <label class="slds-form-element__control slds-size--1-of-2">
+          <span class="slds-form-element__helper">ZIP Code</span>
+          <input
+            class="slds-input"
+            required="required"
+            type="text"
+            onchange={handleBAPostalCodeChange}
+            value={businessAccountRec.ShippingPostalCode}
+          />
+        </label>
+        <label class="slds-form-element__control slds-size--1-of-2">
+          <span class="slds-form-element__helper">Country</span>
+          <input
+            class="slds-input"
+            required="required"
+            type="text"
+            onchange={handleBACountryChange}
+            value={businessAccountRec.ShippingCountry}
+          />
+        </label>
+      </div>
+    </div>
+</fieldset>
+
+<br />
+&nbsp;&nbsp;&nbsp;&nbsp;   <lightning-button
+  label="Save"
+  onclick={handleBusinessAccountSave}
+  variant="brand"
+></lightning-button>
+</lightning-card>             
+</template>
+-->
+
+
+</template>

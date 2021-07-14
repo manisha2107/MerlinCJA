@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Quote_Product_must_be_same_to_Opps_Pro</fullName>
+    <active>false</active>
+    <description>Quote Product must be same to Opp</description>
+    <errorConditionFormula>AND(
+!ISBLANK(Opportunity__c),
+ Product__c  &lt;&gt; Opportunity__r.Product__c
+)</errorConditionFormula>
+    <errorDisplayField>Product__c</errorDisplayField>
+    <errorMessage>Quote Product must be same to Opportunity Product.</errorMessage>
+</ValidationRule>

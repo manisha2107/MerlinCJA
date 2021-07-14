@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Billing_Contact__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <inlineHelpText>Individual who will receive certificate &amp; pay invoice</inlineHelpText>
+    <label>Billing Contact</label>
+    <referenceTo>Contact</referenceTo>
+    <relationshipLabel>Policies (Billing Contact)</relationshipLabel>
+    <relationshipName>Policies2</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>
